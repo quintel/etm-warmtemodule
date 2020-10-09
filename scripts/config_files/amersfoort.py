@@ -1,5 +1,5 @@
 """
-<name of project>
+AMERSFOORT
 
 This is an example of a config file. Duplicate and rename the file for your
 project. Here, you may write a short description of the project.
@@ -97,11 +97,18 @@ KEY_FIGURES = {
 
 # Different scenarios that are run by the ETM heat module
 SCENARIOS = {
-    'scenario_1': { # ruim gas, ruim warmte
+    'scenario_1': { # ruim gas, overal warmte, geen geothermie
         'renewable_gas_budget':  424704,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
+        'geothermal': 'geothermal_sources_high_potential.csv'
+    },
+    'scenario_2': { # ruim gas, overal MT-warmte, beperkt LT-warmte, geen geothermie
+        'renewable_gas_budget':  424704,  # in GJ
+        'used_renewable_gas': 0.,
+        'ht_heat': 'ht_sources_high_potential.csv',
+        'lt_heat': 'lt_sources_low_potential.csv',
         'geothermal': 'geothermal_sources_high_potential.csv'
     }
 }
