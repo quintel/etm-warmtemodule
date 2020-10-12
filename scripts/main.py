@@ -16,7 +16,6 @@ from classify_neighbourhoods import (apply_electricity_decision_tree,
                                      apply_pre_analysis)
 from load_data import initialise_neighbourhoods_and_heat_sources
 import config
-from post_analysis import flip_LT_eligible_neighbourhoods
 from run_tests import run_all_tests
 
 
@@ -345,10 +344,6 @@ def main(args):
             key=lambda x: x.fraction_of_lt_eligible_houses(),
             reverse=True):
         sorted_neighbourhoods[neighbourhood.code] = neighbourhood
-
-    # Run post-analysis for all neighbourhoods (and save the refined
-    # neighbourhoods into a new pickle object)
-    flip_LT_eligible_neighbourhoods(bookkeeper, config.current_project.current_scenario_name, sorted_neighbourhoods, heat_sources)
 
     # Get future efficiency of appliances, etc.
     efficiency = config.current_project.ASSUMPTIONS['efficiency_of_appliances']
