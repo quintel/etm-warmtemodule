@@ -11,15 +11,15 @@ class Matrix:
     Class to describe the heating option preference for each cell of the matrix
     """
 
-    def __init__(self):
+    def __init__(self, number_of_options=3):
         self.residences_matrix = config.current_project.DEFAULT_MATRIX_RESIDENCES
         self.utility_matrix = config.current_project.DEFAULT_MATRIX_UTILITY
 
-        # Vectors represent [E, W, H]
-        self.heat_demand_vector = np.zeros(3)
-        self.heat_demand_vector_residences = np.zeros(3)
-        self.heat_demand_vector_utility = np.zeros(4)
-        self.normalized_vector = np.zeros(3)
+        # Vectors represent [E, W, H] by default
+        self.heat_demand_vector = np.zeros(number_of_options)
+        self.heat_demand_vector_residences = np.zeros(number_of_options)
+        self.heat_demand_vector_utility = np.zeros(number_of_options+1)
+        self.normalized_vector = np.zeros(number_of_options)
 
 
     def determine_heating_option_preference(self, neighbourhood):
@@ -46,6 +46,13 @@ class Matrix:
         if np.sum(self.heat_demand_vector) > 0.:
             self.normalized_vector = self.heat_demand_vector / np.sum(
                 self.heat_demand_vector)
+
+        return self.sorted_preference(neighbourhood)
+
+    def sorted_preference(self, neighbourhood):
+        '''
+        Returns the sorted peference for the given neighbourhood
+        '''
 
         # Take linear heat density offset into account
         offset = self.determine_linear_heat_density_offset(neighbourhood)
@@ -132,25 +139,25 @@ class Matrix:
                 # and add product to the sum of all vectors
                 self.heat_demand_vector_utility += np.array(self.utility_matrix[building_type][size_class]) * total_heat_demand
 
-        # The fourth entry of the utility vector contains the m2 of utility that
+        # The last entry of the utility vector contains the m2 of utility that
         # 'follows' residences. Here, the residences vector is multiplied by
         # that share of the total heat demand of utilities and added to the
         # utilities vector which is now also a length-3 vector
-        if self.heat_demand_vector_utility[3] > 0.:
+        if self.heat_demand_vector_utility[-1] > 0.:
             if np.sum(self.heat_demand_vector_residences) > 0.:
                 normalized_vector_residences = self.heat_demand_vector_residences / np.sum(self.heat_demand_vector_residences)
-                self.heat_demand_vector_utility = self.heat_demand_vector_utility[:3] + self.heat_demand_vector_utility[3] * normalized_vector_residences
+                self.heat_demand_vector_utility = self.heat_demand_vector_utility[:-1] + self.heat_demand_vector_utility[-1] * normalized_vector_residences
 
-            elif np.sum(self.heat_demand_vector_utility[:3]) > 0.:
-                # If residential vector is empty, add utility vector (first three entries) to itself
-                normalized_vector_utility = self.heat_demand_vector_utility[:3] / np.sum(self.heat_demand_vector_utility[:3])
-                self.heat_demand_vector_utility = self.heat_demand_vector_utility[:3] + self.heat_demand_vector_utility[3] * normalized_vector_utility
+            elif np.sum(self.heat_demand_vector_utility[:-1]) > 0.:
+                # If residential vector is empty, add utility vector (except last entry) to itself
+                normalized_vector_utility = self.heat_demand_vector_utility[:-1] / np.sum(self.heat_demand_vector_utility[:-1])
+                self.heat_demand_vector_utility = self.heat_demand_vector_utility[:-1] + self.heat_demand_vector_utility[-1] * normalized_vector_utility
 
             else:
-                self.heat_demand_vector_utility = np.zeros(3)
+                self.heat_demand_vector_utility = np.zeros(len(self.heat_demand_vector_residences))
 
         else:
-            self.heat_demand_vector_utility = self.heat_demand_vector_utility[:3]
+            self.heat_demand_vector_utility = self.heat_demand_vector_utility[:-1]
 
         # Check if the sum of the vector is equal to the total heat demand of
         # the neighbourhood's utilities. If not, warn the user.

@@ -121,7 +121,7 @@ SCENARIOS = {
 }
 
 # Default residences matrix
-# [heat network ('W'), hybrid/renewable gas ('H'), all-electric ('E')]
+# [heat network ('W_MTHT'), hybrid/renewable gas ('H'), all-electric ('E')]
 DEFAULT_MATRIX_RESIDENCES = {
     'Apartment': {
         '<1946': [1.0, 0.0, 0.0],
@@ -158,7 +158,7 @@ DEFAULT_MATRIX_RESIDENCES = {
 }
 
 # Default utility matrix
-# [heat network ('W'), hybrid/renewable gas ('H'), all-electric ('E'),
+# [heat network ('W_MTHT'), hybrid/renewable gas ('H'), all-electric ('E'),
 #  follow housing stock]
 DEFAULT_MATRIX_UTILITY = {
     'Small': {
@@ -177,6 +177,66 @@ DEFAULT_MATRIX_UTILITY = {
         '>2000': [0.0, 0.0, 1.0, 0.0]
     }
 }
+
+# Default lt residences matrix
+# [lt heat network ('W_LT')]
+LT_MATRIX_RESIDENCES = {
+    'Apartment': {
+        '<1946': [10.0],
+        '1946-1974': [0.0],
+        '1975-1990': [0.0],
+        '1991-2000': [0.33],
+        '2001-2010': [0.67],
+        '>2010': [1.0]
+    },
+    'Terraced house': {
+        '<1946': [0.0],
+        '1946-1974': [0.0],
+        '1975-1990': [0.0],
+        '1991-2000': [0.0],
+        '2001-2010': [0.33],
+        '>2010': [0.67]
+    },
+    'Semi-detached house': {
+        '<1946': [0.0],
+        '1946-1974': [0.0],
+        '1975-1990': [0.0],
+        '1991-2000': [0.0],
+        '2001-2010': [0.0],
+        '>2010': [0.0]
+    },
+    'Detached house': {
+        '<1946': [0.0],
+        '1946-1974': [0.0],
+        '1975-1990': [0.0],
+        '1991-2000': [0.0],
+        '2001-2010': [0.0],
+        '>2010': [0.0]
+    }
+}
+
+# Default utility matrix
+# [heat network ('W_LT'), follow housing stock]
+LT_MATRIX_UTILITY = {
+    'Small': {
+        '<1991': [0.0, 1.0],
+        '1991-2000': [0.0, 1.0],
+        '>2000': [0.5, 0.0]
+    },
+    'Medium': {
+        '<1991': [0.0, 1.0],
+        '1991-2000': [0.0, 1.0],
+        '>2000': [1.0, 0.0]
+    },
+    'Large': {
+        '<1991': [0.0, 0.0],
+        '1991-2000': [0.33, 0.0],
+        '>2000': [1.0, 0.0]
+    }
+}
+
+# Threshold for which a neigbourhood is found having a preference for W_LT
+LT_THRESHOLD = 0.5
 
 # CSV files with neighbourhood data
 NEIGHBOURHOOD_CSVS = {

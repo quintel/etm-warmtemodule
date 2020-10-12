@@ -5,6 +5,7 @@ import numpy as np
 from classify_neighbourhoods import efficiency_of_heating_option
 import config
 from Matrix import Matrix
+from lt_matrix import LTMatrix
 
 WHITELIST = [
     'municipality_code', 'municipality_name', 'geo_coordinate_x',
@@ -35,6 +36,7 @@ class Neighbourhood:
 
         self.geo_coordinate = [None, None]
         self.heating_option_preference = {}
+        self.lt_preference = {}
         self.assigned_heating_option = None
         self.assigned_heat_source = None
         self.stage_of_assignment = None
@@ -513,4 +515,6 @@ class Neighbourhood:
 
         # Create empty Matrix object for housing and determine the
         # heating option preference based on the housing and utility stock
+        # do the same for the LTMatrix
         self.heating_option_preference = Matrix().determine_heating_option_preference(self)
+        self.lt_preference = LTMatrix().determine_heating_option_preference(self)
