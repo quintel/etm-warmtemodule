@@ -52,35 +52,35 @@ def flip_LT_eligible_neighbourhoods(bookkeeper, scenario, neighbourhoods, heat_s
     LT heat source available for this neighbourhood.
     """
 
-    number_of_flipped_neighbourhoods = 0
+    # number_of_flipped_neighbourhoods = 0
 
-    # Set scenario
-    config.current_project.set_current_scenario(scenario)
+    # # Set scenario
+    # config.current_project.set_current_scenario(scenario)
 
-    for code, neighbourhood in neighbourhoods.items():
-        # Check if the neighbourhood's heating option is 'E' and if the
-        # neighbourhood is eligible for LT
-        if ((neighbourhood.assigned_heating_option == 'E') and
-            (neighbourhood.fraction_of_lt_eligible_houses() >= config.current_project.ASSUMPTIONS['lt_eligibility'])):
-            # Check if there is a LT source in range available
-            if heat_sources_available(neighbourhood, 'W', heat_sources['LT'],
-                                      'LT', bookkeeper):
-                # Replace former heating option by 'W'
-                neighbourhood.assigned_heating_option = 'W'
+    # for code, neighbourhood in neighbourhoods.items():
+    #     # Check if the neighbourhood's heating option is 'E' and if the
+    #     # neighbourhood is eligible for LT
+    #     if ((neighbourhood.assigned_heating_option == 'E') and
+    #         (neighbourhood.fraction_of_lt_eligible_houses() >= config.current_project.ASSUMPTIONS['lt_eligibility'])):
+    #         # Check if there is a LT source in range available
+    #         if heat_sources_available(neighbourhood, 'W', heat_sources['LT'],
+    #                                   'LT', bookkeeper):
+    #             # Replace former heating option by 'W'
+    #             neighbourhood.assigned_heating_option = 'W'
 
-                # Correct energy demands in bookkeeper
-                correct_bookkeeper_demands(neighbourhood, bookkeeper)
+    #             # Correct energy demands in bookkeeper
+    #             correct_bookkeeper_demands(neighbourhood, bookkeeper)
 
-                # Update the confidence based on the corresponding heating option preference
-                # neighbourhood.confidence = ...
+    #             # Update the confidence based on the corresponding heating option preference
+    #             # neighbourhood.confidence = ...
 
-                # Assign post-analysis as stage of assignment
-                neighbourhood.stage_of_assignment = 'post-analysis'
+    #             # Assign post-analysis as stage of assignment
+    #             neighbourhood.stage_of_assignment = 'post-analysis'
 
-                # Increment number of flipped neighbourhoods
-                number_of_flipped_neighbourhoods += 1
+    #             # Increment number of flipped neighbourhoods
+    #             number_of_flipped_neighbourhoods += 1
 
-    print("\nPOST-ANALYSIS: {} neighbourhoods have been flipped to W-LT".format(number_of_flipped_neighbourhoods))
+    # print("\nPOST-ANALYSIS: {} neighbourhoods have been flipped to W-LT".format(number_of_flipped_neighbourhoods))
 
 
 if __name__ == '__main__':

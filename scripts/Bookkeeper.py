@@ -135,11 +135,11 @@ class Bookkeeper:
 
         'E': electricity (heating_option 'E')
         'H': renewable gas (heating_option 'H')
-        'geothermal': heat from a geothermal source (heating_option 'W')
-        'HT': heat from an HT source (heating_option 'W')
-        'MT': heat from an MT source (heating_option 'W')
-        'LT': heat from an LT source (heating_option 'W' or 'E')
-        'backup': heat from a backup source (heating_option 'W' or 'H')
+        'geothermal': heat from a geothermal source (heating_option 'W_MTHT')
+        'HT': heat from an HT source (heating_option 'W_MTHT')
+        'MT': heat from an MT source (heating_option 'W_MTHT')
+        'LT': heat from an LT source (heating_option 'W_MTHT' or 'W_LT')
+        'backup': heat from a backup source (heating_option 'W_MTHT' , 'W_LT' or 'H')
         """
 
         # Add final heat demand for all residences in the total region

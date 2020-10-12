@@ -6,7 +6,6 @@ import sys
 import csv
 import numpy as np
 import pickle
-import requests
 from pathlib import Path
 
 # project modules
@@ -120,11 +119,11 @@ def apply_decision_trees(sorted_neighbourhoods, heat_sources, bookkeeper):
                 # If the neighbourhood's preference is "E",
                 if neighbourhood.heating_option_preference[i][0] == 'E':
                     # Apply electricity decision tree to neighbourhood
-                    apply_electricity_decision_tree(neighbourhood,
-                                                    heat_sources, bookkeeper)
+                    apply_electricity_decision_tree(neighbourhood, heat_sources,
+                                                    i == 1, bookkeeper)
 
                 # Else if the neighbourhood's preference is "W",
-                elif neighbourhood.heating_option_preference[i][0] == 'W':
+                elif neighbourhood.heating_option_preference[i][0] == 'W_MTHT':
                     # Apply electricity decision tree to neighbourhood
                     apply_heat_decision_tree(neighbourhood, heat_sources,
                                              False, i == 1, bookkeeper)
@@ -137,25 +136,32 @@ def apply_decision_trees(sorted_neighbourhoods, heat_sources, bookkeeper):
 
                 # If the neighbourhood has been assigned a heating option,
                 # count it
-                if neighbourhood.assigned_heating_option:
-                    neighbourhood.stage_of_assignment = 'iteration {}'.format(
-                        i + 1)
-                    number_of_assigned_neighbourhoods += 1
-
-                    tuple_position = [i for i, v in enumerate(neighbourhood.heating_option_preference) if v[0] == neighbourhood.assigned_heating_option]
-                    # Determine confidence for assigned heating option
-                    neighbourhood.confidence = neighbourhood.heating_option_preference[tuple_position[0]][1]
-
-                    # print("{} ({}): {}, {} (confidence: {})".format(
-                    #     neighbourhood.name, neighbourhood.code,
-                    #     neighbourhood.assigned_heating_option,
-                    #     neighbourhood.assigned_heat_source,
-                    #     round(neighbourhood.confidence, 2)))
-
-                else:
-                    continue
+                if not neighbourhood.assigned_heating_option:
                     print("{} ({}): undecided".format(neighbourhood.name,
                                                       neighbourhood.code))
+                    continue
+
+
+                neighbourhood.stage_of_assignment = 'iteration {}'.format(i + 1)
+                number_of_assigned_neighbourhoods += 1
+
+                if neighbourhood.assigned_heating_option == 'W_LT':
+                    confidence_option = 'E'
+                else:
+                    confidence_option =  neighbourhood.assigned_heating_option
+
+                confidence = [
+                    conf for option, conf in neighbourhood.heating_option_preference
+                    if option == confidence_option
+                ][0]
+                neighbourhood.confidence = confidence
+
+                # print("{} ({}): {}, {} (confidence: {})".format(
+                #     neighbourhood.name, neighbourhood.code,
+                #     neighbourhood.assigned_heating_option,
+                #     neighbourhood.assigned_heat_source,
+                #     round(neighbourhood.confidence, 2)))
+
 
         print("\nITERATION {}: [{}/{}] neighbourhoods have been assigned "
               "a heating option".format(i + 1,

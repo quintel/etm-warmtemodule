@@ -22,18 +22,31 @@ def apply_pre_analysis(neighbourhood, heat_sources, bookkeeper):
         add_present_heat_demand_to_bookkeeper(neighbourhood, bookkeeper)
 
 
-def apply_electricity_decision_tree(neighbourhood, heat_sources, bookkeeper):
+def apply_electricity_decision_tree(neighbourhood, heat_sources,
+                                    is_second_time, bookkeeper):
     """
     Apply electricity decision tree: if the neighbourhood's heating preference
-    is all-electric, assign this option.
+    is all-electric, assign this option. Also check for W_LT
     """
 
-    # If no suitable option can be found for this neighbourhood,
-    # return None, representing 'undecided'
+    # Check if this is either second time, or the neighbourhood does not want a W_LT
+    if is_second_time or not neighbourhood.lt_elegible:
+        neighbourhood.assigned_heating_option = 'E'
+        neighbourhood.assigned_heat_source = None
+        add_electricity_demand_to_bookkeeper(neighbourhood, bookkeeper)
+        return
+
+    # Else check for W_LT
+    if heat_sources_available(neighbourhood, 'W_LT', heat_sources['LT'], 'LT', bookkeeper):
+        neighbourhood.assigned_heating_option = 'W_LT'
+        return
+
+    if teo_available(neighbourhood, bookkeeper):
+        neighbourhood.assigned_heating_option = 'W_LT'
+        return
+
     neighbourhood.assigned_heating_option = 'E'
     neighbourhood.assigned_heat_source = None
-
-    # Add heat demand to bookkeeper
     add_electricity_demand_to_bookkeeper(neighbourhood, bookkeeper)
 
 
@@ -45,13 +58,13 @@ def apply_heat_decision_tree(neighbourhood, heat_sources, is_pre_analysis,
     sufficient remaining heat to meet the neighbourhood's demand.
     """
 
-    # Hypothetically assign 'W' to the neighbourhood. If W doesn't work out,
+    # Hypothetically assign 'W_MTHT' to the neighbourhood. If W doesn't work out,
     # the heating option will be assigned to None again.
-    neighbourhood.assigned_heating_option = 'W'
+    neighbourhood.assigned_heating_option = 'W_MTHT'
 
     # If there is an HT source available for this neighbourhood, assign it
     # (otherwise keep None)
-    if heat_sources_available(neighbourhood, 'W', heat_sources['HT'], 'HT',
+    if heat_sources_available(neighbourhood, 'W_MTHT', heat_sources['HT'], 'HT',
                               bookkeeper):
 
         return
@@ -62,16 +75,16 @@ def apply_heat_decision_tree(neighbourhood, heat_sources, is_pre_analysis,
         return
 
     # Else if there is an LT source available,
-    elif heat_sources_available(neighbourhood, 'W', heat_sources['LT'], 'LT',
+    elif heat_sources_available(neighbourhood, 'W_MTHT', heat_sources['LT'], 'LT',
                                 bookkeeper):
 
         return
 
     # Else if the decision tree is applied in the pre-analysis,
-    # and no suitable option can be found, assign 'W' and
+    # and no suitable option can be found, assign 'W_MTHT' and
     # use the gas budgets as a backup heat source
     elif is_pre_analysis:
-        if gas_available(neighbourhood, 'W', bookkeeper, 'backup'):
+        if gas_available(neighbourhood, 'W_MTHT', bookkeeper, 'backup'):
             neighbourhood.assigned_heat_source = 'backup'
 
             return
@@ -173,8 +186,14 @@ def heat_sources_available(neighbourhood, heating_option, heat_sources,
         bookkeeper, heating_option)
 
     # Get efficiency of using residual heat for the heat network
-    share_of_residual_heat = config.current_project.SPECS[
-        'share_of_{}_heat'.format(heat_temperature)]
+    try:
+        share_of_residual_heat = config.current_project.SPECS[
+            'share_of_{}_heat'.format(heat_temperature)
+        ]
+    except KeyError:
+        share_of_residual_heat = config.current_project.SPECS[
+            f'share_of_{heat_temperature}_heat_for_{heating_option}'
+        ]
 
     # Calculate final demand of residual heat
     final_residual_heat_demand_residences = (final_heat_demand_residences * share_of_residual_heat)
@@ -241,11 +260,11 @@ def geothermal_available(neighbourhood, bookkeeper):
 
         # Calculate future heat demand for residences
         final_heat_demand_residences, useful_heat_demand_residences, heat_reduction_residences = neighbourhood.future_heat_demand_of_residences(
-            bookkeeper, 'W')
+            bookkeeper, 'W_MTHT')
 
         # Calculate future heat demand for utility
         final_heat_demand_utility, useful_heat_demand_utility, heat_reduction_utility = neighbourhood.future_heat_demand_of_utility(
-            bookkeeper, 'W')
+            bookkeeper, 'W_MTHT')
 
         # Add future heat demands to the bookkeeper
         bookkeeper.add_useful_heat_demand(neighbourhood,
@@ -281,6 +300,48 @@ def geothermal_available(neighbourhood, bookkeeper):
     # If there is no geothermal source available, return False
     return False
 
+def teo_available(neighbourhood, bookkeeper):
+    """
+    Check if there's TEO heat available for the neighbourhood
+    """
+
+    # If there is a teo source available for this neighbourhood,
+    if not neighbourhood.teo_available:
+        return False
+
+    # Assign this source
+    neighbourhood.assigned_heat_source = 'TEO'
+
+    # Calculate future heat demand for residences and utility
+    final_hd_residences, useful_hd_residences, heat_reduction_residences = neighbourhood.future_heat_demand_of_residences(
+        bookkeeper, 'W_LT')
+
+    final_hd_utility, useful_hd_utility, heat_reduction_utility = neighbourhood.future_heat_demand_of_utility(
+        bookkeeper, 'W_LT')
+
+    # Add future heat demands to the bookkeeper
+    bookkeeper.add_useful_heat_demand(neighbourhood,
+                                      useful_hd_residences,
+                                      useful_hd_utility,
+                                      heat_reduction_residences,
+                                      heat_reduction_utility)
+
+    # Get share of using TEO heat for the heat network
+    share_of_teo_heat = config.current_project.SPECS['share_of_teo_heat']
+
+    # Calculate final demand of backup heat for cofiring
+    final_backup_demand_residences = final_hd_residences * (1. - share_of_teo_heat)
+    final_backup_demand_utility = final_hd_utility * (1. - share_of_teo_heat)
+
+    # Add final demands to the bookkeeper
+    bookkeeper.add_final_heat_demand(neighbourhood, 'TEO',
+                                     useful_hd_residences,
+                                     useful_hd_utility)
+    bookkeeper.add_final_heat_demand(neighbourhood, 'backup',
+                                     final_backup_demand_residences,
+                                     final_backup_demand_utility)
+
+    return True
 
 def gas_available(neighbourhood, heating_option, bookkeeper, heat_type):
     """
@@ -340,7 +401,8 @@ def efficiency_of_heating_option(neighbourhood, heating_option):
     Returns the heat losses (in GJ) per heating option. These should be
     added to the total heat demand after insulation.
 
-    W: heat network losses, backup (cofiring)
+    W_MTHT: heat network losses, backup (cofiring)
+    W_LT: heat network losses, backup (cofiring)
     E: efficiency electricity to heat
     H: efficiency gas to heat (both for HHP and CCB)
     """
@@ -357,9 +419,13 @@ def efficiency_of_heating_option(neighbourhood, heating_option):
                           (1. - neighbourhood.fraction_of_small_houses()) *
                           config.current_project.SPECS['efficiency_gas_to_heat_hhp'])
 
-    elif heating_option == 'W':
+    elif heating_option == 'W_MTHT':
         # Take heat losses of heat network into account
         efficiency = config.current_project.SPECS['efficiency_of_heat_network']
+
+    elif heating_option == 'W_LT':
+        # Take heat losses of heat network into account
+        efficiency = config.current_project.SPECS['efficiency_of_LT_heat_network']
 
     return efficiency
 

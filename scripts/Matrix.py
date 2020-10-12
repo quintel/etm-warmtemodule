@@ -59,7 +59,7 @@ class Matrix:
 
         # Cast normalized vector to heating options
         heating_option_preference = {
-            'W': offset + (1. - offset) * self.normalized_vector[0],
+            'W_MTHT': offset + (1. - offset) * self.normalized_vector[0],
             'H': (1. - offset) * self.normalized_vector[1],
             'E': (1. - offset) * self.normalized_vector[2]
         }

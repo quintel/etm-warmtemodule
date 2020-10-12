@@ -283,11 +283,6 @@ def update_neighbourhood_housing_stock(neighbourhoods, csv):
                     'gem_oppervlakte': row['gem_oppervlakte']
                 }
 
-            # Add number of LT eligible houses
-            if row['woningtype'] in config.current_project.ASSUMPTIONS['lt_eligible_housing_types']:
-                if row['QI_bouwjaarklasse'] in config.current_project.ASSUMPTIONS['lt_eligible_construction_years']:
-                    number_of_lt_eligible_houses += row['aantal_woningen']
-
         # Update neighbourhood with housing stock matrix
         neighbourhoods[code].update(
             {'housing_stock_matrix': housing_stock_matrix})
@@ -426,8 +421,8 @@ def export_data_to_csv(neighbourhoods):
         'total_heat_demand_of_residences', 'total_heat_demand_of_utility',
         'total_electricity_demand_of_residences',
         'total_electricity_demand_of_utility', 'geothermal_available',
-        'ht_sources_available', 'lt_sources_available', 'preference_W',
-        'preference_H', 'preference_E'
+        'ht_sources_available', 'lt_sources_available', 'preference_W_MTHT',
+        'preference_H', 'preference_E', 'elegible_W_LT'
     ]
 
     # Write the neighbourhood objects to csv file rows
@@ -436,8 +431,8 @@ def export_data_to_csv(neighbourhoods):
         writer.writeheader()
         for neighbourhood in neighbourhoods.values():
             for preference in neighbourhood.heating_option_preference:
-                if preference[0] == 'W':
-                    preference_W = preference[1]
+                if preference[0] == 'W_MTHT':
+                    preference_W_MTHT = preference[1]
                 elif preference[0] == 'H':
                     preference_H = preference[1]
                 elif preference[0] == 'E':
@@ -471,12 +466,14 @@ def export_data_to_csv(neighbourhoods):
                 neighbourhood.ht_sources_available,
                 'lt_sources_available':
                 neighbourhood.lt_sources_available,
-                'preference_W':
-                preference_W,
+                'preference_W_MTHT':
+                preference_W_MTHT,
                 'preference_H':
                 preference_H,
                 'preference_E':
-                preference_E
+                preference_E,
+                'elegible_W_LT':
+                neighbourhood.lt_elegible
             }
             writer.writerow(characteristics)
 
