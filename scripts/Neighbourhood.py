@@ -38,6 +38,7 @@ class Neighbourhood:
         self.heating_option_preference = {}
         self.lt_elegible = False
         self.assigned_heating_option = None
+        self.force_heat_network = False
         self.assigned_heat_source = None
         self.stage_of_assignment = None
         self.confidence = None

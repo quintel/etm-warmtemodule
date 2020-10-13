@@ -422,7 +422,7 @@ def export_data_to_csv(neighbourhoods):
         'total_electricity_demand_of_residences',
         'total_electricity_demand_of_utility', 'geothermal_available',
         'ht_sources_available', 'lt_sources_available', 'preference_W_MTHT',
-        'preference_H', 'preference_E', 'elegible_W_LT'
+        'preference_H', 'preference_E', 'elegible_W_LT', 'force_heat_network'
     ]
 
     # Write the neighbourhood objects to csv file rows
@@ -473,7 +473,9 @@ def export_data_to_csv(neighbourhoods):
                 'preference_E':
                 preference_E,
                 'elegible_W_LT':
-                neighbourhood.lt_elegible
+                neighbourhood.lt_elegible,
+                'force_heat_network':
+                neighbourhood.force_heat_network
             }
             writer.writerow(characteristics)
 

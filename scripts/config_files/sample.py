@@ -39,6 +39,14 @@ ASSUMPTIONS = {
         'E': 0.7    # label A+
     },
 
+    # Neighbourhoods that have existing heat networks are set to have preference
+    # 100% when the existing heat networks cover more than 'threshold_high' of
+    # the neighbourhood. They get an extra 'favour' preference when the coverage
+    # is in between 'threshold_high' and 'threshold_low'
+    'heat_network_coverage_threshold_high': 0.7,
+    'heat_network_coverage_threshold_low': 0.3,
+    'heat_network_coverage_favour': 0.05,
+
     # Future efficiency of appliances (baseload electricity demand)
     'efficiency_of_appliances': 0.75, # source: NvdT scenarios
 }
@@ -51,7 +59,8 @@ SPECS = {
     'share_of_LT_heat_for_W_MTHT': 0.4, ## TODO
     'share_of_LT_heat_for_W_LT': 0.8,
     'share_of_geothermal_heat': 0.7,
-    'share_of_teo_heat': 0.8,
+    'share_of_TEO_heat': 0.8,
+    'share_of_undefined_heat': 0.8,
 
     # Efficiencies of different heating options (heat network, central combi
     # boiler (ccb), heat pump)

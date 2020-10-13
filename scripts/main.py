@@ -200,25 +200,27 @@ def determine_distance_from_neighbourhood_to_source(neighbourhoods, heat_sources
 
         for code, neighbourhood in neighbourhoods.items():
             # Check if a heat source has been assigned to the neighbourhood
+            if not neighbourhood.assigned_heat_source:
+                continue
+
             assigned_heat_source_code = neighbourhood.assigned_heat_source
 
             # If so, find the corresponding heat source object
-            if assigned_heat_source_code:
-                if assigned_heat_source_code != "geothermal":
-                    heat_type = assigned_heat_source_code[0:2]
-                    assigned_heat_source = heat_sources[heat_type][assigned_heat_source_code]
+            if not assigned_heat_source_code in ["geothermal", "undefined"]:
+                heat_type = assigned_heat_source_code[0:2]
+                assigned_heat_source = heat_sources[heat_type][assigned_heat_source_code]
 
-                    # and determine the distance to the heat source
-                    distance_to_heat_source = np.linalg.norm(
-                        np.array(neighbourhood.geo_coordinate) -
-                        np.array(assigned_heat_source.geo_coordinate))
+                # and determine the distance to the heat source
+                distance_to_heat_source = np.linalg.norm(
+                    np.array(neighbourhood.geo_coordinate) -
+                    np.array(assigned_heat_source.geo_coordinate))
 
-                    writer.writerow({
-                        'neighbourhood_code': code,
-                        'heat_source_code': assigned_heat_source_code,
-                        'heat_source_name': assigned_heat_source.name,
-                        'distance_in_m': distance_to_heat_source
-                    })
+                writer.writerow({
+                    'neighbourhood_code': code,
+                    'heat_source_code': assigned_heat_source_code,
+                    'heat_source_name': assigned_heat_source.name,
+                    'distance_in_m': distance_to_heat_source
+                })
 
 
 def export_neighbourhood_results_to_csv(neighbourhoods):

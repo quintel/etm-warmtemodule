@@ -43,31 +43,42 @@ class Matrix:
                                    self.heat_demand_vector_utility)
 
         # Normalize combined heating option vector
-        if np.sum(self.heat_demand_vector) > 0.:
-            self.normalized_vector = self.heat_demand_vector / np.sum(
-                self.heat_demand_vector)
+        self.normalized_vector = Matrix.normalise_vector(self.heat_demand_vector)
 
         return self.sorted_preference(neighbourhood)
 
     def sorted_preference(self, neighbourhood):
         '''
-        Returns the sorted peference for the given neighbourhood
+        Returns the sorted peference for the given neighbourhood by executing
+        step 3 and 4 of determine_heating_option_preference
         '''
 
         # Take linear heat density offset into account
         offset = self.determine_linear_heat_density_offset(neighbourhood)
+        vector_with_offset = (
+            (self.normalized_vector * (1. - offset)) + np.array([offset, 0, 0])
+        )
 
-        # Cast normalized vector to heating options
+        # Check for existing heat networks
+        ass = config.current_project.ASSUMPTIONS
+        if neighbourhood.existing_heat_network_share > ass['heat_network_coverage_threshold_high']:
+            neighbourhood.force_heat_network = True
+            vector_with_offset = [1., 0., 0.]
+        elif neighbourhood.existing_heat_network_share > ass['heat_network_coverage_threshold_low']:
+            vector_with_offset[0] += ass['heat_network_coverage_favour']
+            vector_with_offset = Matrix.normalise_vector(vector_with_offset)
+
         heating_option_preference = {
-            'W_MTHT': offset + (1. - offset) * self.normalized_vector[0],
-            'H': (1. - offset) * self.normalized_vector[1],
-            'E': (1. - offset) * self.normalized_vector[2]
+            'W_MTHT': vector_with_offset[0],
+            'H': vector_with_offset[1],
+            'E': vector_with_offset[2]
         }
 
         # Sort by value to determine the neighbourhood's preferences
         return sorted(heating_option_preference.items(),
                       key=lambda x: x[1],
                       reverse=True)
+
 
 
     def apply_matrix_to_housing_stock(self, neighbourhood):
@@ -197,3 +208,13 @@ class Matrix:
             offset = max_offset
 
         return offset
+
+    @staticmethod
+    def normalise_vector(vector):
+        '''
+        Returns normalised vector
+        '''
+        summed = np.sum(vector)
+        if summed > 0.:
+            return vector / summed
+        return vector

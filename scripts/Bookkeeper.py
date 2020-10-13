@@ -29,6 +29,7 @@ class Bookkeeper:
         'HT': final demand heat from HT sources (GJ)
         'MT': final demand heat from MT sources (GJ)
         'LT': final demand heat from LT sources (GJ)
+        'undefined': final demand heat for heat networks with an undefined source
         'backup': final demand backup heat (GJ)
         'undecided': present demand (GJ)
         'useful_heat': useful demand heat for space heating and hot water (GJ)
@@ -43,6 +44,7 @@ class Bookkeeper:
                 'HT': 0.,
                 'MT': 0.,
                 'LT': 0.,
+                'undefined': 0.,
                 'backup': 0.,
                 'undecided': 0.,
                 'useful_heat': 0.,
@@ -55,6 +57,7 @@ class Bookkeeper:
                 'HT': 0.,
                 'MT': 0.,
                 'LT': 0.,
+                'undefined': 0.,
                 'backup': 0.,
                 'undecided': 0.,
                 'useful_heat': 0.,
@@ -226,7 +229,7 @@ class Bookkeeper:
         # Define the columns variable
         columns = [
             'neighbourhood', 'type', 'E', 'H', 'geothermal', 'HT', 'MT', 'LT',
-            'backup', 'undecided', 'useful_heat', 'heat_reduction'
+            'undefined', 'backup', 'undecided', 'useful_heat', 'heat_reduction'
         ]
 
         # Write the neighbourhood objects to csv file rows
