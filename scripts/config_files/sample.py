@@ -45,7 +45,7 @@ ASSUMPTIONS = {
     # is in between 'threshold_high' and 'threshold_low'
     'heat_network_coverage_threshold_high': 0.7,
     'heat_network_coverage_threshold_low': 0.3,
-    'heat_network_coverage_favour': 0.05,
+    'heat_network_coverage_favour': 0.025,
 
     # Future efficiency of appliances (baseload electricity demand)
     'efficiency_of_appliances': 0.75, # source: NvdT scenarios

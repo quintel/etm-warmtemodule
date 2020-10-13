@@ -15,7 +15,7 @@ WHITELIST = [
     'space_heating_demand_per_m2_utility', 'hot_water_demand_per_m2_utility',
     'electricity_demand_per_m2_utility', 'existing_heat_network_share',
     'geothermal_available', 'teo_available','number_of_historical_buildings', 'trace_length',
-    'share_of_houses_demolished', 'number_of_lt_eligible_houses',
+    'share_of_houses_demolished',
     'housing_stock_matrix', 'utility_stock_matrix', 'number_of_new_apartments',
     'number_of_new_terraced_houses', 'number_of_new_detached_houses',
     'number_of_new_semi_detached_houses', 'number_of_new_houses_unknown_type',

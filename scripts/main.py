@@ -237,7 +237,7 @@ def export_neighbourhood_results_to_csv(neighbourhoods):
     # Read the Neighbourhood attributes of the first neighbourhood into the
     # csv_columns variable
     for neighbourhood in neighbourhoods.values():
-        csv_columns = list(neighbourhood.__dict__.keys())
+        csv_columns = list(neighbourhood.__dict__.keys()) + ['desired_epi']
         break
 
     # Write the neighbourhood objects to csv file rows
@@ -245,7 +245,13 @@ def export_neighbourhood_results_to_csv(neighbourhoods):
         writer = csv.DictWriter(csv_file, fieldnames=csv_columns)
         writer.writeheader()
         for neighbourhood in neighbourhoods.values():
-            writer.writerow(neighbourhood.__dict__)
+            attributes = neighbourhood.__dict__
+            attributes['desired_epi'] = (
+                config.current_project.ASSUMPTIONS['desired_epi'][
+                    neighbourhood.assigned_heating_option
+                ]
+            )
+            writer.writerow(attributes)
 
 
 def export_heat_source_results_to_csv(heat_sources):
