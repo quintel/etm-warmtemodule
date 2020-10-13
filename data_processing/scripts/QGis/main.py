@@ -106,6 +106,26 @@ HEAT_SOURCES = {
         'attributes_to_keep': ['source_name', 'available_heat'],
         'identifier': 'GEOLP',
         'output_file' : 'geothermal_sources_low_potential.csv'
+        },
+    'TEO_HIGH_POTENTIAL' : {
+        'path': 'heat_sources/high_potential/teo_heat_sources_delivery_areas_groningen_ruim.geojson',
+        'rename_attributes': {
+                                'name': 'source_name',
+                                'capacity': 'available_heat'
+                             },
+        'attributes_to_keep': ['source_name', 'available_heat'],
+        'identifier': 'TEOHP',
+        'output_file' : 'teo_sources_high_potential.csv'
+        },
+    'TEO_LOW_POTENTIAL' : {
+        'path': 'heat_sources/low_potential/teo_heat_sources_delivery_areas_groningen_beperkt.geojson',
+        'rename_attributes': {
+                                'name': 'source_name',
+                                'capacity': 'available_heat'
+                             },
+        'attributes_to_keep': ['source_name', 'available_heat'],
+        'identifier': 'TEOLP',
+        'output_file' : 'teo_sources_low_potential.csv'
         }
     }
 
