@@ -41,6 +41,7 @@ class Bookkeeper:
                 'E': 0.,
                 'H': 0.,
                 'geothermal': 0.,
+                'TEO': 0.,
                 'HT': 0.,
                 'MT': 0.,
                 'LT': 0.,
@@ -54,6 +55,7 @@ class Bookkeeper:
                 'E': 0.,
                 'H': 0.,
                 'geothermal': 0.,
+                'TEO': 0.,
                 'HT': 0.,
                 'MT': 0.,
                 'LT': 0.,
@@ -228,7 +230,7 @@ class Bookkeeper:
 
         # Define the columns variable
         columns = [
-            'neighbourhood', 'type', 'E', 'H', 'geothermal', 'HT', 'MT', 'LT',
+            'neighbourhood', 'type', 'E', 'H', 'geothermal', 'TEO', 'HT', 'MT', 'LT',
             'undefined', 'backup', 'undecided', 'useful_heat', 'heat_reduction'
         ]
 

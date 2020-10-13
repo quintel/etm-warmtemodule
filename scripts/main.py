@@ -206,7 +206,7 @@ def determine_distance_from_neighbourhood_to_source(neighbourhoods, heat_sources
             assigned_heat_source_code = neighbourhood.assigned_heat_source
 
             # If so, find the corresponding heat source object
-            if not assigned_heat_source_code in ["geothermal", "undefined"]:
+            if not assigned_heat_source_code in ["geothermal", 'TEO', "undefined"]:
                 heat_type = assigned_heat_source_code[0:2]
                 assigned_heat_source = heat_sources[heat_type][assigned_heat_source_code]
 

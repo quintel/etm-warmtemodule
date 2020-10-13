@@ -111,21 +111,24 @@ SCENARIOS = {
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
-        'geothermal': 'geothermal_sources_high_potential.csv'
+        'geothermal': 'geothermal_sources_high_potential.csv',
+        'teo': 'teo_sources_high_potential.csv'
     },
     'scenario_2': { # beperkt gas, ruim warmte
         'renewable_gas_budget': 19.E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
-        'geothermal': 'geothermal_sources_high_potential.csv'
+        'geothermal': 'geothermal_sources_high_potential.csv',
+        'teo': 'teo_sources_high_potential.csv'
     },
     'scenario_3': { # beperkt gas, beperkt warmte
         'renewable_gas_budget': 19.E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_low_potential.csv',
         'lt_heat': 'lt_sources_low_potential.csv',
-        'geothermal': 'geothermal_sources_low_potential.csv'
+        'geothermal': 'geothermal_sources_low_potential.csv',
+        'teo': 'teo_sources_low_potential.csv'
     }
 }
 

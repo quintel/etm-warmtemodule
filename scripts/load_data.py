@@ -383,6 +383,9 @@ def map_heat_sources_to_neighbourhoods(neighbourhoods, heat_sources,
         elif source_type == 'geothermal':
             neighbourhood.geothermal_available = bool(neighbourhood_dict[code])
 
+        elif source_type == 'teo':
+            neighbourhood.teo_available = bool(neighbourhood_dict[code])
+
     return neighbourhoods
 
 
@@ -420,7 +423,7 @@ def export_data_to_csv(neighbourhoods):
         'number_of_house_equivalents_utility', 'm2_of_utility',
         'total_heat_demand_of_residences', 'total_heat_demand_of_utility',
         'total_electricity_demand_of_residences',
-        'total_electricity_demand_of_utility', 'geothermal_available',
+        'total_electricity_demand_of_utility', 'geothermal_available', 'teo_available',
         'ht_sources_available', 'lt_sources_available', 'preference_W_MTHT',
         'preference_H', 'preference_E', 'elegible_W_LT', 'force_heat_network'
     ]
@@ -462,6 +465,8 @@ def export_data_to_csv(neighbourhoods):
                 neighbourhood.total_electricity_demand_of_utility(),
                 'geothermal_available':
                 neighbourhood.geothermal_available,
+                'teo_available':
+                neighbourhood.teo_available,
                 'ht_sources_available':
                 neighbourhood.ht_sources_available,
                 'lt_sources_available':
@@ -532,6 +537,11 @@ def initialise_neighbourhoods_and_heat_sources():
         config.current_project.current_scenario['geothermal'])
     neighbourhoods = map_heat_sources_to_neighbourhoods(
         neighbourhoods, geothermal_sources, 'geothermal')
+
+    # Initialise TEO sources and map to neighbourhoods
+    teo_sources = initialise_heat_sources(config.current_project.current_scenario['teo'])
+    neighbourhoods = map_heat_sources_to_neighbourhoods(
+    neighbourhoods, teo_sources, 'teo')
 
     # Pickle neighbourhoods and heat sources
     # Geothermal is not saved as only availability ('yes'/'no') is relevant
