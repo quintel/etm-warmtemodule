@@ -1,0 +1,3433 @@
+neighbourhood_code,neighbourhood_name
+BU18920104,Moerkapelle-Oost
+BU18920105,Bedrijventerrein Moerkapelle
+BU18920106,Moerkapelle kassengebied
+BU18920107,Jonge Veenen
+BU18920191,Verspreide bebouwing Moerkapelle
+BU18920201,Kern Zevenhuizen
+BU18920202,Swanla
+BU18920203,Zevenhuizen Bloemenbuurt
+BU18920204,Bedrijventerrein Zevenhuizen
+BU18920205,Zevenhuizen-West 1
+BU18920206,Zevenhuizen-West 2
+BU18920207,Recreatiepark De Korenmolen
+BU18920208,Recreatiepark De Bonk
+BU18920209,Oud Verlaat
+BU18920211,Zevenhuizen-Zuid
+BU18920291,Verspreide bebouwing Tweemanspolder
+BU18920292,Verspreide bebouwing Zuidplaspolder Zevenhuizen
+BU18920293,Verspreide bebouwing Eendragtspolder
+BU04020506,Egelshoek
+BU16960300,Oud-Loosdrecht
+BU04847001,Nesse
+BU16960400,Nieuw-Loosdrechtsedijk
+BU04847002,Rijneveld-Noord
+BU16960401,Muijeveld
+BU04847003,Rijneveld-Zuid
+BU19040801,Polder Aetsveld
+BU16960402,Boomhoek
+BU04847004,Laag Boskoop
+BU19040802,Polder Garsten Noord
+BU04847005,Draaistok
+BU19040803,Kanaalzone sector Nigtevecht
+BU04847006,Biezen-West
+BU19040804,Nigtevecht Dorp
+BU04847007,Biezen-Oost
+BU19040805,Nigtevecht Garsten
+BU04847008,Zonnedauw
+BU04847009,Snijdelwijk
+BU04847010,Vogelbuurt
+BU04020905,Landelijk Gebied 95
+BU04847011,Voorofschebuurt
+BU04847012,Appelbuurt
+BU04847013,Botanicusbuurt
+BU04847014,Zuidwijk
+BU04847015,Spoelwijk
+BU00803601,Camminghaburen-Noord
+BU00803701,Grote Wielen
+BU16213344,Kruisweg
+BU18920101,Kern Moerkapelle
+BU18920102,Wilde Veenen
+BU18920103,Moerkapelle-West
+BU00580000,Dokkum binnen de Bolwerken
+BU00580001,Dokkum Noord
+BU00580002,Dokkum Fonteinslanden
+BU00580003,Dokkum Fugellan
+BU00580004,Dokkum Betterwird
+BU00580005,Dokkum Hoedemakerspolder
+BU00580006,Dokkum De Woudhorne
+BU00580007,De Trije Terpen
+BU00580008,Dokkum Weeshuislanden
+BU00580009,Dokkum Jantjeszeepolder
+BU00580010,Dokkum Kooilanden
+BU00580011,Dokkum Hogedijken
+BU00580100,Metslawier
+BU00580101,Jouswier
+BU00580102,Niawier
+BU00580103,Wetsens
+BU00580104,Aalsum
+BU00580105,Oostrum
+BU00580107,Verspreide huizen Metslawier
+BU00580108,Verspreide huizen Niawier
+BU00580109,Verspreide huizen Oostrum
+BU00580200,Ee
+BU00580201,Engwierum
+BU00580202,Dokkumer Nieuwe Zijlen
+BU00580208,Verspreide huizen Ee
+BU00580209,Verspreide huizen Engwierum
+BU00580300,Anjum
+BU00580301,Lioessens
+BU00580302,Morra
+BU00580303,Oostmahorn
+BU00580307,Verspreide huizen Anjum
+BU00580308,Verspreide huizen Lioessens
+BU00580309,Verspreide huizen Morra
+BU00580400,Oosternijkerk
+BU00580401,Paesens
+BU00580408,Verspreide huizen Oosternijkerk
+BU00580409,Verspreide huizen Paesens
+BU00580500,Ternaard
+BU00580501,Wierum
+BU00580502,Nes
+BU00580503,Moddergat
+BU00580506,Verspreide huizen Ternaard
+BU00580507,Verspreide huizen Wierum
+BU00580508,Verspreide huizen Nes
+BU00580509,Verspreide huizen Moddergat
+BU00580600,Holwerd
+BU00580601,Waaxens
+BU00580602,Brantgum
+BU00580603,Foudgum
+BU00580604,Bornwird
+BU00580605,Raard
+BU00580608,Verspreide huizen Holwerd
+BU00580609,Verspreide huizen Brantgum
+BU00580700,Hantum
+BU00580701,Hantumhuizen
+BU00580702,Hantumeruitburen
+BU00580703,Hiaure
+BU00580708,Verspreide huizen Hantum
+BU00580709,Verspreide huizen Hantumhuizen
+BU00590000,Buitenpost
+BU00590001,Twijzel
+BU00590002,Kootstertille
+BU00590003,Twijzelerheide
+BU00590004,Gerkesklooster
+BU00590005,Verspreide huizen Buitenpost
+BU00590006,Verspreide huizen Twijzel
+BU00590007,Verspreide huizen Kootstertille
+BU00590008,Verspreide huizen Twijzelerheide
+BU00590009,Verspreide huizen Gerkesklooster
+BU00590100,Stroobos
+BU00590102,Drogeham
+BU00590103,Augustinusga
+BU00590107,Verspreide huizen Stroobos
+BU00590108,Verspreide huizen Drogeham
+BU00590109,Verspreide huizen Augustinusga
+BU00590200,Surhuisterveen
+BU00590201,Harkema
+BU00590202,Surhuizum
+BU00590203,Boelenslaan
+BU00590206,Verspreide huizen Surhuisterveen
+BU00590207,Verspreide huizen Harkema
+BU00590208,Verspreide huizen Surhuizum
+BU00590209,Verspreide huizen Boelenslaan
+BU00600000,Nes
+BU00600001,Buren
+BU00600002,Ballum
+BU00600003,Hollum
+BU00600007,Verspreide huizen Ballum
+BU00600008,Verspreide huizen Nes
+BU00600009,Verspreide huizen Hollum
+BU00790000,Kollum
+BU00790009,Verspreide huizen Kollum
+BU00790100,Burum
+BU00790101,Kollumerpomp
+BU00790102,Warfstermolen
+BU00790103,Munnekezijl
+BU00790104,Augsbuurt
+BU00790106,Verspreide huizen Burum
+BU00790107,Verspreide huizen Kollumerpomp
+BU00790108,Verspreide huizen Warfstermolen
+BU00790109,Verspreide huizen Munnekezijl
+BU00790200,Oudwoude
+BU00790201,Triemen
+BU00790202,Westergeest
+BU00790208,Verspreide huizen Oudwoude
+BU00790209,Verspreide huizen Westergeest
+BU00790300,Kollumerzwaag
+BU00790301,Zwagerbosch
+BU00790302,Veenklooster
+BU00790309,Verspreide huizen Kollumerzwaag
+BU00803702,De Groene Ster
+BU00880000,Schiermonnikoog
+BU00880009,Verspreide huizen Schiermonnikoog
+BU02790000,Scherpenzeel
+BU02790008,Verspreide huizen ten zuiden van Scherpenzeel
+BU02790009,Verspreide huizen ten noorden van Scherpenzeel
+BU03070100,Hof
+BU03070101,Nieuwstraat
+BU03070102,Mooierstraat
+BU03070103,Lieve Vrouwekerkhof
+BU03070104,Coninckstraat
+BU03070105,Beestenmarkt
+BU03070106,Gote Haag
+BU03070107,Stadhuisplein
+BU03070108,Schimmelpenninckstraat
+BU03070200,Smallepad
+BU03070202,Snouckaertlaan
+BU03070204,Zonnehof
+BU03070205,Weltevreden
+BU03070206,Bloemweg
+BU03070300,Rivierenbuurt-Oost
+BU03070301,Rivierenbuurt-West
+BU03070302,G. van Stellingwerfstraat
+BU03070303,Bloemenbuurt-Oost
+BU03070304,Bloemenbuurt-West
+BU03070305,Bomenbuurt
+BU03070306,Puntenburg
+BU03070307,Piet Mondriaanlaan
+BU03070401,Eemplein
+BU03070402,Geldersestraat
+BU03070403,Chromiumweg
+BU03070404,Uraniumweg
+BU03070500,Birkhoven en Bokkeduinen
+BU03070501,Vlasakkers
+BU03070502,Zon en Schild
+BU03070600,Jericho en Jeruzalem
+BU03070601,Meridiaan
+BU03070603,Gildekwartier
+BU03070700,Evertsenstraat
+BU03070701,Neptunusplein
+BU03070702,Columbusweg
+BU03070800,Vuurtoren
+BU03070801,De Plaatsen
+BU03070803,Koperhorst
+BU03070900,Elly Takmastraat
+BU03070902,Camera Obscurastraat
+BU03070903,Queekhoven
+BU03070905,Het Gein
+BU03071000,Liendertsedreef
+BU03071001,Vinkenbaan
+BU03071002,De Horsten
+BU03071003,Albatrosstraat
+BU03071004,Zwaluwenstraat
+BU03071100,Rustenburg-Noord
+BU03071101,Rustenburg-Zuid
+BU03071201,Bloeidaal
+BU03071202,Stoutenburgerlaan
+BU03071300,Romeostraat
+BU03071301,Ariaweg
+BU03071302,Verdiweg
+BU03071400,Willem III
+BU03071401,Randenbroekerweg
+BU03071402,Bachweg-Zuid
+BU03071403,Weberstraat
+BU03071500,Bekenstein en De Luiaard
+BU03071501,Rubensstraat
+BU03071502,Albert Cuypstraat
+BU03071503,Dorrestein
+BU03071600,De Driehoek
+BU03071601,Voltastraat
+BU03071602,Bosweg
+BU03071603,Nimmerdor
+BU03071700,Westerstraat
+BU03071701,Juliana van Stolberg
+BU03071702,Huygenslaan
+BU03071703,De Lichtenberg
+BU03071704,Verhoevenstraat
+BU03071705,Indische Buurt
+BU03071706,Curacaolaan
+BU03071707,Klein Zwitserland
+BU03071800,Regentesselaan
+BU03071801,Station Berkenweg
+BU03071802,Thorbeckeplein
+BU03071803,Mr. Th. Heemskerklaan
+BU03071804,Oranjelaan
+BU03071900,De Ham
+BU03071901,Langenoord
+BU03071902,Bieshaar-Noord
+BU03071903,Bieshaar-Zuid
+BU03071904,De Bik
+BU03071905,De Brinken
+BU03071906,De Biezen
+BU03072000,Vlinderbuurt
+BU03072001,Erasmusstraat
+BU03072002,Muziekbuurt-Noord
+BU03072003,Muziekbuurt-Zuid
+BU03072004,Architectenbuurt-Oost
+BU03072005,Architectenbuurt-West
+BU03072006,Sportpark Zielhorst
+BU03072100,Stille Steeg
+BU03072101,Amaniet
+BU03072102,Woudzoom
+BU03072103,Gesloten Stad
+BU03072104,De Verwondering
+BU03072105,Emiclaer
+BU03072106,Groote Kreek
+BU03072107,Het Hallehuis
+BU03072108,De Horizon
+BU03072201,Calveen
+BU03072300,Park Schothorst-Zuid
+BU03072301,Park Schothorst-Noord
+BU03072400,Stadskwartier
+BU03072402,Hoge Hoven
+BU03072403,Centrum-Wat
+BU03072404,Stadstuin
+BU03072405,Waterkwartier
+BU03072407,Lage Hoven
+BU03072500,De Hoef-West
+BU03072501,De Hoef-Oost
+BU03072502,De Wieken
+BU03072503,Vinkenhoef
+BU03072504,Nijkerkerstraat
+BU03072505,Bedrijventerrein Vathorst-Zuid
+BU03072506,Podium
+BU03072507,Bedrijventerrein Vathorst-Noord
+BU03072508,De Brand
+BU03072600,Dorpskern Hooglanderveen
+BU03072601,Lient
+BU03072602,Hoekveen
+BU03072603,Heideweg
+BU03072700,Coelhorst
+BU03072701,Zeldert
+BU03072709,Maatweg
+BU03072800,Leersumseberg
+BU03072801,Emminkhuizerberg
+BU03072802,Sprengenberg
+BU03072803,Duisterweg
+BU03072804,Cycladen
+BU03072805,Reinier
+BU03072806,Smink
+BU03072900,Roevoeterstraat
+BU03072901,Winkelcentrum
+BU03072902,Damespolder
+BU03073000,De Bron Noord
+BU03073001,De Bron Zuid
+BU03073100,De Laak Oost
+BU03073101,Hoornplantsoen
+BU03073102,Muidenkade
+BU03073103,Hogesteeg
+BU03073104,Vathorst-West
+BU03073108,Vathorst-Noord
+BU03080000,Centrum
+BU03080001,Schoonoordpark
+BU03080002,Transvaal
+BU03080003,Zandvoort
+BU03080004,Oude-Oosterhei
+BU03080005,Nieuwe-Oosterhei
+BU03080006,Pekingpark
+BU03080007,Amaliapark
+BU03080100,Componistenwijk
+BU03080101,Professorenwijk
+BU03080102,Staatsliedenwijk
+BU03080103,Schilderswijk
+BU03080104,Eemdal-Noord
+BU03080105,Eemdal-Zuid
+BU03080109,Eemland waaronder Eembrugge
+BU03080200,Wilhelminapark
+BU03080201,Pr. Hendrikpark
+BU03080400,Verspreide huizen Baarn
+BU03080401,Amerpoort Sherpa
+BU03080500,Lage Vuursche
+BU03080501,Verspreide huizen Lage Vuursche
+BU03100001,Steinenburg
+BU03100002,Weltevreden
+BU03100008,De Bilt
+BU03100009,Verspreide huizen Oostbroek
+BU03100100,Bilthoven-Zuid
+BU03100200,Bilthoven-Noord
+BU03100201,De Leyen
+BU03100209,Verspreide huizen
+BU03100300,Hollandsche Rading
+BU03100309,Verspreide huizen
+BU03100400,Maartensdijk
+BU03100401,Achterwetering
+BU03100402,Nieuwe-Wetering
+BU03100500,Groenekan
+BU03100501,Blauwkapel
+BU03100600,Achttienhoven-Westbroek
+BU03120000,Bunnik
+BU03120001,Vechten
+BU03120008,Verspreide huizen in het noorden
+BU03120009,Verspreide huizen in het zuiden
+BU03120100,Odijk
+BU03120109,Verspreide huizen van Odijk
+BU03120200,Werkhoven
+BU03120209,Verspreide huizen van Werkhoven
+BU03130001,Bunschoten
+BU03130002,Spakenburg
+BU03130003,Eemdijk
+BU03130004,Broerswetering
+BU03130005,Bikkersvaart
+BU03130006,Blokhuiswetering
+BU03130007,De Haar
+BU03130008,Verspreide huizen
+BU03130009,Koenraadswetering
+BU03130011,Rengerswetering
+BU03170210,Eembrugge
+BU03170211,Eemmeer-Eemnes
+BU03170212,Eemnes-Dorp
+BU03170213,Eempolder
+BU03170214,Polder te Veen
+BU03170215,Goyergracht
+BU03170216,Heidehoek
+BU03170217,Noordbuurt
+BU03170218,Wakkerendijk-Meentweg
+BU03170219,Zuidbuurt
+BU03211010,Oude Dorp
+BU03211011,Oorden
+BU03211012,Hoven
+BU03211013,Gaarden
+BU03211014,Hoeven
+BU03211015,Erven
+BU03211016,Poorten
+BU03211017,Slagen
+BU03211018,Borchen
+BU03211019,Campen
+BU03211050,Rondweg Noord-West
+BU03211120,Centrum West
+BU03211121,Centrum Oost
+BU03211122,Molens
+BU03211123,Hagen
+BU03211124,weiden
+BU03211125,Gilden
+BU03211126,velden
+BU03211127,Sloten
+BU03211128,Bermen
+BU03211129,Akkers
+BU03211151,Rondweg Noord-Oost
+BU03211230,Bouwen
+BU03211231,Houten
+BU03211232,Waters
+BU03211233,Polders
+BU03211234,Stenen
+BU03211235,muren
+BU03211236,Castellum West
+BU03211237,Castellum Oost
+BU03211238,Schaften
+BU03211252,Rondweg Zuid-West
+BU03211340,Landen
+BU03211341,Tuinen
+BU03211342,Sporen
+BU03211343,Meren
+BU03211344,Mossen
+BU03211345,Grassen
+BU03211353,Rondweg Zuid-Oost
+BU03212054,De Staart
+BU03212055,Kaden
+BU03212056,vesten
+BU03212057,Schepen
+BU03212058,Boten
+BU03212059,Honen
+BU03212060,Hof van Wulven
+BU03212061,Bruggen
+BU03212062,Bogen
+BU03212063,De Poel
+BU03212064,Buitengebied Houten West
+BU03212065,Buitengebied Houten Oost
+BU03213070,Dorp 't Goy
+BU03213071,'t Goysedorp
+BU03213172,Buitengebied 't Goy
+BU03214080,'t Waal
+BU03214081,Tull
+BU03214182,Buitengebied Tull en 't Waal
+BU03215090,Dorp Schalkwijk West
+BU03215091,Dorp Schalkwijk Oost
+BU03215192,Buitengebied Schalkwijk West
+BU03215193,Buitengebied Schalkwijk Oost
+BU03270000,Hamershof
+BU03270001,Akkerhoeve
+BU03270002,Noorwijck
+BU03270003,Langenbeek
+BU03270004,Zwanenburg
+BU03270005,Munnikhove
+BU03270006,Bosveld
+BU03270007,Claverenblad
+BU03270008,Wildenburg
+BU03270009,Buitengebied Leusden-Centrum Oost
+BU03270100,Hamersveld-Oud
+BU03270101,Hamersveld-Nieuw
+BU03270102,Rozenboom
+BU03270103,Rozendaal
+BU03270104,Alandsbeek-West
+BU03270105,Alandsbeek-Oost
+BU03270106,De Wetering
+BU03270107,Rossenberg
+BU03270108,Groenhouten
+BU03270109,Buitengebied Leusden-Centrum West
+BU03270200,Kern Leusden-Zuid
+BU03270201,Tabaksteeg
+BU03270209,Buitengebied Leusden-Zuid
+BU03270300,Kern Achterveld
+BU03270309,Buitengebied Achterveld
+BU03270400,Stoutenburg
+BU03270500,'t Ruige Veld
+BU03270501,'t Vliet
+BU03310000,Lopik-Dorp
+BU03310001,Graaf
+BU03310002,Uitweg
+BU03310003,Lopikerkapel
+BU03310004,Jaarsveld
+BU03310005,Wielsekade
+BU03310006,Cabauw
+BU03310007,Zevender
+BU03310008,Lekdijk tussen Jaarsveld en Schoonhoven
+BU03310009,Langs de Lekdijk Lopikerwaard
+BU03310010,Benschop-Dorp
+BU03310019,Benschop Boveneind-Benedeneind
+BU03310020,Polsbroek-Dorp
+BU03310029,Polsbroek-Noordzijdseweg-Zuidzijdseweg
+BU03350000,Montfoort
+BU03350001,Tabakshof en Heeswijk (gedeeltelijk)
+BU03350100,Linschoten
+BU03350101,Polanen
+BU03350102,Cattenbroek
+BU03350103,Heeswijk
+BU03350108,Verspreide huizen Linschoten
+BU03350109,Verspreide huizen Mastwijk
+BU03350200,Willeskop
+BU03350201,Blokland
+BU03350202,Beneden Kerkweg
+BU03350209,Verspreide huizen
+BU03390000,Renswoude
+BU03390009,Verspreide huizen
+BU03400001,Rhenen Binnenstad
+BU03400101,Cunera
+BU03400102,Vogelenzang
+BU03400103,Grebbekwartier Zuid
+BU03400104,Grebbekwartier Noord
+BU03400105,Bruine Eng
+BU03400201,Molenberg
+BU03400202,Donderberg
+BU03400203,Koerheuvel
+BU03400301,Rhenen Hoog
+BU03400302,Domineesberg
+BU03400303,Helling Bergweg
+BU03400401,Grebbeberg
+BU03400501,Randzone
+BU03400502,Veeneind
+BU03400503,Rhenendael
+BU03400504,Prattenburg
+BU03400601,Binnenveld
+BU03400701,Achterberg
+BU03400702,De Horst
+BU03400703,Achterberg West
+BU03400801,Uiterwaarden Rhenen
+BU03400901,Remmerden
+BU03401001,Heuvelrug Rhenen
+BU03401101,Heuvelrug Elst
+BU03401201,Uiterwaarden Elst
+BU03401301,De Vordel
+BU03401302,Elst Centrum
+BU03401303,Het Bosje
+BU03401304,Elst West
+BU03420101,Industrieterrein Soest
+BU03420102,'t Hart
+BU03420103,Soestdijk
+BU03420201,Klaarwater
+BU03420301,Pijnenburg
+BU03420302,Het Soesterveen
+BU03420303,De Grachten
+BU03420304,Boerenstreek
+BU03420401,De Eng Noord West
+BU03420402,De Eng
+BU03420403,Soest Midden
+BU03420404,Eemgebied
+BU03420405,De Eng Zuid
+BU03420501,Smitsveen
+BU03420601,De Zoom
+BU03420602,Wieksloot
+BU03420604,Hees
+BU03420605,Klein Engendaal
+BU03420606,Klein Engendaal Noord
+BU03420701,Soest Zuid
+BU03420702,De Birkt
+BU03420703,Soestduinen
+BU03420704,Duinen Gebied
+BU03420705,Paltz
+BU03420706,Vlasakkers
+BU03420801,Soesterberg Noord
+BU03420802,Soesterberg Oost
+BU03420803,Leusderheide
+BU03420804,Soesterberg Kom
+BU03440111,"Welgelegen, Den Hommel"
+BU03440112,Oog in Al
+BU03440113,Halve Maan-Zuid
+BU03440114,Halve Maan-Noord
+BU03440121,Lombok-Oost
+BU03440122,Leidseweg en omgeving
+BU03440123,Lombok-West
+BU03440124,"Laan van Nieuw-Guinea, Spinozaweg e.o."
+BU03440131,"Nieuw Engeland, Th. a. Kempisplantsoen en omgeving"
+BU03440132,"Schepenbuurt, Cartesiusweg e.o."
+BU03440133,Bedrijventerrein Lageweide
+BU03440211,Pijlsweerd-Zuid
+BU03440212,Pijlsweerd-Noord
+BU03440221,"Nijenoord, Hoogstraat en omgeving"
+BU03440222,Ondiep
+BU03440223,2e Daalsebuurt en omgeving
+BU03440224,"Elegantierstraat, MariÃƒÂ«ndaalstraat en omgeving"
+BU03440231,Julianapark en omgeving
+BU03440232,Elinkwijk en omgeving
+BU03440233,Prins Bernhardplein en omgeving
+BU03440241,Geuzenwijk
+BU03440242,Schaakbuurt en omgeving
+BU03440243,Queeckhovenplein en omgeving
+BU03440244,Zuilen-Noord
+BU03440311,Taag- en Rubicondreef en omgeving
+BU03440312,Wolga- en Donaudreef en omgeving
+BU03440321,Zamenhofdreef en omgeving
+BU03440322,Neckardreef en omgeving
+BU03440331,Vechtzoom-zuid
+BU03440332,"Vechtzoom-noord, Klopvaart"
+BU03440333,Bedrijventerrein en omgeving
+BU03440341,Zambesidreef en omgeving
+BU03440342,Tigrisdreef en omgeving
+BU03440343,Poldergebied Overvecht
+BU03440411,Vogelenbuurt
+BU03440412,Lauwerecht
+BU03440413,Staatsliedenbuurt
+BU03440414,Tuinwijk-West
+BU03440415,Tuinwijk-Oost
+BU03440421,Tuindorp en Van Lieflandlaan-West
+BU03440422,Tuindorp-Oost
+BU03440423,Voordorp en Voorveldsepolder
+BU03440431,"Huizingalaan, K. Doormanlaan en omgeving"
+BU03440432,"Zeeheldenbuurt, Hengeveldstraat en omgeving"
+BU03440433,Wittevrouwen
+BU03440511,Buiten Wittevrouwen
+BU03440512,Oudwijk
+BU03440521,Abstede
+BU03440522,Tolsteegsingel
+BU03440523,Rubenslaan en omgeving
+BU03440524,Watervogelbuurt
+BU03440525,L. Napoleonplantsoen en omgeving
+BU03440526,Maarschalkerweerd en Mereveld
+BU03440531,Schildersbuurt
+BU03440532,Wilhelminapark en omgeving
+BU03440533,De Uithof
+BU03440534,Rijnsweerd
+BU03440535,Galgenwaard en omgeving
+BU03440611,"Domplein, Neude, Janskerkhof"
+BU03440612,"Lange Elisabethstraat, Mariaplaats en omgeving"
+BU03440613,Hoog-Catharijne NS en Jaarbeurs
+BU03440621,Wijk C
+BU03440622,Breedstraat en Plompetorengracht en omgeving
+BU03440623,Nobelstraat en omgeving
+BU03440624,Springweg en omgeving Geertebuurt
+BU03440625,Lange Nieuwstraat en omgeving
+BU03440626,Nieuwegracht-Oost
+BU03440627,Bleekstraat en omgeving
+BU03440628,Hooch Boulandt
+BU03440711,Lunetten-Noord
+BU03440712,Lunetten-Zuid
+BU03440721,Tolsteeg en Rotsoord
+BU03440722,Oud Hoograven-Noord
+BU03440723,Oud Hoograven-Zuid
+BU03440731,Bokkenbuurt
+BU03440732,Nieuw Hoograven-Noord
+BU03440733,Nieuw Hoograven-Zuid
+BU03440811,Dichterswijk
+BU03440812,Rivierenwijk
+BU03440821,Bedrijvengebied Kanaleneiland
+BU03440822,Transwijk-Zuid
+BU03440823,Transwijk-Noord
+BU03440831,Kanaleneiland-Zuid
+BU03440832,Kanaleneiland-Noord
+BU03440911,Bedrijventerrein De Wetering
+BU03440912,Terwijde-West
+BU03440913,Terwijde-Oost
+BU03440921,Het Zand-West
+BU03440922,Het Zand-Oost
+BU03440931,Leidsche Rijn-Centrum
+BU03440932,Grauwaart
+BU03440933,Hoge Weide
+BU03440934,Leeuwesteyn
+BU03440941,Parkwijk-Noord
+BU03440942,Parkwijk-Zuid
+BU03440943,Langerak
+BU03440951,Rijnvliet
+BU03440952,Bedrijvengebied Strijkviertel
+BU03440953,Bedrijvengebied Papendorp
+BU03441011,Haarrijn
+BU03441012,Haarzuilens en omgeving
+BU03441013,Vleuten
+BU03441014,MÃƒÂ¡ximapark
+BU03441021,Vleuterweide-West
+BU03441022,Vleuterweide-Noord/Oost/Centrum
+BU03441023,Vleuterweide-Zuid
+BU03441024,Veldhuizen
+BU03441031,De Meern-Noord
+BU03441032,De Meern-Zuid
+BU03441033,Bedrijvengebied Oudenrijn
+BU03441041,Rijnenburg
+BU03450000,Koopcentrum
+BU03450001,Vijgendam en omgeving
+BU03450002,Schrijverswijk
+BU03450003,Beatrixstraat en omgeving
+BU03450100,Dragonder-Noord
+BU03450101,Dragonder-Zuid
+BU03450102,De Compagnie-Oost
+BU03450103,Spitsbergen
+BU03450104,Dragonder-Oost
+BU03450105,Veenendaal-Oost
+BU03450200,Engelenburg
+BU03450201,Het Ambacht
+BU03450202,Boslaan en omgeving
+BU03450203,Petenbos
+BU03450204,Petenbos-Oost
+BU03450205,Nijverkamp
+BU03450206,De Groene Velden
+BU03450207,De Blauwe Hel
+BU03450208,Bezuiden de Middelbuurtseweg
+BU03450300,'t Goeie Spoor en omgeving
+BU03450301,Franse Gat
+BU03450302,Salamander
+BU03450400,Molenbrug
+BU03450401,'t Hoorntje
+BU03450402,De Pol
+BU03450403,De Gelderse blom
+BU03450404,De Compagnie
+BU03450405,De Batterijen
+BU03450500,Oudeveen en De Schans en omgeving
+BU03450501,Componistenbuurt
+BU03450502,Vogelbuurt
+BU03450503,Schepenbuurt
+BU03450504,Dichtersbuurt
+BU03450505,De Faktorij en De Vendel
+BU03450506,Fort Buurtsteeg
+BU03450507,Bezuiden de Dijkstraat
+BU03510001,De Grift
+BU03510002,Nico Bergsteijn
+BU03510003,Nieuwoord
+BU03510004,Laanzicht
+BU03510005,Het Zeeland
+BU03510006,Het Groene Woud
+BU03510007,Woudenberg-Oost
+BU03510008,Bedrijventerrein
+BU03510009,Den Treek-Henschoten
+BU03510010,Geerestein
+BU03510011,Voskuilen
+BU03510012,Rumelaar-Lambalgen
+BU03520000,Wijk bij Duurstede
+BU03520101,Gebied ten zuiden van Amsterdam-Rijnkanaal
+BU03520109,Verspreide huizen
+BU03520200,Cothen
+BU03520209,Verspreide huizen Cothen
+BU03520300,Nederlangbroek
+BU03520301,Nederlangbroek West- en Oostzijde
+BU03520302,Overlangbroek
+BU03520309,Verspreide huizen Langbroek
+BU03530001,IJsselstein-Binnenstad
+BU03530002,Nieuwpoort
+BU03530003,Groenvliet
+BU03530004,Kasteelkwartier
+BU03530005,Europakwartier
+BU03530006,Oranjekwartier
+BU03530007,IJsselveld-Oost
+BU03530008,IJsselveld-West
+BU03530009,IJsseloevers
+BU03530010,Hazenveld en Overwaard
+BU03530011,Rijpickerwaard
+BU03530012,Panoven
+BU03530013,Paardenveld
+BU03530014,Over Oudland
+BU03530015,Industrieterrein Lage Dijk
+BU03530016,Bedrijventerrein De Corridor
+BU03530017,De Hoven en De Boomgaard
+BU03530018,De Tuinen
+BU03530019,Het Hart
+BU03530020,De Wereldsteden
+BU03530021,De Rivieren
+BU03530022,Het Staatse
+BU03530023,Benschopperpoort en Het Podium
+BU03530024,Achterveld-Zuid
+BU03530025,Achterveld-West
+BU03530026,Achterveld-Noord
+BU03530027,Achterveld-Oost
+BU03530028,Eiterse Waard
+BU03530029,Landelijk gebied Noord
+BU03530030,Landelijk gebied Zuid
+BU03550101,CarrÃƒÂ©
+BU03550102,Centrumschil-Zuid
+BU03550103,Centrumschil-Noord
+BU03550104,Lyceumkwartier
+BU03550105,Het Slot en omgeving
+BU03550201,Patijnpark
+BU03550202,Dijnselburg
+BU03550203,Staatsliedenkwartier
+BU03550204,Mooi Zeist
+BU03550205,Vollenhove
+BU03550206,Utrechtseweg
+BU03550301,Griffensteijn en Kersbergen
+BU03550302,Nijenheim
+BU03550303,Crosesteijn
+BU03550304,Vogelwijk
+BU03550305,Brugakker
+BU03550306,De Clomp
+BU03550307,Couwenhoven
+BU03550308,Blikkenburg e.o.
+BU03550309,Weidegebied
+BU03550401,Hoge Dennen
+BU03550402,Kerckebosch
+BU03550403,Driebergseweg
+BU03550404,Station NS
+BU03550405,Zeister Bos
+BU03550406,Austerlitz
+BU03550407,Verspreide huizen Austerlitz
+BU03550501,Huis ter Heide-Zuid
+BU03550502,Huis ter Heide-Noord
+BU03550503,Bosch en Duin
+BU03550504,Beukbergen
+BU03550505,Den Dolder-Zuid
+BU03550506,Den Dolder-Noord
+BU03550507,Soestdijkerweg en omgeving
+BU03550508,Sterrenberg
+BU03560100,Jutphaas Wijkersloot
+BU03560200,Zuilenstein
+BU03560300,Batau Zuid
+BU03560400,Batau Noord
+BU03560500,Doorslag
+BU03560600,Huis de Geer
+BU03560700,Blokhoeve
+BU03560800,Galecop
+BU03561000,Fokkesteeg
+BU03561100,Hoogzandveld
+BU03561200,Lekboulevard
+BU03561300,Vreeswijk
+BU03561400,Merwestein
+BU03561500,Park Oudegein
+BU03561600,Zandveld
+BU03561800,Het Klooster
+BU03562000,Laagraven
+BU03562100,Plettenburg
+BU03562200,De Wiers
+BU03562300,Hoge Landen
+BU03562400,Stadscentrum
+BU03580000,Centrum
+BU03580001,Stommeer
+BU03580004,Hornmeer
+BU03580005,Uiterweg
+BU03580100,Kudelstaart
+BU03580200,Bovenlanden
+BU03580201,Greenpark
+BU03580205,Oosteinde
+BU03580206,Schinkelpolder
+BU03610904,Zuidschermer
+BU03611006,Markenbinnen
+BU03620101,Randwijck West
+BU03620102,Randwijck Oost
+BU03620201,Oranjebuurt
+BU03620202,Patrimonium
+BU03620301,Elsrijk West
+BU03620302,Kruiskerkbuurt
+BU03620303,Vredeveldbuurt
+BU03620304,Elsrijk Oost
+BU03620401,Stadshart
+BU03620501,Uilenstede
+BU03620502,Kronenburg
+BU03620601,Heldenbuurt
+BU03620602,Zeestratenbuurt
+BU03620603,Boekenbuurt
+BU03620604,Operabuurt
+BU03620701,Middelpolder
+BU03620702,Buurt over Ouderkerk
+BU03620801,Oude Dorp
+BU03620802,Kastanjebuurt
+BU03620803,Van der Leekbuurt
+BU03620804,Populierenbuurt
+BU03620805,Augustinuspark
+BU03620806,Startbaanbuurt
+BU03620901,Langerhuize
+BU03620902,Alpen Rondwegbuurt
+BU03620903,In de Wolkenbuurt
+BU03620904,Watercirkelbuurt
+BU03620905,Kringloopbuurt
+BU03621001,Beroepenbuurt
+BU03621002,Hemellichamenbuurt
+BU03621003,Punterbuurt
+BU03621004,Molenbuurt
+BU03621005,Galjoenbuurt
+BU03621101,Bovenkerk
+BU03621102,Buitenplaatsenbuurt
+BU03621103,Betsy Perkbuurt
+BU03621104,Legmeer
+BU03621105,Landschappenbuurt
+BU03621106,Theaterbuurt
+BU03621201,Kastelenbuurt
+BU03621202,Schrijversbuurt
+BU03621203,Kruidenbuurt
+BU03621204,De Scheg
+BU03621301,Nes aan de Amstel
+BU03621302,Legmeerpolder
+BU03621401,Amsterdamse Bos Noord
+BU03621402,Amsterdamse Bos Zuid
+BU03750000,Wijkertoren
+BU03750001,Meerplein
+BU03750002,Koningstraat
+BU03750003,Burgerhartstraat
+BU03750004,Sint Aagtendorp
+BU03750005,Reguliersstraat
+BU03750100,Vondellaan
+BU03750101,Ronde Boogaard
+BU03750102,Westerhout
+BU03750200,Oranjebuurt
+BU03750201,Oud Sportpark
+BU03750202,Beijnes
+BU03750300,Plantage
+BU03750301,Oostertuinen
+BU03750302,Kuenenplein
+BU03750303,De Naald
+BU03750400,Warande
+BU03750401,De Horn
+BU03750500,Westertuinen
+BU03750501,Creutzberglaan
+BU03750502,Binnenduin
+BU03750600,Oosterwijk
+BU03750601,Zwaansmeer
+BU03750700,Bleriotlaan
+BU03750701,Fokkerlaan
+BU03750702,Wijkerbaan
+BU03750703,Overbos
+BU03750800,Wijk aan Zee
+BU03750801,Industriegebied Hoogovens
+BU03750900,De Pijp
+BU03750901,Kagerweg
+BU03750902,Wijkerbroek
+BU03751000,Lanen
+BU03751001,De Ladder Noord
+BU03751002,De Ladder Zuid
+BU03751003,Waterwijk
+BU03770000,Bloemendaal
+BU03770001,Veen en Duin
+BU03770002,Wildhoef
+BU03770003,Duinlustpark
+BU03770004,Provinciaal Ziekenhuis
+BU03770005,De Rijp
+BU03770009,Verspreide huizen Bloemendaal
+BU03770100,Overveen
+BU03770101,Oldenhove
+BU03770109,Overveen-West
+BU03770200,Aerdenhout-Centrum
+BU03770201,Aerdenhout-West
+BU03770202,Aerdenhout-Noord
+BU03770209,Aerdenhout-Zuid
+BU03770300,Vogelenzang
+BU03770309,Verspreide huizen Vogelenzang
+BU03770400,Oude Kern Bennebroek
+BU03770401,Villawijk Het Duin
+BU03770402,Leidsevaart- Bloemhof
+BU03770403,Villawijk Bijweg
+BU03770404,Meerwijk
+BU03770409,Vogelenzang Psychiatrisch Ziekenhuis
+BU03830001,Centrum-Noord
+BU03830011,Centrum-Zuid
+BU03830101,Oranjebuurt
+BU03830111,Kooiweg
+BU03830201,Molendijk
+BU03830211,Noord-End
+BU03830221,Albert's Hoeve
+BU03830301,Beverwijkerstraatweg
+BU03830311,Buitengebied
+BU03830401,Bakkum-Noord
+BU03830411,Bakkum-Zuid
+BU03830421,Duin en Bosch
+BU03830431,Duingebied
+BU03830501,Akersloot Oost
+BU03830511,Akersloot West
+BU03830601,De Woude
+BU03830701,Limmen West
+BU03830711,Limmen Centrum
+BU03830721,Limmen Oost
+BU03930000,Halfweg
+BU03930002,Spaarnwoude
+BU03930003,Spaarndam (gedeeltelijk)
+BU03930004,Haarlemmerliede en Penningsveer
+BU03930009,Verspreide huizen Houtrakpolder
+BU03960100,Centrum
+BU03960101,Zaalbergkwartier
+BU03960200,Commandeurs
+BU03960201,Eikenhof
+BU03960202,Landgoed Marquette
+BU03960300,Oud Haarlem
+BU03960301,Harteheem
+BU03960302,Oosterwijk
+BU03960303,Zuidbroek
+BU03960400,De Houtwegen
+BU03960401,Industriegebied
+BU03960402,Heemskerkerduin
+BU03960403,Noorddorp
+BU03960404,Westertuinen
+BU03960408,Business park Ijmond
+BU03960409,Duingebied
+BU03960500,Poelenburg
+BU03960501,Oosterzij
+BU03960502,Neksloot
+BU03960503,Steenstrapark
+BU03960600,De Maer
+BU03960601,De Die
+BU03960602,Rendorppark
+BU03960603,Breedweer
+BU03960604,Tolhek
+BU03960605,De Trompet
+BU03960607,Noorderveld
+BU03960700,Onderwijzersbuurt
+BU03960701,Villabuurt
+BU03960702,Beijnesbuurt
+BU03960800,Slotherenbuurt
+BU03960801,Verzetstrijdersbuurt
+BU03960802,Beijerlust
+BU03960900,Hoogdorp
+BU03960901,Waterakkers
+BU03961001,De Citadel
+BU03961002,De Wadden
+BU03961100,Landelijk gebied
+BU03970000,Centrum
+BU03970001,"Oude Dorp, Indische buurt en omgeving"
+BU03970002,Zandvoortselaan en Berkenrode en omgeving
+BU03970003,"Heemsteedse Dreef, Schildersbuurt en omgeving"
+BU03970004,Van Merlenbuurt en Valkenburgerplein en omgeving
+BU03970005,Schouwbroekerpolder
+BU03970006,Rivierenbuurt
+BU03970007,Kennemerduin en omgeving
+BU03970008,Provincienbuurt
+BU03970009,Geleerdenbuurt
+BU03970100,De Glip
+BU03970101,Glipper Dreef en Staatsliedenbuurt
+BU03970102,Manpad en Hartekamp
+BU03970200,Dichters- en Vogelbuurt
+BU04370000,Ouderkerk aan de Amstel
+BU04370001,Duivendrecht
+BU04370002,Industriegebied Amstel
+BU04370006,Verspreide huizen in de Rondehoeppolder
+BU04370007,Verspreide huizen in de Duivendrechtsche polder
+BU04370008,Verspreide huizen in de Bullewijker polder
+BU04370009,Verspreide huizen langs De Bullewijk en De Hole
+BU04500001,De Koog
+BU04500002,De Kleis
+BU04500003,Waldijk
+BU04500004,Oude Dorp
+BU04500005,Bedrijventerrein
+BU04500006,Buitengebied
+BU04511500,Dorpscentrumcentrum
+BU04512500,Thamerdal
+BU04513500,Zijdelwaard
+BU04514500,Legmeer
+BU04515000,Langs de Vuurlinie
+BU04515500,Veilinggebied
+BU04516500,Meerwijk
+BU04517500,Bedrijventerrein
+BU04518500,Meerwijk
+BU04519000,Glastuinbouwgebied
+BU04519500,Veenweidegebied
+BU04730101,Boulevard Noord
+BU04730102,Stations omgeving
+BU04730103,Oud Noord
+BU04730104,Nieuw Noord - bedrijven
+BU04730105,Nieuw Noord - wonen
+BU04730106,Sport Circuit
+BU04730107,Recreatiepark
+BU04730201,Boulevard Midden
+BU04730202,Boulevard Zuid
+BU04730203,Brederode- Gerkestraat e.o.
+BU04730204,Zandvoortselaan
+BU04730205,Kostverloren e.o.
+BU04730206,Centrum
+BU04730301,Bentveld Noord
+BU04730302,Bentveld Zuid
+BU04730401,Noord strand
+BU04730402,Zuid strand
+BU04730403,Zuid duinen
+BU04730404,Noord duinen
+BU04820101,Cortgene
+BU04820102,Redersbuurt
+BU04820103,kerkbuurt
+BU04820104,Polderbuurt
+BU04820105,De Werven
+BU04820201,Dijk
+BU04820202,Vogelbuurt
+BU04820203,Waterland
+BU04820204,Groene Long
+BU04820205,Rivierenbuurt
+BU04820206,Nieuw Kinderdijk
+BU04820301,Zeelt
+BU04820302,Middelland
+BU04820303,Blokweer Noord
+BU04820304,Blokweer Zuid
+BU04820305,Drentsebuurt
+BU04820306,Florabuurt
+BU04820307,Staatsliedenbuurt
+BU04820401,Schildersbuurt
+BU04820402,Schrijversbuurt
+BU04820403,Klein Alblas
+BU04820404,Oranjebuurt
+BU04820501,Vinkenwaard
+BU04820502,Hoogendijk
+BU04820503,Nieuwland
+BU04820601,Polder Blokweer
+BU04820602,Polder Kortland
+BU04820603,Polder Souburgh
+BU04820604,Polder Vinkenwaard
+BU04890101,Centrum
+BU04890102,Centrum Oost
+BU04890103,Centrum West
+BU04890204,Noord 1
+BU04890205,Noord 2
+BU04890206,Noord 3
+BU04890207,Noord 4
+BU04890308,Binnenland
+BU04890409,Oranjewijk 1
+BU04890410,Oranjewijk 2
+BU04890511,Buitenoord 1
+BU04890512,Buitenoord 2
+BU04890513,Buitenoord 3
+BU04890614,Ter Leede
+BU04890715,Paddewei
+BU04890816,Molenvliet 1
+BU04890817,Molenvliet 2
+BU04890918,Nieuweland 1
+BU04890919,Nieuweland 2
+BU04890920,Nieuweland 3
+BU04890921,Nieuweland 4
+BU04890922,Nieuweland 5
+BU04891023,Dorpzicht
+BU04891124,Bijdorp
+BU04891225,Smitshoek
+BU04891226,Smitshoek 1
+BU04891227,Smitshoek 2
+BU04891328,Voordijk
+BU04891429,Meerwede Noordoost
+BU04891430,Meerwede Noordwest
+BU04891431,Meerwede Zuidoost
+BU04891432,Meerwede Zuidwest
+BU04891533,Waterkant
+BU04891634,Havenkwartier
+BU04891735,Gaatkensoog
+BU04891836,Riederhoek
+BU04891937,Vrijheidsakker
+BU04892039,Vrijenburg
+BU04893050,Sportpark Smitshoek
+BU04893051,Sint Clarabos
+BU04893052,Vrijenburgbos
+BU04893053,Kooiwalbos
+BU04893054,Dordtsestraatweg
+BU04893160,Koedood
+BU04893161,Achterzeedijk West
+BU04893162,Achterzeedijk Oost
+BU04893163,Noldijk
+BU04893164,Kilweg
+BU04895070,BT Reijerswaard
+BU04895071,BT Cornelisland
+BU04895072,BT Dierenstein
+BU04895073,BT Veiling
+BU04895074,BT Handelscentrum
+BU04895075,BT Gebroken Meeldijk
+BU04895076,BT Ziedewij
+BU04895077,BT Bijdorp
+BU04895078,BT Kilweg Noord
+BU04895080,BT Achterzeedijk
+BU04895081,BT Vaanpark 1
+BU04895082,BT Vaanpark 2
+BU04895083,BT Vaanpark 3
+BU04895084,BT Vaanpark 4
+BU05010000,Brielle
+BU05010001,Spuilaan en omgeving
+BU05010002,De Kapel en omgeving
+BU05010003,Rugge
+BU05010004,Noord Meeuwenoord
+BU05010005,Kleine Goote
+BU05010006,Nieuwland
+BU05010009,Verspreide huizen
+BU05010100,Vierpolders
+BU05010109,Verspreide huizen
+BU05010200,Zwartewaal
+BU05010201,Tuindorp-Hofstede
+BU05010202,Zalmlaan
+BU05010209,Verspreide huizen
+BU05010300,Recreatiestrook Brielse Maas
+BU05020110,IJsseldijk
+BU05020111,Redebuurt
+BU05020112,Industrieterrein-West
+BU05020113,Zeeheldenbuurt-West
+BU05020114,Zeeheldenbuurt-Oost
+BU05020115,Chopin-buurt
+BU05020116,Bizet-buurt
+BU05020117,Paganini-buurt
+BU05020118,Rossini-buurt
+BU05020119,Puccini-buurt
+BU05020223,Reviusbuurt
+BU05020224,Dichtersbuurt
+BU05020225,Merelbuurt
+BU05020226,Schildersbuurt
+BU05020227,Valeriusbuurt
+BU05020228,Rozenburcht
+BU05020229,Oude plaats
+BU05020332,Hovenbuurt
+BU05020333,Koperwiek
+BU05020334,Meeuwenbuurt
+BU05020335,Alkenoord
+BU05020336,Vuykterrein
+BU05020337,Oude Kern
+BU05020338,Kievitlaan
+BU05020441,De Baronie
+BU05020442,Diepenbuurt
+BU05020443,Dalenbuurt
+BU05020444,Sportpark Couwenhoek
+BU05020445,Eilandenbuurt
+BU05020446,Waardenbuurt
+BU05020447,AWZI Oostgaarde
+BU05020448,Baaienbuurt
+BU05020449,Paradijssel
+BU05020551,Beemster en Purmerhoek
+BU05020552,Schermerhoek
+BU05020553,Wormerhoek
+BU05020554,Scandinavischebuurt
+BU05020555,Amerikaansebuurt
+BU05020556,Bergenbuurt
+BU05020557,Molukkenbuurt
+BU05020621,'s-Gravenweg en Alexanderlaan
+BU05020622,'s-Gravenpark
+BU05020631,Stationsbuurt
+BU05020658,Klaverweide
+BU05020659,Klinkert
+BU05020661,Molenbuurt
+BU05020662,Florabuurt
+BU05020663,Bloemenbuurt-West
+BU05020664,Bloemenbuurt-Oost
+BU05020665,Akker- en Haagwinde
+BU05020666,Sportpark Schenkel
+BU05020770,Dansenbuurt-Noord
+BU05020771,Burgenbuurt
+BU05020772,Dansenbuurt-Zuid
+BU05020773,Ervenbuurt
+BU05020774,Stadsdeelpark
+BU05020775,Instrumentenbuurt
+BU05020776,Kunstenaarsbuurt
+BU05020777,Operabuurt
+BU05020778,Gebouwenbuurt
+BU05020779,Schildersvormenbuurt
+BU05020880,Hoofdweg Sector E en F
+BU05020881,Hoofdweg Sector A
+BU05020882,Hoofdweg Sector B
+BU05020883,Hoofdweg Sector C
+BU05020884,Hoofdweg Sector D
+BU05020885,Hoofdweg Sector G
+BU05020886,Sporenbuurt-West
+BU05020887,Sporenbuurt-Oost
+BU05020888,Tuinenbuurt
+BU05020889,Kunstenaarsbuurt-Noord
+BU05020991,Fascinatio West
+BU05020992,Fascinatio Oost
+BU05020993,Capelsebrug
+BU05020994,Rijckevorselpark
+BU05020995,Rivium 1e straat
+BU05020996,AWZI Rivium
+BU05020997,Rivium 2e straat
+BU05020998,Rivium Promenade
+BU05031100,Bedrijventerrein Wateringseweg
+BU05031101,Centrum-Noord
+BU05031102,Centrum-West
+BU05031103,Centrum-Oost
+BU05031104,Centrum
+BU05031105,Stationsbuurt
+BU05031106,Centrum-Zuidwest
+BU05031107,In de Veste
+BU05031108,Centrum-Zuidoost
+BU05031109,Zuidpoort
+BU05031200,Bedrijventerrein Haagweg
+BU05031201,Indische Buurt-Noord
+BU05031202,Indische Buurt-Zuid
+BU05031203,Sint Joris
+BU05031204,Koepoort
+BU05031205,Bomenwijk
+BU05031206,Biesland
+BU05031207,Heilige Land
+BU05031208,Bedrijventerrein Delftse Poort-West
+BU05031300,Bedrijventerrein Altena
+BU05031301,Agnetaparkbuurt
+BU05031302,Ministersbuurt-West
+BU05031303,Ministersbuurt-Oost
+BU05031304,Westeindebuurt
+BU05031305,Olofsbuurt
+BU05031306,Krakeelpolder
+BU05031307,Westerkwartier
+BU05031400,Kuyperwijk-Noord
+BU05031401,Kuyperwijk-Zuid
+BU05031402,Ecodus
+BU05031403,Marlot
+BU05031404,Westlandhof
+BU05031405,Hoornse Hof
+BU05031406,Den Hoorn
+BU05031407,Molenbuurt
+BU05031600,De Bras
+BU05031601,Bedrijventerrein Ypenburgsepoort
+BU05031602,De Grote Plas
+BU05031603,Bedrijventerrein Delftse Poort-Oost
+BU05031604,Hoflaan
+BU05032200,Bedrijventerrein Tanthof-West
+BU05032201,Afrikabuurt-West
+BU05032202,Afrikabuurt-Oost
+BU05032203,Latijns Amerikabuurt
+BU05032204,AziÃƒÂ«buurt
+BU05032205,Tanthofkadebuurt
+BU05032300,Bedrijventerrein Tanthof-Oost
+BU05032301,Boerderijbuurt
+BU05032302,Dierenbuurt
+BU05032303,Vogelbuurt-West
+BU05032304,Vogelbuurt-Oost
+BU05032305,Bosrand
+BU05032400,Poptahof-Noord
+BU05032401,Poptahof-Zuid
+BU05032402,Bedrijventerrein Voorhof
+BU05032403,Mythologiebuurt
+BU05032404,Aart van der Leeuwbuurt
+BU05032405,Roland Holstbuurt
+BU05032406,Voorhof-Hoogbouw
+BU05032407,Multatulibuurt
+BU05032408,Bedrijventerrein Vulcanusweg
+BU05032500,Reinier de Graafbuurt
+BU05032501,Buitenhof-Noord
+BU05032502,Juniusbuurt
+BU05032503,Gillisbuurt
+BU05032504,Fledderusbuurt
+BU05032505,Het Rode Dorp
+BU05032506,Pijperring
+BU05032507,Verzetstrijdersbuurt
+BU05032508,Vrijheidsbuurt
+BU05032509,Buitenhof-Zuid
+BU05032510,Kerkpolder
+BU05032600,Abtswoude
+BU05032700,Delftzicht
+BU05032702,Bedrijventerrein Schieweg-Noord
+BU05032703,Bedrijventerrein Schieweg-Zuid
+BU05032704,Schieweg-Polder
+BU05032800,Zeeheldenbuurt
+BU05032801,TU-Noord
+BU05032802,Wippolder-Noord
+BU05032803,Wippolder-Zuid
+BU05032804,Bedrijventerrein Rotterdamseweg-Noord
+BU05032805,TU-Campus
+BU05032806,Professorenbuurt
+BU05032807,Bedrijventerrein Delftech
+BU05032808,Pauwmolen
+BU05032809,Koningsveldbuurt
+BU05032900,Bedrijventerrein Rotterdamseweg-Zuid
+BU05032901,Bedrijventerrein Technopolis
+BU05032902,Ackersdijk
+BU05050100,Nieuwe Haven en omgeving
+BU05050101,Groenmarkt en omgeving
+BU05050102,Grote Markt en omgeving
+BU05050103,Wijnstraat en omgeving
+BU05050104,Kalkhaven
+BU05050105,Achterhakkers en omgeving
+BU05050106,Boogjes en omgeving
+BU05050107,Lombard en omgeving
+BU05050108,Centrum
+BU05050109,Augustijnenkamp en omgeving
+BU05050110,Geldelozepad en omgeving
+BU05050111,Rozenhof en omgeving
+BU05050112,Beverwijcksplein en omgeving
+BU05050113,Burgemeester de Raadtsingel en omgeving
+BU05050114,Kon. Wilhelminastraat en omgeving
+BU05050200,Bleijenhoek
+BU05050201,Stadswerven
+BU05050202,Lijnbaan
+BU05050203,Matena's Pad en omgeving
+BU05050204,Merwestein-Noord
+BU05050205,Kasperspad en omgeving
+BU05050206,Park Merwestein en omgeving
+BU05050300,Zuidendijk
+BU05050301,Viottakade en omgeving
+BU05050302,Erasmuslaan en omgeving
+BU05050303,Breitnerstraat en omgeving
+BU05050304,Jacob Marisstraat en omgeving
+BU05050305,Krispijnse Driehoek
+BU05050306,Jacob Catsstraat en omgeving
+BU05050307,Rembrandtlaan en omgeving
+BU05050400,Pr. Bernhardstraat en omgeving
+BU05050401,Waldeck Pyrmontweg en omgeving
+BU05050402,Anna Paulownastraat en omgeving
+BU05050403,Emmastraat en omgeving
+BU05050404,Bloemenbuurt
+BU05050405,Weizigtpark
+BU05050406,Nieuweweg en omgeving
+BU05050500,Wantijpark en omgeving
+BU05050501,Transvaalstraat en omgeving
+BU05050502,Indische Buurt-Zuid
+BU05050503,Indische Buurt-Noord
+BU05050504,Boeroestraat en omgeving
+BU05050505,Vogelplein-Aalscholverstraat en omgeving
+BU05050506,Hoekenessestraat en omgeving
+BU05050507,Standhasenstraat en omgeving
+BU05050508,Heysterbachstraat en omgeving
+BU05050509,Maria Montessorilaan en omgeving
+BU05050510,Sportterrein Krommedijk
+BU05050600,Plein 1940-1945 en omgeving
+BU05050601,Beekmanstraat en omgeving
+BU05050602,Noorderkwartier
+BU05050603,Amerstraat en omgeving
+BU05050604,Merwedepolder-West
+BU05050605,Merwedepolder-Oost
+BU05050606,Spaarbekken
+BU05050607,1e Merwedehaven en omgeving
+BU05050608,2e Merwedehaven en omgeving
+BU05050700,Admiraalsplein
+BU05050701,Van Kinsbergenstraat en omgeving
+BU05050702,Cornelis Evertsenstraat en omgeving
+BU05050703,Dorus Rijkersstraat en omgeving
+BU05050704,Van Ewijckstraat en omgeving
+BU05050705,Zeehavenlaan en omgeving
+BU05050706,Laan der Verenigde Naties Noord
+BU05050707,Dordtse Hout
+BU05050800,Crabbehof-Zuid
+BU05050801,Crabbehof-Noord
+BU05050802,Zuidhoven
+BU05050900,Sterrenburg 1-West
+BU05050901,Sterrenburg 1-Oost
+BU05050902,Waterman en omgeving
+BU05050903,Driehoek en omgeving
+BU05050904,Blaauwweg en omgeving
+BU05050905,Minnaertweg en omgeving
+BU05050906,Mildenburg en omgeving
+BU05050907,Zuilenburg en omgeving
+BU05050908,Vredenburg en omgeving
+BU05050909,Wittenstein en omgeving
+BU05050910,Smitsweg
+BU05051000,Vissersdijk-West
+BU05051001,Vissersdijk-Beneden
+BU05051002,Vissersdijk-Oost
+BU05051003,Egstraat en omgeving
+BU05051004,Oudendijk en omgeving
+BU05051005,Vissersdijk-Noord
+BU05051006,Dubbeldam-Noord
+BU05051007,Dubbeldam-Zuid
+BU05051008,Bastion locatie
+BU05051009,Locatie Karel Lotsyweg
+BU05051010,Albert Schweitzerplaats
+BU05051011,De Hoven
+BU05051012,Zuidpolder
+BU05051013,Belthure Park
+BU05051100,Amazone en omgeving
+BU05051101,Palissander en omgeving
+BU05051102,Azobe en omgeving
+BU05051103,Iroko en omgeving
+BU05051104,Bedrijventerrein Groene Zoom
+BU05051105,Van Ravesteijn-erf en omgeving
+BU05051106,Van den Broek-erf en omgeving
+BU05051107,Suze Groeneweg-erf en omgeving
+BU05051108,Joke Smit-erf en omgeving
+BU05051109,Pearl Buck-erf en omgeving
+BU05051110,Aletta Jacobs-erf en omgeving
+BU05051111,Johanna Naber-erf en omgeving
+BU05051112,Bildersteeg en omgeving
+BU05051900,Weeskinderendijk en Dokweg
+BU05051901,Handelskade en 's-Gravendeelsedijk
+BU05051902,Voltastraat en omgeving - De Put
+BU05051903,Louterbloemen
+BU05051904,Wilhelminahaven
+BU05051905,Julianahaven
+BU05051906,Krabbegors
+BU05051907,Krabbepolder
+BU05051909,Wieldrecht
+BU05051910,Dordtse Kil I
+BU05051911,Amstelwijck-West
+BU05051912,Schotman terrein
+BU05051913,Locatie Refaja
+BU05051914,Amstelwijck
+BU05051915,Tweede Tol
+BU05051916,Dordtse Kil II
+BU05051917,Dordtse Kil III
+BU05051918,Oostkil
+BU05051919,Dordtse Kil IV
+BU05059800,Merwelanden
+BU05059801,3e Merwedehaven
+BU05059804,Dordtse Biesbosch
+BU05059805,Bovenpolder
+BU05120101,Bovenstad
+BU05120102,Benedenstad
+BU05120200,Wijdschild
+BU05120300,Lingewijk
+BU05120403,Haarwijk West
+BU05120404,Haarwijk Oost
+BU05120500,Stalkaarsen
+BU05120600,Gildenwijk
+BU05120700,Schelluinsestraat
+BU05120800,Avelingen Oost
+BU05120900,Avelingen West
+BU05121000,Molenvliet
+BU05121105,Laag Dalem I
+BU05121106,Laag Dalem II
+BU05121107,Laag Dalem Oost
+BU05121108,Laag Dalem Zuid
+BU05121200,Dalem
+BU05121300,Hoog Dalem
+BU05121409,Linge
+BU05121410,Oost I
+BU05121411,Oost II
+BU05121500,Papland
+BU05121600,Schotdeuren
+BU05121700,Bedrijventerrein Noord
+BU05121800,Landelijk gebied West
+BU05121900,Landelijk gebied Noord
+BU05122000,Landelijk gebied Oost
+BU05122100,Landelijk gebied Zuid
+BU05130100,Nieuwe Markt en omgeving
+BU05130101,De Baan en omgeving
+BU05130102,Turfmarkt en omgeving
+BU05130103,Raam en omgeving
+BU05130104,Nieuwe Park-Oost
+BU05130105,Nieuwe Park-West
+BU05130200,De Korte Akkeren-Oud
+BU05130201,De Korte Akkeren-Nieuw
+BU05130202,Industrieterrein Kromme Gouwe Oost West
+BU05130203,Industrieterrein de Hollandsche IJssel
+BU05130204,Weidebloemkwartier
+BU05130300,Boerhaavekwartier
+BU05130301,Windrooskwartier en Heesterbuurt
+BU05130302,Groenhovenkwartier
+BU05130303,Bloemendaalseweg
+BU05130304,De Goudse Poort
+BU05130305,De Gaardenbuurt
+BU05130400,Hoef- en Veldbuurt
+BU05130401,Zomenbuurt
+BU05130402,Hoevenbuurt
+BU05130403,"Lusten-, Burgen- en Steinenbuurt"
+BU05130404,Grassen- en Waterbuurt
+BU05130405,Bodegraafsestraatweg
+BU05130406,Mammoet
+BU05130407,Wervenbuurt
+BU05130500,Ouwe Gouwe
+BU05130501,Statensingel
+BU05130502,Wethouder Venteweg
+BU05130503,Achterwillenseweg
+BU05130504,Slagenbuurt
+BU05130509,De Goudse Hout
+BU05130600,Oosterwei
+BU05130601,Vreewijk
+BU05130602,Voorwillenseweg
+BU05130603,Kadenbuurt
+BU05130604,Kort Haarlem
+BU05130700,Sportbuurt
+BU05130701,Molenbuurt
+BU05130702,Polderbuurt
+BU05130703,Vrijheidsbuurt
+BU05130704,Componistenbuurt
+BU05130705,Muziekbuurt
+BU05130800,Stolwijkersluis-Oost
+BU05130809,Stolwijkersluis-West
+BU05130900,Gouwestroom
+BU05130901,Ringvaartbocht
+BU05130909,Oostpolder in Schieland
+BU05180170,Oostduinen
+BU05180271,Belgisch Park
+BU05180373,Westbroekpark
+BU05180374,Duttendel
+BU05180448,Nassaubuurt
+BU05180475,Uilennest
+BU05180476,Duinzigt
+BU05180477,Waalsdorp
+BU05180478,Arendsdorp
+BU05180479,Van Hoytemastraat en omgeving
+BU05180546,Archipelbuurt
+BU05180605,Van Stolkpark en Scheveningse Bosjes
+BU05180701,Oud Scheveningen
+BU05180702,Vissershaven
+BU05180703,Scheveningen Badplaats
+BU05180704,Visserijbuurt
+BU05180772,Rijslag
+BU05180800,Duindorp
+BU05180907,Statenkwartier
+BU05180908,Geuzenkwartier
+BU05181041,Zorgvliet
+BU05181142,Stadhoudersplantsoen
+BU05181143,Sweelinckplein en omgeving
+BU05181250,Bloemenbuurt-West
+BU05181251,Bloemenbuurt-Oost
+BU05181252,Bomenbuurt
+BU05181309,Vogelwijk
+BU05181481,Bosjes van Pex
+BU05181492,Bohemen en Meer en Bos
+BU05181590,Ockenburgh
+BU05181591,Kijkduin
+BU05181697,Kraayenstein
+BU05181785,Kerketuinen en Zichtenburg
+BU05181786,Houtwijk
+BU05181795,Kom Loosduinen
+BU05181806,Waldeck-Zuid
+BU05181840,Nieuw Waldeck
+BU05181882,Rosenburg
+BU05181893,Componistenbuurt
+BU05181894,Waldeck-Noord
+BU05181953,Vruchtenbuurt
+BU05181983,Eykenduinen
+BU05182054,Heesterbuurt
+BU05182055,Valkenboskwartier
+BU05182110,Rond de Energiecentrale
+BU05182144,Koningsplein en omgeving
+BU05182245,Zeeheldenkwartier
+BU05182347,Willemspark
+BU05182449,Haagse Bos
+BU05182561,Landen
+BU05182567,Kampen
+BU05182568,Marlot
+BU05182569,Burgen en Horsten
+BU05182664,Bezuidenhout-West
+BU05182665,Bezuidenhout-Midden
+BU05182666,Bezuidenhout-Oost
+BU05182718,Huygenspark
+BU05182762,Rivierenbuurt-Zuid
+BU05182763,Rivierenbuurt-Noord
+BU05182811,Kortenbos
+BU05182812,Voorhout
+BU05182813,Uilebomen
+BU05182814,Zuidwal
+BU05182915,Schildersbuurt-West
+BU05182916,Schildersbuurt-Noord
+BU05182917,Schildersbuurt-Oost
+BU05183032,Transvaalkwartier-Noord
+BU05183033,Transvaalkwartier-Midden
+BU05183034,Transvaalkwartier-Zuid
+BU05183130,Rustenburg
+BU05183131,Oostbroek-Noord
+BU05183135,Oostbroek-Zuid
+BU05183284,Leyenburg
+BU05183387,"Venen, Oorden en Raden"
+BU05183396,"Zijden, Steden en Zichten"
+BU05183398,Dreven en Gaarden
+BU05183399,De Uithof
+BU05183480,Morgenstond-Zuid
+BU05183488,Morgenstond-West
+BU05183489,Morgenstond-Oost
+BU05183536,Zuiderpark
+BU05183620,Moerwijk-Oost
+BU05183637,Moerwijk-West
+BU05183638,Moerwijk-Noord
+BU05183639,Moerwijk-Zuid
+BU05183721,Groente- en Fruitmarkt
+BU05183819,Laakhaven-Oost
+BU05183822,Laakhaven-West
+BU05183823,Spoorwijk
+BU05183824,Laakkwartier-West
+BU05183825,Laakkwartier-Oost
+BU05183826,Noordpolderbuurt
+BU05183960,Binckhorst
+BU05184001,Erasmus Veld
+BU05184002,Hoge Veld
+BU05184003,Parkbuurt oosteinde
+BU05184004,Lage Veld
+BU05184005,Zonne Veld
+BU05184106,Vlietzoom-West
+BU05184107,Vliegeniersbuurt
+BU05184110,De Reef
+BU05184208,Bosweide
+BU05184209,Tedingerbuurt
+BU05184211,De Venen
+BU05184212,Morgenweide
+BU05184213,Singels
+BU05184214,Waterbuurt
+BU05184215,De Bras
+BU05184316,Vlietzoom-Oost
+BU05184317,De Rivieren
+BU05184418,De Lanen
+BU05184419,De Velden
+BU05184420,De Vissen
+BU05184421,Rietbuurt
+BU05230000,Boven-Hardinxveld
+BU05230001,Neder-Hardinxveld
+BU05230002,Giessendam
+BU05230003,De Peulen
+BU05300000,De Vesting
+BU05300001,Glaciswijk
+BU05300003,Groote Weergors
+BU05300004,Marinebuurt
+BU05300005,Dichters- en Schrijversbuurt
+BU05300100,Nieuw-Helvoet
+BU05300101,Bloemen- en Plantenbuurt
+BU05300102,Kulck-Noord
+BU05300103,Kulck-Zuid
+BU05300104,Rijksstraatweg en omgeving
+BU05300105,Dorp en Hoonaart
+BU05300106,Vogelbuurt
+BU05300107,Boomgaard
+BU05300200,Nieuwenhoorn
+BU05300201,'t Lange Land
+BU05300300,Kanaalzicht
+BU05300301,Wittens Hoeck
+BU05300302,Gorsingen Hoeck
+BU05300303,Hooghen Hoeck
+BU05300400,Hout Hoeffe
+BU05300401,Koele Nacht
+BU05300402,Morgen Stont
+BU05300404,Vlotbrug
+BU05300500,Tolhoeck
+BU05300502,Out Jaar
+BU05300503,Logendal
+BU05300504,Kruis Hoeffe
+BU05300505,Salem
+BU05300600,Wagenzicht
+BU05300601,Altena
+BU05300700,Centrumgebied-West
+BU05300701,Centrumgebied-Oost
+BU05300800,Kickers Bloem
+BU05300900,Duinhoeck
+BU05300901,Buitengebied
+BU05300902,Heliushaven
+BU05310101,Dorp
+BU05310102,Oostendam
+BU05310103,Kruiswiel
+BU05310201,Krommeweg-Noord
+BU05310202,Krommeweg-Zuid
+BU05310203,De Sandeling
+BU05310204,Ambachtszone
+BU05310301,Volgerlanden-West
+BU05310302,Volgerlanden-Oost
+BU05310400,Sandelingen-Ambacht
+BU05310501,Antoniapolder
+BU05310502,Noordoevers
+BU05420000,Oud Krimpen
+BU05420001,Kortland-Noord
+BU05420002,Kortland-Zuid
+BU05420003,Boveneind
+BU05420004,Langeland
+BU05420005,Lansingh-Zuid
+BU05450001,Leerdam-Centrum
+BU05450002,Leerdam-West
+BU05450003,Leerdam-Oost
+BU05450004,Leerdam-Noord
+BU05450005,Verspreide huizen Leerdam
+BU05450006,Kedichem
+BU05450007,Schoonrewoerd
+BU05560101,Taanschuurpolder
+BU05560201,Vertobuurt
+BU05560202,Bloemenbuurt
+BU05560203,Bomendal
+BU05560301,Sluispolder Oost
+BU05560302,Sluispolder West
+BU05560303,Binnenstad
+BU05560401,Kapelpolder
+BU05560402,Componistenbuurt
+BU05560403,Koningshoek
+BU05560404,Het Balkon
+BU05560405,Nieuwe waterweg
+BU05560501,Vogelbuurt
+BU05560502,Burgemeesterswijk
+BU05560601,Steendijkpolder Noord
+BU05560602,Steendijkpolder Zuid
+BU05560701,Zuidbuurt
+BU05560702,De Dijk
+BU05560801,Wilgenrijk
+BU05690004,Achttienhoven
+BU05690006,Woerdense Verlaat
+BU05690104,Vrouwenakker
+BU05840001,Bedrijventerrein De Bosschen
+BU05840002,Oosterse Gorzenwijk
+BU05840003,Centrum-Noord
+BU05840004,Croonenburghwijk
+BU05840005,Centrum-Zuid
+BU05840006,Zeeheldenwijk
+BU05840007,Zuidwijk
+BU05840008,Zoomwijck
+BU05840009,Spuioeverwijk
+BU05840010,"Bedrijventerrein Langeweg, Rembrandtstraat"
+BU05840011,Poortwijk
+BU05840012,Zinkweg buurtschap
+BU05840013,Landelijk gebied
+BU05850000,Heinenoord
+BU05850001,Goidschalxoord
+BU05850002,Blaak
+BU05850003,Uitbreiding Dorp Heinenoord
+BU05850004,Uitbreiding Dorp na 1971
+BU05850009,Verspreide huizen Heinenoord
+BU05850100,Mijnsheerenland
+BU05850101,Westdijk
+BU05850102,Stougjesdijk (gedeeltelijk)
+BU05850103,Blaaksedijk (gedeeltelijk)
+BU05850104,Uitbreiding Dorp
+BU05850108,Verspreide huizen Westmaas-Nieuwlandse polder
+BU05850109,Verspreide huizen Moerkerken
+BU05850200,Westmaas
+BU05850201,Greup
+BU05850202,Grote Riethure
+BU05850208,Verspreide huizen polder Munnikenland
+BU05850209,Verspreide huizen in het Westen
+BU05850300,Maasdam
+BU05850301,Cillaarshoek (gedeeltelijk)
+BU05850302,Sint Anthoniepolder
+BU05850303,Maasdam nieuwbouw
+BU05850304,Bungalow plan
+BU05850307,Bedrijfsterreinen
+BU05850309,Verspreide huizen Maasdam
+BU05850400,"Bebouwde Kom, oud gedeelte"
+BU05850401,Rustenburgstraat (gedeeltelijk)
+BU05850402,Bebouwde Kom Plan Dorp
+BU05850403,Bebouwde Kom Plan Oudeland
+BU05850405,Plan De Grienden
+BU05850406,Plan Zijdewinde
+BU05850408,Verspreide huizen in het Zuidoosten
+BU05850409,Suikerfabriek en verspreide huizen Noordwesten
+BU05850500,'s-Gravendeel
+BU05850501,Boendersweg-Strijensedijk (gedeeltelijk)
+BU05850502,Nieuw Bonaventura
+BU05850503,Schenkeldijk
+BU05850504,Mijlpolder
+BU05850505,Groot en Klein Koninkrijk
+BU05850506,Schuilingen
+BU05850509,Verspreide huizen 's-Gravendeel
+BU05880000,Nieuw-Beijerland
+BU05880001,Zuidzijde (gedeeltelijk)
+BU05880009,Verspreide huizen Nieuw-Beijerland
+BU05880100,Piershil
+BU05880103,Zwartsluisje (gedeeltelijk)
+BU05880109,Verspreide huizen Piershil
+BU05880200,Goudswaard
+BU05880201,Nieuwendijk (gedeeltelijk)
+BU05880202,Oudendijk
+BU05880208,Verspreide huizen Eiland Tiengemeten (gedeeltelijk)
+BU05880209,Overige verspreide huizen Goudswaard
+BU05880300,Zuid-Beijerland
+BU05880301,Zwartsluisje (gedeeltelijk)
+BU05880302,Zuidzijde (gedeeltelijk)
+BU05880303,Schenkeldijk
+BU05880304,Nieuwendijk (gedeeltelijk)
+BU05880308,Verspreide huizen Eiland Tiengemeten (gedeeltelijk)
+BU05880309,Overige verspreide huizen Zuid-Beijerland
+BU05890101,Kern Hekendorp
+BU05890102,Hekendorpse buurt
+BU05890201,Kern Oudewater
+BU05890202,de Noort syde
+BU05890203,Brede dijk
+BU05890204,Klein Hekendorp
+BU05890205,Kern Hoenkoop
+BU05890206,Markveld
+BU05890207,Groenbuffer noord
+BU05890208,Tappersheul
+BU05890209,Klein Hekendorp buitengebied
+BU05890210,Rozendaal
+BU05890211,Hoenkoopse buurt
+BU05890212,Willeskop
+BU05890213,Ruige weide
+BU05890301,Kern Papekop
+BU05890302,Diemerbroek
+BU05890401,Snelrewaard
+BU05900001,Westpolder
+BU05900002,Molenvliet
+BU05900003,Kraaihoek
+BU05900004,Middenpolder
+BU05900005,Wilgendonk
+BU05900006,Oosteind en De Kooy
+BU05900007,Oostpolder
+BU05900008,Vriesenpolder
+BU05970100,Centrum
+BU05970200,West
+BU05970300,Oost
+BU05970400,Drievliet
+BU05970500,Het Zand
+BU05970600,Slikkerveer
+BU05970700,Bolnes
+BU05970800,Rijsoord
+BU05970900,Oostendam
+BU05971000,Donkersloot
+BU05971100,Verenambacht
+BU05971200,Cornelisland
+BU05990110,Stadsdriehoek
+BU05990111,Oude Westen
+BU05990112,Cool
+BU05990113,Cs Kwartier
+BU05990118,Nieuwe Werk
+BU05990119,Dijkzigt
+BU05990320,Delfshaven
+BU05990321,Bospolder
+BU05990322,Tussendijken
+BU05990323,Spangen
+BU05990324,Nieuwe Westen
+BU05990325,Middelland
+BU05990327,Oud Mathenesse
+BU05990328,Witte Dorp
+BU05990329,Schiemond
+BU05990451,Kleinpolder
+BU05990452,Noord Kethel
+BU05990454,Schieveen
+BU05990455,Zestienhoven
+BU05990456,Overschie
+BU05990457,Landzicht
+BU05990515,Agniesebuurt
+BU05990516,Provenierswijk
+BU05990531,Bergpolder
+BU05990532,Blijdorp
+BU05990534,Liskwartier
+BU05990535,Oude Noorden
+BU05990558,Blijdorpsepolder
+BU05990660,Schiebroek
+BU05990661,Hillegersberg Zuid
+BU05990662,Hillegersberg Noord
+BU05990664,Terbregge
+BU05990665,Molenlaankwartier
+BU05990814,Rubroek
+BU05990836,Nieuw Crooswijk
+BU05990837,Oud Crooswijk
+BU05990841,Kralingen West
+BU05990842,Kralingen Oost
+BU05990843,Kralingse Bos
+BU05990845,De Esch
+BU05990847,Struisenburg
+BU05991017,Kop van Zuid
+BU05991079,Kop van Zuid - Entrepot
+BU05991080,Vreewijk
+BU05991081,Bloemhof
+BU05991082,Hillesluis
+BU05991085,Katendrecht
+BU05991086,Afrikaanderwijk
+BU05991087,Feijenoord
+BU05991088,Noordereiland
+BU05991283,Oud IJsselmonde
+BU05991284,Lombardijen
+BU05991289,Groot IJsselmonde
+BU05991290,Beverwaard
+BU05991391,Pernis
+BU05991444,'s Gravenland
+BU05991446,Kralingseveer
+BU05991448,Prinsenland
+BU05991449,Het Lage Land
+BU05991463,Ommoord
+BU05991466,Zevenkamp
+BU05991467,Oosterflank
+BU05991468,Nesselande
+BU05991570,Charlois Zuidrand
+BU05991571,Tarwewijk
+BU05991572,Carnisse
+BU05991573,Zuidwijk
+BU05991574,Oud Charlois
+BU05991575,Wielewaal
+BU05991576,Zuidplein
+BU05991577,Pendrecht
+BU05991578,Zuiderpark
+BU05991593,Heijplaat
+BU05991692,Hoogvliet Noord
+BU05991699,Hoogvliet Zuid
+BU05991701,Strand en Duin
+BU05991702,Dorp
+BU05991703,Rijnpoort
+BU05991853,Spaanse Polder
+BU05991926,Nieuw Mathenesse
+BU05992194,Waalhaven
+BU05992196,Eemhaven
+BU05992198,Waalhaven Zuid
+BU05992295,Vondelingenplaat
+BU05992306,Botlek
+BU05992307,Europoort
+BU05992308,Maasvlakte
+BU05992459,Bedrijvenpark Noord-West
+BU05992540,Rivium
+BU05992650,Bedrijventerrein Schieveen
+BU05992704,Rozenburg
+BU05992705,Noordzeeweg
+BU06030111,Cromvliet
+BU06030112,Leeuwendaal
+BU06030221,Oud-Rijswijk
+BU06030222,Bomenbuurt
+BU06030223,Welgelegen
+BU06030224,Rembrandtkwartier
+BU06030225,Havenkwartier
+BU06030391,Hoornwijck
+BU06030392,Broekpolder
+BU06030431,Julianapark
+BU06030432,Huis te Lande
+BU06030434,Te Werve
+BU06030581,Plaspoelpolder
+BU06030633,Stationskwartier
+BU06030641,Spoorzicht
+BU06030642,Kleurenbuurt
+BU06030643,Artiestenbuurt
+BU06030771,Muziekbuurt
+BU06030772,Wilhelminapark
+BU06030851,Overvoorde
+BU06030852,Strijp
+BU06030853,Presidentenbuurt
+BU06030854,Ministerbuurt
+BU06030961,Stervoorde
+BU06030962,Eikelenburg
+BU06030963,Hoekpolder
+BU06031064,Sion
+BU06031082,Elsenburg
+BU06031083,Pasgeld
+BU06031084,Haantje
+BU06031193,Kraayenburg
+BU06031194,Vrijenban
+BU06060000,Buurt 00
+BU06060101,Stadserf
+BU06060102,Natuurkundigenbuurt
+BU06060103,Singelkwartier
+BU06060104,Stationsbuurt
+BU06060105,Wetenschappersbuurt
+BU06060106,Newtonbuurt
+BU06060107,Rotterdamsedijk
+BU06060201,Brandersbuurt
+BU06060202,Walvisbuurt
+BU06060203,De Plantage
+BU06060301,Schildersbuurt
+BU06060302,Schrijversbuurt
+BU06060303,Fabribuurt
+BU06060304,Frankenland
+BU06060305,Liduinabuurt
+BU06060306,Nassaubuurt
+BU06060307,Oranjekwartier
+BU06060308,Haverschmidtkwartier
+BU06060309,Distillateursbuurt
+BU06060401,Noletbuurt
+BU06060402,Eilandenbuurt
+BU06060403,Piet Sandersbuurt
+BU06060404,Maasboulevard
+BU06060405,Havenbuurt
+BU06060500,Nieuw-Mathenesse
+BU06060602,Spieringshoek
+BU06060603,Staatsliedenbuurt
+BU06060604,Vakbondsliedenbuurt
+BU06060605,Hollandiabuurt
+BU06060606,Schiehart
+BU06060607,Nolensbuurt
+BU06060608,Wibautbuurt
+BU06060701,Parkenbuurt/Bijdorp
+BU06060702,Groenoord-Zuid
+BU06060703,Groenoord-Midden
+BU06060704,Groenoord-Noord
+BU06060705,Kethel-dorp
+BU06060706,Vogelbuurt
+BU06060707,Tuindorp
+BU06060801,Spaanse Polder
+BU06060802,'s-Gravelandsepolder
+BU06060803,Polderwetering
+BU06060901,Toneelspelersbuurt
+BU06060902,Ambachtenbuurt
+BU06060903,Kastelenbuurt
+BU06060904,Botenbuurt
+BU06060905,De Gaarden/Sveafors
+BU06060906,De Vlinderhoven/Sveaholm
+BU06060907,De Akkers en De Velden
+BU06060908,Sveaborg en -Dal
+BU06060909,Noordkethelpolder
+BU06100101,Baanhoek-West
+BU06100102,Baanhoek-Bedrijven
+BU06100103,De Weren
+BU06100104,Benedenveer
+BU06100105,Baanhoek-Oost
+BU06100106,Prickwaert en Weresteijn
+BU06100107,De Hoven
+BU06100108,Molendijk
+BU06100109,Bedrijventerrein Het Plaatje
+BU06100201,Rivierenbuurt-Noord
+BU06100202,Rivierenbuurt-Zuid
+BU06100203,Kerkbuurt-West
+BU06100204,Buitenuitbreiding-West
+BU06100205,Bedrijventerrein Kerkerak
+BU06100206,Stationsweg
+BU06100207,Staatsliedenbuurt
+BU06100208,Winklerplein-Noord
+BU06100209,Winklerplein-Zuid
+BU06100210,Kerkbuurt-Oost
+BU06100211,Buitenuitbreiding-Oost
+BU06100301,Vogelbuurt-Noord
+BU06100302,Vogelbuurt-Zuid
+BU06100303,Middenveer
+BU06100304,Rivierdijk-West
+BU06100305,De Grienden
+BU06100306,Rivierdijk-Midden
+BU06100307,Rivierdijk-Oost
+BU06100401,Het Buitengebied
+BU06100402,Bedrijventerrein De Driehoek
+BU06100403,Bedrijventerrein Nijverwaard
+BU06100404,Bedrijventerrein Stationspark
+BU06100405,Sportpark
+BU06100406,Bedrijventerrein Noordoost-Kwadrant
+BU06110000,Nieuwbouw Dorp
+BU06110001,Middelsluis
+BU06110003,Schuring
+BU06110004,Numansdorp
+BU06110009,Verspreide huizen Numansdorp
+BU06110100,Klaaswaal
+BU06110101,Oude Sluis
+BU06110108,Verspreide huizen West
+BU06110109,Verspreide huizen Oost
+BU06130101,Valckesteyn
+BU06130102,Zwaardijk-Kruisdijk
+BU06130103,Poortugaal
+BU06130104,Buitengebied Poortugaal
+BU06130205,Rhoon Noord
+BU06130207,Buitengebied Rhoon-Noord
+BU06130308,Beatrixstraat
+BU06130309,Landweg
+BU06130310,Poortugaal-Centrum
+BU06130311,Poortugaal Zuid
+BU06130312,Polder Albrandswaard
+BU06130313,Kijvelanden
+BU06130414,Rhoon-Centrum
+BU06130415,Ghijseland
+BU06130416,Overhoeken
+BU06130417,Park Rhoon
+BU06130418,Rhoon-Zuidoost
+BU06130419,Tijsjesdijk
+BU06130420,Buitengebied Rhoon-Zuid
+BU06130521,Portland-Koedoodzone
+BU06130522,Buitengebied
+BU06130623,Driehoek
+BU06130624,Portland-Centrum
+BU06130625,Wijkpark Portland
+BU06130626,De Eilanden
+BU06130706,Distripark
+BU06140000,Rockanje
+BU06140001,Helhoek
+BU06140002,Strijpe
+BU06140003,Stuifakker
+BU06140004,Zuidhoek
+BU06140005,Nieuw gebied
+BU06140009,Verspreide huizen
+BU06140100,Oostvoorne
+BU06140101,De Waranda
+BU06140102,Kruiningergors
+BU06140103,Tinte
+BU06140104,Goudhoek
+BU06140105,Vogelenzang
+BU06140106,Duinoord
+BU06140108,Verspreide huizen in het Westen
+BU06140109,Verspreide huizen in het Oosten
+BU06170001,Strijen-Centrum
+BU06170002,Oranjewijk
+BU06170003,Land van Essche
+BU06170004,Over de Keen
+BU06170005,Noord
+BU06170007,Oud Bonaventura (bedrijfsterrein)
+BU06170008,Strijensas
+BU06170009,Mookhoek
+BU06170010,Cillaarshoek
+BU06170011,Klem
+BU06170012,Buitengebied-Zuid
+BU06170013,Buitengebied-West
+BU06170014,Buitengebied-Oost
+BU06200000,Oude Stad
+BU06200001,Zederik
+BU06200002,De Hagen
+BU06200003,Vijfheerenlanden
+BU06200004,Industrieterrein Vianen
+BU06200005,Monnikenhof en Amaliastein
+BU06200007,Verspreide huizen Helsdingen
+BU06200009,Overige verspreide huizen Vianen
+BU06200100,Hagestein
+BU06200101,Industrieterrein Hagestein
+BU06200107,Verspreide huizen in het Oosten
+BU06200108,Verspreide huizen in het Noorden
+BU06200109,Verspreide huizen in het Zuidwesten
+BU06200200,Everdingen
+BU06200201,Zijderveld
+BU06200202,Diefdijk (gedeeltelijk)
+BU06200209,Verspreide huizen Everdingen
+BU06220101,Indische Buurt
+BU06220102,Vettenoordse Polder Oost
+BU06220103,Centrum
+BU06220104,Hoogstad
+BU06220201,Hoogkamer
+BU06220202,Zuidbuurt
+BU06220203,Wetering
+BU06220204,Lage Weide
+BU06220205,Buitengebied Zuidbuurt
+BU06220301,De Vergulde Hand
+BU06220302,Lickebaert
+BU06220303,'t Scheur
+BU06220304,Deltagebied
+BU06220305,Park Zuidbuurt
+BU06220306,Vettenoordse Polder West
+BU06220307,Maasboulevard
+BU06220401,Hofbuurt
+BU06220402,Oostbuurt
+BU06220403,Havengebied Oost
+BU06220404,Vijfsluizen
+BU06220501,Babberspolder Noord
+BU06220502,Oranjebuurt
+BU06220503,Babberspolder West
+BU06220504,Babberspolder Oost
+BU06220505,'t Nieuwe Lant
+BU06220601,Vaart Zuid
+BU06220602,Statenbuurt
+BU06220603,Loper Zuid
+BU06220604,Vogelbuurt Noord
+BU06220605,Sportpark Holy
+BU06220606,Vogelbuurt Zuid
+BU06220701,Drevenbuurt
+BU06220702,Kruidenbuurt
+BU06220703,Loper Noord
+BU06220704,Hoofdstedenbuurt
+BU06220705,Park Holy Noord
+BU06220706,Hoevenbuurt
+BU06220707,Holierhoekse Polder
+BU06220708,Vaart Noord
+BU06220801,Broekpolder gebied
+BU06270101,Groenswaard 1
+BU06270102,Groenswaard 2
+BU06270103,Groenswaard 3
+BU06270104,Peter Zuidlaan en Horstenbuurt
+BU06270105,West 1
+BU06270106,Bomenwijk
+BU06270202,Zuidplas 80
+BU06270203,Zuidplas 90
+BU06270204,Triangel
+BU06270205,West 2
+BU06270301,Oranjewijk Zuid
+BU06270302,Oranjewijk Noord
+BU06270303,Vondelwijk
+BU06270304,Noordkade
+BU06270401,Centrum
+BU06270402,Oostpolderwijk
+BU06270403,Bedrijventerrein Mercuriusweg
+BU06270404,Zuid
+BU06270405,Coenecoop
+BU06270406,'t Weegje
+BU06270407,Oost
+BU06270408,Zeeheldenbuurt
+BU06320101,Binnenstad
+BU06320102,Bloemen- en Bomenkwartier
+BU06320103,Bedrijventerrein Honthorst
+BU06320104,Staatsliedenkwartier
+BU06320105,Vogelkwartier
+BU06320106,Schilderskwartier
+BU06320201,Bedrijventerrein Barwoutswaarder
+BU06320202,Molenvliet-West
+BU06320203,Molenvliet-Oost
+BU06320204,Kromwijk
+BU06320301,Middelland-Noord
+BU06320302,Middelland-Zuid
+BU06320303,Snel en Polanen
+BU06320304,Bedrijventerrein Polanen
+BU06320305,Waterrijk
+BU06320401,Rietveld
+BU06320402,Barwoutswaarder
+BU06320501,Geestdorp
+BU06320502,Breeveld
+BU06320503,Cattenbroek
+BU06320601,Harmelen-Noord (dorp)
+BU06320602,Harmelen-Zuid (dorp)
+BU06320603,Putkop
+BU06320604,Buitengebied Harmelen
+BU06320605,Reijerscop
+BU06320606,Gerverscop
+BU06320701,Kamerik (dorp)
+BU06320702,Kanis
+BU06320703,Buitengebied Kamerik
+BU06320801,Zegveld (dorp)
+BU06320802,Buitengebied Zegveld
+BU06370001,Dorp
+BU06370002,Stadscentrum
+BU06370003,Palenstein
+BU06370004,Driemanspolder
+BU06370100,Meerzicht-West
+BU06370101,Meerzicht-Oost
+BU06370200,Buytenwegh
+BU06370201,De Leyens
+BU06370300,Seghwaert-Zuid-West
+BU06370301,Seghwaert-Noord-Oost
+BU06370400,Noordhove-West
+BU06370401,Noordhove-Oost
+BU06370500,Rokkeveen-West
+BU06370501,Rokkeveen-Oost
+BU06370600,Oosterheem-Zuid-West
+BU06370601,Oosterheem-Noord-Oost
+BU06370800,Rokkehage c.a.
+BU06370801,Lansinghage c.a.
+BU06370802,Zoeterhage c.a.
+BU06370803,Hoornerhage c.a.
+BU06370902,Balijbos
+BU06370903,Westerpark c.a.
+BU06370904,Buitengebied-West
+BU06370905,Meerpolder
+BU06370906,Scheidingszone
+BU06370907,Van Tuyllpark
+BU06420101,Slagveld en Omgeving
+BU06420102,Veerplein - Oostkeetshaven
+BU06420103,Drinkwaterbedrijf
+BU06420104,Balkengat
+BU06420105,Noordpark
+BU06420106,Industriegebied Ringdijk
+BU06420107,Staatsliedenbuurt-Noord
+BU06420108,Europesebuurt
+BU06420109,Staatsliedenbuurt-Zuid
+BU06420110,Oud- en Gerbrandyplein
+BU06420111,Winkelcentrum Walburg
+BU06420112,De Were en omgeving
+BU06420113,Lievershil en omgeving
+BU06420114,Eem- en Zonnestein
+BU06420115,Swanendrif-Zuid
+BU06420201,Veerplein - De Werf
+BU06420202,Euryza
+BU06420203,Westkeetshaven
+BU06420204,Brugweg
+BU06420205,Corridor-Oost
+BU06420206,Voormalig veilingterrein
+BU06420207,Burgemeester Doornplein en omgeving
+BU06420208,Prins Bernhardstraat en omgeving
+BU06420209,Juliandorp
+BU06420301,Industriegebied Develpoort
+BU06420302,Corridor-West
+BU06420303,Schildersbuurt
+BU06420304,Sterrenbeeldenbuurt
+BU06420305,Planetenbuurt
+BU06420306,Begraafplaats Noord
+BU06420307,Officiervliet-Oost
+BU06420308,Officiervliet-West
+BU06420309,Ter Steeghe
+BU06420310,Pilotenbuurt
+BU06420311,Langeraarstraat en omgeving
+BU06420312,Hoveniersplein - Griend
+BU06420313,Prinsessenbuurt
+BU06420401,De Hoge Devel
+BU06420402,Componistenbuurt-Zuid
+BU06420403,Componistenbuurt-Midden
+BU06420404,Componistenbuurt-Noord
+BU06420405,Oudeland en Meubelmaker
+BU06420406,Klarinetsingel en omgeving
+BU06420407,Sonate en omgeving
+BU06420408,De As
+BU06420409,Park Molenvliet
+BU06420410,Industriegebied Molenvliet
+BU06420501,Noordzijde De Hoge Devel
+BU06420502,Develsteincollege
+BU06420503,Swinhove - De Lus
+BU06420504,KoloniÃƒÂ«nbuurt
+BU06420505,Meerdervoort
+BU06420506,Dichtersbuurt-Midden
+BU06420507,Dichtersbuurt-West
+BU06420508,Verzetsheldenbuurt
+BU06420509,Kapiteinflats
+BU06420510,Zeeheldenbuurt
+BU06420511,Bloemenbuurt M(adelief) - Z(onnenbloem)
+BU06420512,Bloemenbuurt D(ahlia) - G(eranium)
+BU06420513,Bloemenbuurt B(egonia) - C(rocus)
+BU06420514,Bloemenbuurt H(yacinth) - L(Obelia)
+BU06420515,Bloemenbuurt A(kelei)
+BU06420601,IJsvogelplein
+BU06420602,Vogelbuurt-Oost
+BU06420603,Ooievaar- en Vinkplein
+BU06420604,Vogelbuurt-West
+BU06420605,Leeuwerik- en Fazantplein
+BU06420606,Moermond-Zuid
+BU06420607,Boshuizen - Rechteren
+BU06420608,Assumburg - Lunenburg
+BU06420609,Hilverbeek en omgeving
+BU06420610,Develzijde Nederhoven
+BU06420701,Industriegebied Groote Lindt
+BU06420702,De Geer-Oost
+BU06420703,De Geer-West
+BU06420704,Achterlindtsestraat
+BU06420705,Kijfhoek
+BU06420706,"Emplacement ""Kijfhoek"""
+BU06420707,Groenesteeg - Langeweg
+BU06420708,Bakestein
+BU06420801,Molenweg-West
+BU06420802,Dorp-Noordoost
+BU06420803,Dorp-Zuidoost
+BU06420804,Dorp-Zuid
+BU06420805,Bedrijventerrein Gors-Noord
+BU06420901,Emplacement Kijfhoek en Langeweg
+BU06420902,"Sportcomplex ""De Molenwei"""
+BU06420903,Polder Heerjansdam
+BU06420904,Kleine Lindt Polder
+BU06420905,Hooge Nespolder
+BU06420906,Het Buitenland en omgeving
+BU06420907,Bedrijventerrein Gors-Zuid
+BU06540101,Baarland (Kern)
+BU06540102,Verspreide huizen Baarland
+BU06540201,Borssele (Kern)
+BU06540202,Verspreide huizen Borssele
+BU06540301,Driewegen (Kern)
+BU06540302,Verspreide huizen Driewegen
+BU06540401,Ellewoutsdijk (Kern)
+BU06540402,Verspreide huizen Ellewoutsdijk
+BU06540501,Heinkenszand (Kern)
+BU06540502,Verspreide huizen Heinkenszand
+BU06540601,Hoedekenskerke (Kern)
+BU06540602,Verspreide huizen Hoedekenskerke
+BU06540701,Kwadendamme (Kern)
+BU06540702,Verspreide huizen Kwadendamme
+BU06540801,Lewedorp (Kern)
+BU06540802,Verspreide huizen Lewedorp
+BU06540901,Nieuwdorp (Kern)
+BU06540902,Verspreide huizen Nieuwdorp
+BU06540903,Havengebied Sloe
+BU06541001,Nisse (Kern)
+BU06541002,Verspreide huizen Nisse
+BU06541101,Oudelande (Kern)
+BU06541102,Verspreide huizen Oudelande
+BU06541201,Ovezande (Kern)
+BU06541202,Verspreide huizen Ovezande
+BU06541301,'s-Gravenpolder (Kern)
+BU06541302,Verspreide huizen 's-Gravenpolder
+BU06541401,'s-Heer Abtskerke (Kern)
+BU06541402,Verspreide huizen 's-Heer Abtskerke
+BU06541501,'s-Heerenhoek (Kern)
+BU06541502,Verspreide huizen 's-Heerenhoek
+BU06640101,Goes-Centrum
+BU06640102,Goes-Oost
+BU06640103,Goes-Zuid
+BU06640104,Goes-West
+BU06640105,Goes-Noordwest
+BU06640106,Goes-Noordoost
+BU06640107,Industrieterrein De Poel
+BU06640108,Industrieterrein Haven
+BU06640109,Goese Meer
+BU06640110,Overzuid
+BU06640111,Mannee
+BU06640220,Wilhelminadorp
+BU06640229,Verspreide huizen Wilhelminadorp
+BU06640330,Kloetinge
+BU06640331,Oostmolenpark
+BU06640338,Verspreide huizen in het Oosten
+BU06640339,Verspreide huizen in het Zuiden
+BU06640440,Kattendijke
+BU06640449,Verspreide huizen Kattendijke
+BU06640550,'s-Heer-Arendskerke
+BU06640551,De Schenge
+BU06640559,Verspreide huizen in het Westen
+BU06640660,Eindewege
+BU06640770,'s-Heer-Hendrikskinderen
+BU06640778,Verspreide huizen ten noorden van 's-Heer-Hendrikskinderen
+BU06640779,Verspreide huizen ten zuiden van 's-Heer-Hendrikskinderen
+BU06640880,Wolphaartsdijk
+BU06640889,Verspreide huizen Wolphaartsdijk
+BU06640990,Oud-Sabbinge
+BU06770101,Hulst
+BU06770102,Linie
+BU06770103,'t Jagertje-Schuddebeurs
+BU06770104,Carmel
+BU06770105,Dullaert
+BU06770106,Absdaalseweg
+BU06770107,Hogeweg
+BU06770108,Zoetevaart
+BU06770109,Groote Kreek
+BU06770110,Absdale
+BU06770112,Buitengebied Hulst
+BU06770213,Kern Sint Jansteen
+BU06770214,Buitengebied Sint Jansteen
+BU06770315,Kern Clinge
+BU06770316,Buitengebied Clinge
+BU06770417,Kern Graauw
+BU06770418,Kern Zandberg
+BU06770419,Kern Paal
+BU06770420,Buitengebied Graauw
+BU06770521,Kern Heikant
+BU06770522,Buitengebied Heikant
+BU06770623,Kern Nieuw Namen
+BU06770624,Buitengebied Nieuw Namen
+BU06770725,Kern Kapellebrug
+BU06770826,Kern Kloosterzande
+BU06770827,Walsoorden
+BU06770828,Buitengebied Kloosterzande
+BU06770929,Kern Lamswaarde
+BU06770930,Kuitaart
+BU06770931,Buitengebied Lamswaarde
+BU06770932,Kruispolder
+BU06771033,Kern Terhole
+BU06771034,Buitengebied Terhole
+BU06771135,Kern Vogelwaarde
+BU06771136,Buitengebied Vogelwaarde
+BU06771237,Kern Hengstdijk
+BU06771238,Buitengebied Hengstdijk
+BU06771339,Kern Ossenisse
+BU06771340,Buitengebied Ossenisse
+BU06780000,Kapelle
+BU06780009,Verspreide huizen Kapelle
+BU06780100,Wemeldinge
+BU06780109,Verspreide huizen Wemeldinge
+BU06780200,Schore
+BU06780209,Verspreide huizen Schore
+BU06870000,Binnenstad
+BU06870100,Griffioen
+BU06870101,Klarenbeek
+BU06870102,Nieuw Middelburg
+BU06870103,Brigdamme
+BU06870104,Sint Laurens
+BU06870105,Ramsburg
+BU06870106,Veersepoort
+BU06870107,Verspreide huizen in het Noorden
+BU06870108,Verspreide huizen in het Noordwesten
+BU06870109,Verspreide huizen in het Noordoosten
+BU06870200,Stromenwijk/'t Zand
+BU06870209,Verspreide huizen in het Zuidwesten
+BU06870300,Middelburg-Zuid
+BU06870301,Dauwendaele
+BU06870302,Arnestein
+BU06870309,Mortiere
+BU06870400,Nieuw- en Sint Joosland
+BU06870409,Verspreide huizen Nieuw- en Sint Joosland
+BU06870500,Arnemuiden
+BU06870501,Kleverskerke
+BU06870502,Oranjeplaat
+BU06870503,Veerse Meer
+BU06870509,Verspreide huizen Arnemuiden
+BU06890000,Giessenburg en Nieuwkerk
+BU06890001,Peursum
+BU06890002,Giessen en Oude-Bovenkerk
+BU06890100,Giessen en Oudekerk
+BU06890101,Neerpolder en Parallelweg
+BU06890200,Muisbroek
+BU06890201,Neder-Slingeland
+BU06890308,Verspreide huizen polder Giessen en Nieuwkerk
+BU06890309,Verspreide huizen ten noorden van De Giessen
+BU06890400,Arkel
+BU06890401,Rietveld
+BU06890402,Industrieterrein
+BU06890500,Hoogblokland
+BU06890501,Verspreide huizen Bazeldijk (gedeeltelijk)
+BU06890502,Minkeloos (gedeeltelijk) Hoge Giessen (gedeeltelijk)
+BU06890509,Overige verspreide huizen Hoogblokland
+BU06890600,Hoornaar
+BU06890601,Lage Giessen
+BU06890602,Hoge Giessen (gedeeltelijk)
+BU06890603,Hoornaar-Nieuw
+BU06890700,Noordeloos
+BU06890701,Overslingeland
+BU06890702,Minkeloos (gedeeltelijk)
+BU06890800,Schelluinen
+BU07030000,Yerseke - Kern
+BU07030001,Yerseke - West
+BU07030002,Yerseke - Steehof
+BU07030006,Yerseke - Molenpolder/Olzendepolder
+BU07030009,Verspreide huizen Yerseke
+BU07030100,Kruiningen - Kern
+BU07030101,Kruiningen - Zandweg
+BU07030102,Kruiningen - Kruseveer
+BU07030106,Kruiningen - Nishoek
+BU07030109,Verspreide huizen Kruiningen
+BU07030200,Krabbendijke - Kern
+BU07030201,Krabbendijke - Oostpolder
+BU07030202,Krabbendijke - Rozeboom
+BU07030206,Krabbendijke - Zuidweg
+BU07030209,Verspreide huizen Krabbendijke
+BU07030300,Waarde
+BU07030309,Verspreide huizen Waarde
+BU07030400,Rilland - Kern
+BU07030401,Rilland- Stationsbuurt
+BU07030402,Rilland - Bath
+BU07030403,Rilland - Werfkampen
+BU07030406,Rilland - De Poort
+BU07030409,Verspreide huizen Rilland
+BU07030500,Hansweert - Kern
+BU07030501,Hansweert - Tramper
+BU07030509,Verspreide huizen Hansweert
+BU07030600,Oostdijk
+BU07030609,Verspreide huizen Oostdijk
+BU07070100,Lexmond Kern
+BU07070101,Achthoven
+BU07070102,Lakerveld
+BU07070103,Lexmond Polder
+BU07070200,Ameide Kern
+BU07070201,Sluis
+BU07070202,Sluis Polder
+BU07070203,Ameide Polder
+BU07070300,Tienhoven Kern
+BU07070301,Hogewaard
+BU07070302,Tienhoven Polder
+BU07070400,Meerkerk kern
+BU07070401,Meerkers Broek
+BU07070402,Meerkerk Polder
+BU07070500,Hei- en Boeicop Kern
+BU07070501,Hei- en Boeicop Polder
+BU07070600,Leerbroek kern
+BU07070601,Middelkoop
+BU07070602,Weverwijk
+BU07070603,Leerbroek Polder
+BU07070700,Nieuwland Kern
+BU07070701,Achterdijk
+BU07070702,Geer
+BU07070703,Nieuwland Polder
+BU07150101,Binnenstad-Java
+BU07150401,Handelspoort
+BU07150402,Noorderdokken
+BU07150403,Zevenaar
+BU07150404,Zuidpoort
+BU07150701,Driewegen
+BU07150702,Katspolder
+BU07150703,Oudelandse Hoeve
+BU07150704,Oude Vaart
+BU07150705,Zeldenrust
+BU07151001,Lievenspolder
+BU07151002,Noordpolder
+BU07151003,Serlippenspolder
+BU07151004,Triniteit
+BU07151005,Zuiderpark
+BU07151301,Othene
+BU07151600,Buitengebied Terneuzen
+BU07151900,Kern Axel
+BU07152200,Buitengebied Axel
+BU07152500,Kern Biervliet
+BU07152800,Buitengebied Biervliet
+BU07153100,Kern Hoek
+BU07153400,Buitengebied Hoek
+BU07153700,Kern Koewacht
+BU07154000,Buitengebied Koewacht
+BU07154300,Kern Overslag
+BU07154600,Buitengebied Overslag
+BU07154900,Kern Philippine
+BU07155200,Buitengebied Philippine
+BU07155500,Kern Sas van Gent
+BU07155800,Buitengebied Sas van Gent
+BU07156100,Kern Sluiskil
+BU07156400,Buitengebied Sluiskil
+BU07156700,Kern Spui
+BU07157000,Buitengebied Spui
+BU07157300,Kern Westdorpe
+BU07157600,Buitengebied Westdorpe
+BU07157900,Kern Zaamslag
+BU07158200,Buitengebied Zaamslag
+BU07158500,Kern Zuiddorpe
+BU07158800,Buitengebied Zuiddorpe
+BU07160000,Tholen
+BU07160009,Verspreide huizen Tholen
+BU07160100,Poortvliet
+BU07160109,Verspreide huizen Poortvliet
+BU07160200,Scherpenisse
+BU07160209,Verspreide huizen Scherpenisse
+BU07160300,Sint-Maartensdijk
+BU07160309,Verspreide huizen Sint-Maartensdijk
+BU07160400,Stavenisse
+BU07160409,Verspreide huizen Stavenisse
+BU07160500,Sint-Annaland
+BU07160509,Verspreide huizen Sint-Annaland
+BU07160600,Oud-Vossemeer
+BU07160609,Verspreide huizen Oud-Vossemeer
+BU07160700,Sint Philipsland
+BU07160709,Verspreide huizen Sint Philipsland
+BU07160710,Anna Jacobapolder
+BU07170000,Veere
+BU07170001,Zanddijk
+BU07170002,Buiten de Veste
+BU07170009,Verspreide huizen Veere
+BU07170100,Gapinge
+BU07170109,Verspreide huizen Gapinge
+BU07170200,Vrouwenpolder
+BU07170201,Breezand
+BU07170209,Verspreide huizen Vrouwenpolder
+BU07170300,Serooskerke
+BU07170309,Verspreide huizen Serooskerke
+BU07170400,Domburg
+BU07170409,Verspreide huizen Domburg
+BU07170500,Oostkapelle
+BU07170501,Randduin
+BU07170502,Duno
+BU07170508,Verspreide huizen in het Zuiden
+BU07170509,Verspreide huizen in het Noorden
+BU07170600,Aagtekerke
+BU07170609,Verspreide huizen Aagtekerke
+BU07170700,Grijpskerke
+BU07170709,Verspreide huizen Grijpskerke
+BU07170800,Meliskerke
+BU07170809,Verspreide huizen Meliskerke
+BU07170900,Koudekerke
+BU07170901,Dishoek
+BU07170908,Verspreide huizen recreatiegebied van Koudekerke
+BU07170909,Verspreide huizen buiten recreatiegebied Koudekerke
+BU07171000,Biggekerke
+BU07171001,De Ruiser
+BU07171008,Verspreide huizen in recreatiegebied van Biggekerke
+BU07171009,Verspreide huizen buiten recreatiegebied Biggekerke
+BU07171100,Zoutelande
+BU07171101,Kustlicht
+BU07171109,Verspreide huizen Zoutelande
+BU07171200,Westkapelle
+BU07171201,Joossesweg
+BU07171209,Verspreide huizen Westkapelle
+BU07180100,Oude Binnenstad
+BU07180101,Scheldestraat e.o.
+BU07180102,Stadhuisplein e.o.
+BU07180103,Scheldekwartier
+BU07180200,Vredehof Zuid
+BU07180201,Bonedijkestraat e.o.
+BU07180202,Bloemenlaan e.o. Oost
+BU07180203,Baskensburg Zuid
+BU07180204,Vredehof Noord
+BU07180205,Het Fort e.o.
+BU07180206,Hercules Segherslaan e.o.
+BU07180207,Baskensburg Noord
+BU07180208,Boulevards Bankert en Evertsen
+BU07180209,Bloemenlaan e.o. West
+BU07180300,Paauwenburg Zuidoost
+BU07180301,Paauwenburg West
+BU07180302,Westduin
+BU07180303,Paauwenburg Noordoost
+BU07180400,Rosenburg
+BU07180401,Bossenburgh - Weyevliet
+BU07180402,Westerzicht
+BU07180403,Lammerenburg
+BU07180405,Papegaaienburg - Hofwijk
+BU07180406,West-Souburg
+BU07180407,Landelijk gebied Lammerenburg
+BU07180408,Vrijburg
+BU07180500,Kern Oost-Souburg West
+BU07180501,Zeewijksingel
+BU07180502,Schoonenburg - Groot Abeele
+BU07180503,Molenweg e.o.
+BU07180504,Landelijk gebied Oost-Souburg
+BU07180505,Kern Oost-Souburg Oost
+BU07180506,Schoonenburg
+BU07180507,Souburg-Noord
+BU07180600,Ritthem
+BU07180601,Rammekens
+BU07180602,Welzinge
+BU07180603,Bedrijventerrein Oost-Souburg Oost
+BU07180700,Kennishaven
+BU07180701,Buitenhaven
+BU07180702,Bedrijventerrein Oost-Souburg West
+BU07180800,Sloegebied
+BU07330000,Asperen Oude Kern
+BU07330001,Westelijke uitbreiding Asperen
+BU07330002,Noord uitbreiding Asperen industrieterrein
+BU07330009,Verspreide huizen Asperen
+BU07330100,Heukelum Oude Kern
+BU07330101,Uitbreiding Heukelum
+BU07330102,Spijk en Boveneind Spijk en Vogelswerf
+BU07330109,Verspreide huizen Heukelum en Friezenwijk
+BU07360101,Mijdrecht Dorp
+BU07360102,Hofland
+BU07360103,Molenland
+BU07360104,Proostdijland
+BU07360105,Twistvlied-Wickelhof
+BU07360106,Sportpark Mijdrecht
+BU07360107,Bedrijventerrein Mijdrecht
+BU07360108,Mijdrecht Buitengebied
+BU07360201,de Hoef
+BU07360202,de Hoef Buitengebied
+BU07360301,Amstelhoek
+BU07360401,Vinkeveen Dorp
+BU07360402,Zuiderwaard-Westerheul
+BU07360403,Vinkeveen Plassengebied
+BU07360404,Vinkeveen Buitengebied
+BU07360501,Waverveen
+BU07360502,Waverveen Buitengebied
+BU07360601,Wilnis Dorp
+BU07360602,de Maricken-Veenzijde
+BU07360603,Wilnis Buitengebied
+BU07360701,Abcoude-Noordoost
+BU07360702,Abcoude-Zuidwest
+BU07360703,Abcoude Buitengebied
+BU07360801,Baambrugge Dorp
+BU07360802,Baambrugge Buitengebied
+BU07370000,Burgum
+BU07370009,Verspreide huizen Burgum
+BU07370100,Aldtsjerk
+BU07370101,Oentsjerk
+BU07370108,Verspreide huizen Aldtsjerk
+BU07370109,Verspreide huizen Oentsjerk
+BU07370200,MÃƒÂ»nein
+BU07370201,Gytsjerk
+BU07370208,Verspreide huizen MÃƒÂ»nein
+BU07370209,Verspreide huizen Gytsjerk
+BU07370300,Ryptsjerk
+BU07370309,Verspreide huizen Ryptsjerk
+BU07370400,Tytsjerk
+BU07370401,SuwÃƒÂ¢ld
+BU07370408,Verspreide huizen Tytsjerk
+BU07370409,Verspreide huizen SuwÃƒÂ¢ld
+BU07370500,EarnewÃƒÂ¢ld
+BU07370501,Garyp
+BU07370508,Verspreide huizen EarnewÃƒÂ¢ld
+BU07370509,Verspreide huizen Garyp
+BU07370600,Sumar
+BU07370609,Verspreide huizen Sumar
+BU07370700,Eastermar
+BU07370701,Jistrum
+BU07370708,Verspreide huizen Eastermar
+BU07370709,Verspreide huizen Jistrum
+BU07370800,Noordburgum
+BU07370809,Verspreide huizen Noordburgum
+BU07370900,Hurdegaryp
+BU07370909,Verspreide huizen Hurdegaryp
+BU15810000,Doorn-Centrum
+BU15810001,Oudeweg
+BU15810002,Doorn-West
+BU15810003,Doorn-Zuid
+BU15810004,De Wijngaard
+BU15810007,Verspreide huizen op de Heuvelrug-Oost
+BU15810008,Verspreide huizen op de Heuvelrug-West
+BU15810009,Verspreide huizen in het Lage Land
+BU15810101,Landelijk Gebied noordzijde
+BU15810102,Landelijk Gebied zuidzijde
+BU15810103,Driebergen-Noord
+BU15810104,Drift-Sportlaan en Bornia
+BU15810105,Loolaankwartier en Beukenstein
+BU15810106,Kom Driebergen en Seminarie
+BU15810107,Hoenderdaal en Emmalaan
+BU15810108,Wildbaan-Dennenburg
+BU15810109,Welgelegen-Rosarium
+BU15810110,De Horst en De Akker
+BU15810200,Leersum
+BU15810201,Breedeveen
+BU15810207,Verspreide huizen in het Lage Gebied Darthuizen
+BU15810208,Verspreide huizen op de Heuvelrug
+BU15810209,Verspreide huizen in de Geldersche Vallei Overberg
+BU15810300,Amerongen
+BU15810302,Verspreide huizen Overberg en De Haar
+BU15810308,Verspreide huizen Heuvelrug
+BU15810309,Verspreide huizen Lekdijk
+BU15810400,Maarn waaronder Klein Amsterdam
+BU15810402,Maarsbergen
+BU15810403,Valkenheide
+BU15810408,Verspreide huizen op de Heuvelrug
+BU15810409,Verspreide huizen in de Geldersche Vallei
+BU16211111,Dorp Bergschenhoek
+BU16211121,De Driehoek
+BU16211211,Bergsche Ackers
+BU16211221,Oosteindsche Ackers
+BU16211231,Ackerse Zoom
+BU16211311,Beemdenbuurt
+BU16211321,Eilandenbuurt
+BU16211331,Boterdorpse Zoom
+BU16211411,Wilderszijde
+BU16211514,Bergse Nos
+BU16211522,Schreyracker
+BU16211531,Hoeksekade
+BU16211543,Weg en Land
+BU16211552,Warmoeziersweg
+BU16212111,Berkel Dorp
+BU16212121,Parkbuurt
+BU16212131,Oranjebuurt
+BU16212144,Annie M.G. Schmidtpark Midden
+BU16212211,Bomen- en Struikenbuurt
+BU16212221,Sterrenbuurt
+BU16212231,Edelsteenbuurt
+BU16212241,Componistenbuurt
+BU16212254,Annie M.G. Schmidtpark Noord
+BU16212311,Merenbuurt
+BU16212321,Rivierenbuurt
+BU16212331,Havenbuurt
+BU16212412,Noordeinde
+BU16212511,Bloemenbuurt
+BU16212521,Parc Rodenrijs
+BU16212531,Vogelbuurt
+BU16212541,Weidebloembuurt
+BU16212611,Rodenrijse Zoom
+BU16212621,Bonfut
+BU16212633,Berkelse Poort
+BU16212644,Annie M.G. Schmidtpark Zuid
+BU16212711,Bolwerk
+BU16212721,Gouden Griffelbuurt
+BU16212731,Gouden Uilbuurt
+BU16212741,Buurt 2741
+BU16212814,Vlinderstrik
+BU16212823,Spoorhaven
+BU16212833,Bedrijventerrein Rodenrijs
+BU16212843,Oudeland
+BU16212851,Buurt 2851
+BU16212864,Bergboezem
+BU16213111,Schildersbuurt
+BU16213121,Zeeheldenbuurt
+BU16213133,De Hoefslag
+BU16213141,Oranjebuurt
+BU16213162,Zeldenrust
+BU16213211,Molenbuurt
+BU16213221,Sterrenbuurt
+BU16213231,Bomenbuurt
+BU16213242,Merenveld
+BU16213251,Vogelbuurt
+BU16213261,De Tuinen
+BU16213312,Overbuurtse Polder
+BU16213323,Klappolder
+BU16213334,Rotte Zoom
+BU16213353,Prisma
+BU16760000,Zierikzee binnen de vesten
+BU16760001,Malta
+BU16760002,Poortambacht
+BU16760003,Zuidhoek
+BU16760004,Kaaskenswater
+BU16760007,Verspreide huizen in het Noorden en Westen
+BU16760008,Verspreide huizen in het Zuiden
+BU16760009,Verspreide huizen in het Oosten
+BU16760100,Brouwershaven
+BU16760109,Verspreide huizen Brouwershaven
+BU16760200,Zonnemaire
+BU16760209,Verspreide huizen Zonnemaire
+BU16760300,Dreischor
+BU16760309,Verspreide huizen Dreischor
+BU16760400,Noordgouwe
+BU16760401,Schuddebeurs
+BU16760409,Verspreide huizen Noordgouwe en Schuddebeurs
+BU16760500,Bruinisse
+BU16760501,Recreatiegebied
+BU16760509,Verspreide huizen Bruinisse
+BU16760600,Nieuwerkerk
+BU16760609,Verspreide huizen Nieuwerkerk
+BU16760700,Oosterland
+BU16760701,Sirjansland
+BU16760708,Verspreide huizen Sirjansland
+BU16760709,Verspreide huizen Oosterland
+BU16760800,Ouwerkerk
+BU16760809,Verspreide huizen Ouwerkerk
+BU16760900,Scharendijke
+BU16760909,Verspreide huizen Scharendijke
+BU16761000,Kerkwerve
+BU16761009,Verspreide huizen Kerkwerve
+BU16761100,Ellemeet
+BU16761109,Verspreide huizen ten zuiden van Ellemeet
+BU16761200,Haamstede
+BU16761201,Burgh
+BU16761202,Hogeweg
+BU16761203,Westenschouwen
+BU16761204,Kloosterweg en omgeving
+BU16761205,Nieuw-Haamstede
+BU16761208,Verspreide huizen in het Kleigebied
+BU16761209,Verspreide huizen in het Zandgebied
+BU16761300,Renesse
+BU16761301,Oude Moolweg en Laone
+BU16761302,Hoogenboomlaan
+BU16761303,Lagezoom
+BU16761309,Verspreide huizen ten westen van Renesse
+BU16761400,Noordwelle
+BU16761409,Verspreide huizen Noordwelle
+BU16761500,Serooskerke
+BU16761509,Verspreide huizen Serooskerke
+BU16950000,Kortgene-Dorp
+BU16950001,Kortgene-Oost
+BU16950009,Verspreide huizen Kortgene
+BU16950100,Colijnsplaat
+BU16950109,Verspreide huizen Colijnsplaat
+BU16950200,Kats
+BU16950209,Verspreide huizen Kats
+BU16950300,Kamperland
+BU16950301,Recreatiegebied Kamperland
+BU16950309,Verspreide huizen Kamperland
+BU16950400,Wissenkerke
+BU16950409,Verspreide huizen Wissenkerke
+BU16950500,Geersdijk
+BU16950509,Verspreide huizen Geersdijk
+BU16960500,Breukeleveen
+BU17140000,Sluis
+BU17140001,Sint Anna ter Muiden
+BU17140009,Verspreide huizen Sluis
+BU17140100,Retranchement
+BU17140109,Verspreide huizen Retranchement
+BU17140200,Aardenburg
+BU17140209,Verspreide huizen Aardenburg
+BU17140300,Eede
+BU17140309,Verspreide huizen Eede
+BU17140400,Sint Kruis
+BU17140409,Verspreide huizen Sint Kruis
+BU17140500,Oostburg
+BU17140509,Verspreide huizen Oostburg
+BU17140600,Zuidzande
+BU17140609,Verspreide huizen Zuidzande
+BU17140700,Cadzand
+BU17140701,Cadzand-Bad
+BU17140709,Verspreide huizen Cadzand
+BU17140800,Nieuwvliet
+BU17140801,Nieuwvliet-Bad-Oost en -West
+BU17140809,Verspreide huizen Nieuwvliet
+BU17140900,Groede
+BU17140909,Verspreide huizen Groede
+BU17141000,Breskens
+BU17141009,Verspreide huizen Breskens
+BU17141100,Hoofdplaat
+BU17141101,Nummer EÃƒÂ©n en omgeving
+BU17141108,Verspreide huizen Nummer EÃƒÂ©n en Slijkplaat
+BU17141109,Overige verspreide huizen Hoofdplaat
+BU17141200,IJzendijke
+BU17141209,Verspreide huizen IJzendijke
+BU17141300,Schoondijke
+BU17141309,Verspreide huizen Schoondijke
+BU17141400,Waterlandkerkje
+BU17141409,Verspreide huizen Waterlandkerkje
+BU17220000,Ferwerd
+BU17220001,Marrum
+BU17220002,Blija
+BU17220003,Hogebeintum
+BU17220007,Verspreide huizen Ferwerd
+BU17220008,Verspreide huizen Marrum-Westernijkerk
+BU17220009,Verspreide huizen Blija
+BU17220100,Hallum
+BU17220109,Verspreide huizen Hallum
+BU17220200,Birdaard
+BU17220201,Wanswerd
+BU17220202,Jislum
+BU17220203,Genum
+BU17220204,Reitsum
+BU17220205,Lichtaard
+BU17220206,Janum
+BU17220208,Verspreide huizen Birdaard
+BU17220209,Verspreide huizen Wanswerd
+BU18910000,DamwÃƒÂ¢ld
+BU18910001,BroeksterwÃƒÂ¢ld
+BU18910002,De Falom
+BU18910008,Verspreide huizen DamwÃƒÂ¢ld
+BU18910009,Verspreide huizen BroeksterwÃƒÂ¢ld
+BU18910100,Driezum
+BU18910101,WÃƒÂ¢lterswÃƒÂ¢ld
+BU18910108,Verspreide huizen Driezum
+BU18910109,Verspreide huizen WÃƒÂ¢lterswÃƒÂ¢ld
+BU18910200,De Westereen
+BU18910201,FeanwÃƒÂ¢lden
+BU18910202,Readtsjerk
+BU18910208,Verspreide huizen De Westereen
+BU18910209,Verspreide huizen FeanwÃƒÂ¢lden
+BU18910300,Rinsumageast
+BU18910301,SibrandahÃƒÂ»s
+BU18910309,Verspreide huizen Rinsumageast
+BU18920210,Zevenhuizerplas
+BU18920301,Kern Moordrecht
+BU18920302,Moordrecht Bloemenbuurt
+BU18920303,Dorp Noord
+BU18920304,Staatsliedenbuurt/Vijfakkers
+BU18920305,Ambonwijk
+BU18920306,Westeinde
+BU18920307,Uiterwaard
+BU18920308,Bedrijventerrein 't Ambacht
+BU18920309,Recreatiepark Oosteinde
+BU18920310,Bedrijventerrein Gouwepark
+BU18920311,Vijfakkers-Noord
+BU18920399,Verspreide bebouwing Moordrecht
+BU18920401,Kern Nieuwerkerk aan den IJssel
+BU18920402,Bedrijventerrein De Hooge Veenen
+BU18920403,Zuidplas Kruiden
+BU18920404,Zuidplas Velden
+BU18920405,Kleinpolder
+BU18920406,Kortenoord
+BU18920407,Recreatiepark Klein Hitland
+BU18920408,Esse Hoog
+BU18920409,Esse Laag
+BU18920410,Bomenbuurt
+BU18920411,Dorrestein-Noord
+BU18920412,Parkzoom
+BU18920413,Esse Zoom Laag
+BU18920414,Zuidplas Mossen
+BU18920415,Zuidplas Dalen
+BU18920416,Dorrestein-Zuid
+BU18920491,Verspreide bebouwing Zuidplaspolder Nieuwerkerk aan den IJss
+BU18920492,Verspreide bebouwing Essepolder
+BU18920493,Verspreide bebouwing Achter Esse
+BU19010101,Meije
+BU19010102,Buitenkerk
+BU19010103,Burgemeester Kremerweg
+BU19010104,Noordzijde
+BU19010205,Centrum
+BU19010306,Dammekant
+BU19010307,J.C. Hoogendoornlaan
+BU19010308,Oud-Bodegraafseweg
+BU19010309,Dronenwijk
+BU19010310,Broekvelden
+BU19010311,Groote Wetering
+BU19010312,Zuidzijde
+BU19010413,Weijland
+BU19010514,Weijpoort
+BU19010615,Oud-Reeuwijk
+BU19010616,Tempel
+BU19010617,Middelburg
+BU19010618,Randenburg
+BU19010619,Verspreide huizen polder Middelburg
+BU19010620,Verspreide huizen polder Reeuwijk
+BU19010621,Reeuwijk Dorp
+BU19010722,Reeuwijk Brug
+BU19010723,Zoutman
+BU19010724,Ravensberg
+BU19010725,Sluipwijk
+BU19010726,Platteweg
+BU19010727,Gravekoop
+BU19010728,Twaalfmorgen
+BU19010729,Oukoop
+BU19010730,AbessiniÃƒÂ«
+BU19010831,Driebruggen
+BU19010832,Hogebrug
+BU19010833,Hoogeind
+BU19010834,Laageind
+BU19010935,Waarder
+BU19010936,Westeinde
+BU19010937,Oosteinde
+BU19040101,Maarsseveen
+BU19040102,Bethunepolder-zuid
+BU19040103,Otterspoorbroek
+BU19040104,Op Buuren
+BU19040105,Zandweg-Oostwaard
+BU19040106,Staatsliedenbuurt
+BU19040107,Omgeving Goudestein
+BU19040108,Componistenbuurt
+BU19040109,Lanenkwartier
+BU19040110,Centrum ten zuiden van de Vecht
+BU19040111,Reizende man
+BU19040112,Schilderskwartier
+BU19040113,Zogwetering
+BU19040114,Park Vechtenstein
+BU19040115,Zeeheldenbuurt
+BU19040116,Hogebrug
+BU19040117,Friezenbuurt
+BU19040118,Centrum ten noorden van de Vecht
+BU19040119,Begraafplaats Maarssen
+BU19040201,Polder Kortrijk
+BU19040202,Polder Breukelen Proosdij
+BU19040203,Polder Klein Oud Aa
+BU19040204,Kievitsbuurt
+BU19040205,Polder Breukelerwaard
+BU19040206,Polder Nijenrode
+BU19040207,Breukelen Noord
+BU19040208,Corridor
+BU19040209,Landgoed Nijenrode
+BU19040210,Kanaalzone Zuid Breukelen
+BU19040211,Scheendijk
+BU19040212,Broeckland
+BU19040213,Breukelen Zuid
+BU19040214,Kanaalzone Noord Breukelen
+BU19040215,Breukelen Midden
+BU19040216,Rode Dorp
+BU19040301,Polder Holland
+BU19040302,Polder Garsten
+BU19040303,Polder Oud Over
+BU19040304,Kanaalzone Loenen aan de Vecht
+BU19040305,Kanaalzone sector Vreeland
+BU19040306,Mijnden
+BU19040307,Hoefijzer
+BU19040308,Driehoven
+BU19040309,Oudover
+BU19040310,Loenen Dorpskern
+BU19040311,Cronenburgh
+BU19040312,Kerklaan
+BU19040401,Polder Oukoop
+BU19040402,Nieuwer Ter Aa
+BU19040501,Polder Portengen
+BU19040502,Polder Groot Oud Aa
+BU19040503,Polder Spengen
+BU19040504,Polder Kockengen
+BU19040505,Kockengen Dorp
+BU19040506,Portengense Brug
+BU19040507,Welgelegen
+BU19040508,Groenlust
+BU19040509,Vierde kwadrant Kockengen
+BU19040601,Hoeker Polder
+BU19040602,Polder Dorssewaard
+BU19040603,Vreeland Dorp
+BU19040604,Vreeland
+BU19040701,Molenpolder
+BU19040702,Bethunepolder-Noord
+BU19040703,Tienhoven-Oud Maarsseveen
+BU19040901,Polder Mijnden
+BU19040902,Polder Angstelkade
+BU19040903,Polder Sticht
+BU19040904,Polder Het Honderd
+BU19040905,Nieuwersluis
+BU19040906,Angstelkade
+BU19040907,Kanaalzone sector Nieuwersluis
+BU19041001,Poldergebied Loenersloot
+BU19041002,Loenersloot Binnenweg
+BU19041003,Loenersloot Dorp
+BU19041004,Poldergebied Loenersloot
+BU19041101,Oud-Zuilen
+BU19041201,Verbindingswegen
+BU19041202,Industrieterrein Maarssenbroek
+BU19041203,Fazantenkamp
+BU19041204,Boomstede
+BU19041205,Reigerskamp
+BU19041206,Zwanenkamp
+BU19041207,Valkenkamp
+BU19041208,Duivenkamp
+BU19041209,Bloemstede
+BU19041210,Zebraspoor
+BU19041211,Pauwenkamp
+BU19041212,Kamelenspoor
+BU19041213,Antilopespoor
+BU19041214,Bisonspoor
+BU19041215,Spechtenkamp
+BU19160100,De Zijde
+BU19160101,Duivenvoorde
+BU19160102,Park Veursehout
+BU19160103,Leidsenhage
+BU19160104,Schakenbosch
+BU19160200,Prinsenhof hoogbouw
+BU19160201,Prinsenhof laagbouw
+BU19160300,'t Lien
+BU19160301,De Rietvink
+BU19160400,Kern Stompwijk
+BU19160401,Landelijk gebied Stompwijk
+BU19160500,Damcentrum
+BU19160501,Klein Plaspoelpolder
+BU19160502,Leidschendam-Zuid
+BU19160503,Zeeheldenwijk
+BU19160600,De Heuvel
+BU19160601,Amstelwijk
+BU19160700,Damsigt
+BU19160701,Verzetsheldenwijk
+BU19160702,Raadhuiskwartier
+BU19160703,Sijtwende 3 t/m 5
+BU19160800,Essesteijn
+BU19160801,Nieuw Essesteijn / Zijdezigt
+BU19160900,Voorburg Midden
+BU19160901,Voorburg Oud
+BU19161000,Bovenveen
+BU19161100,Voorburg Noord
+BU19161200,Voorburg West
+BU19161201,Park Leeuwenbergh
+BU19240001,Goedereede woonkern
+BU19240002,Goedereede havenhoofd
+BU19240003,Goedereede buitengebied
+BU19240101,Ouddorp centrum
+BU19240102,Ouddorp noord
+BU19240103,Ouddorp zuid
+BU19240104,Ouddorp klepperstee klarebeek
+BU19240105,Ouddorp oude nieuwlandseweg
+BU19240106,Ouddorp brouwersdam
+BU19240107,Ouddorp westeinde
+BU19240108,Ouddorp oudeland
+BU19240109,Ouddorp buitengebied
+BU19240201,Stellendam centrum
+BU19240202,Stellendam west
+BU19240203,Stellendam zuiderdiep
+BU19240204,Stellendam haven
+BU19240205,Stellendam buitengebied
+BU19240301,Middelharnis westplaat
+BU19240302,Middelharnis centrum
+BU19240303,Middelharnis prinsenkwartier
+BU19240304,Middelharnis bomenbuurt
+BU19240305,Middelharnis oostplaat
+BU19240306,Middelharnis Nieuw Zeeland
+BU19240307,Middelharnis buitengebied
+BU19240401,Ooltgensplaat woonkern
+BU19240402,Ooltgensplaat haven
+BU19240403,Ooltgensplaat buitengebied
+BU19240501,Den Bommel woonkern
+BU19240502,Den Bommel buitengebied
+BU19240601,Oude-Tonge centrum
+BU19240602,Oude-Tonge prinsessenbuurt handelskade
+BU19240603,Oude-Tonge planetenbuurt
+BU19240604,Oude-Tonge haven
+BU19240605,Oude-Tonge industriegebied
+BU19240606,Oude-Tonge buitengebied
+BU19240701,Dirksland centrum
+BU19240702,Dirksland noord
+BU19240703,Dirksland zuid
+BU19240704,Dirksland industriegebied
+BU19240705,Dirksland buitengebied
+BU19240801,Melissant woonkern
+BU19240802,Melissant buitengebied
+BU19240901,Herkingen woonkern
+BU19240902,Herkingen buitenplaats
+BU19240903,Herkingen buitengebied
+BU19241001,Sommelsdijk centrum
+BU19241002,Sommelsdijk bloemenbuurt
+BU19241003,Sommelsdijk westplaat
+BU19241004,Sommelsdijk vogelbuurt oost
+BU19241005,Sommelsdijk vogelbuurt west
+BU19241006,Sommelsdijk buitengebied
+BU19241101,Nieuwe-Tonge woonkern
+BU19241102,Nieuwe-Tonge battenoord
+BU19241103,Nieuwe-Tonge buitengebied
+BU19241201,Stad aan 't Haringvliet woonkern
+BU19241202,Stad aan 't Haringvliet buitengebied
+BU19241301,Achthuizen woonkern
+BU19241302,Achthuizen buitengebied
+BU19260101,Pijnacker-Centrum/Dorp
+BU19260102,Pijnacker Noord
+BU19260103,Koningshof
+BU19260104,Klapwijk
+BU19260105,Tolhek
+BU19260106,Keijzershof Erven
+BU19260107,Ackerswoude
+BU19260108,Keijzershof Boszoom
+BU19260109,Keijzershof Eilanden
+BU19260111,Zuidpolder Oude Leede
+BU19260112,Pijnacker Oost
+BU19260113,Noordpolder Pijnacker
+BU19260114,De Boezem
+BU19260221,Nootdorp Centrum/West
+BU19260222,Vrouwtjeslant/Nieuweveen
+BU19260223,Achter het Raadhuis
+BU19260224,'s-Gravenhout
+BU19260225,De Venen Centrum
+BU19260226,De Venen/Craeyenburch
+BU19260227,De Venen Oost
+BU19260231,Buitengebied Nootdorp
+BU19260232,Oostambacht/Heronpark
+BU19260341,Oud-Delfgauw
+BU19260342,Emerald Noord
+BU19260343,Emerald Centrum
+BU19260344,Emerald Zuid
+BU19260351,Ruijven
+BU19260352,Zuidpolder Delfgauw
+BU19260353,Noordpolder Delfgauw
+BU19270000,Lekdijk
+BU19270001,Kinderdijk (gedeeltelijk)
+BU19270002,Middelweg
+BU19270003,Dorp
+BU19270009,Verspreide huizen Nieuw-Lekkerland
+BU19270100,Bleskensgraaf Kern
+BU19270109,Bleskensgraaf landelijk gedeelte
+BU19270200,Brandwijk
+BU19270201,Gijbeland Kern
+BU19270202,"Gijbeland, landelijk gebied"
+BU19270300,Dorp Goudriaan
+BU19270309,Landelijk gebied Goudriaan
+BU19270400,Molenaarsgraaf Kern
+BU19270409,Molenaarsgraaf landelijk gebied
+BU19270500,Ottoland
+BU19270501,Laag-Blokland
+BU19270600,Oud-Alblas Kern
+BU19270609,Oud-Alblas landelijk gebied
+BU19270700,Wijngaarden
+BU19270800,Groot-Ammers
+BU19270801,Gelkenes
+BU19270802,Graafland
+BU19270803,Achterland
+BU19270900,Langerak-Dorp
+BU19270901,Waal
+BU19270909,Langerak-landelijk gebied
+BU19271000,Nieuwpoort
+BU19271100,Streefkerk-Dorp
+BU19271109,Streefkerk landelijk gebied
+BU19300101,Kern
+BU19300102,Molenwei
+BU19300103,Oranjebuurt
+BU19300104,Vogelbuurt
+BU19300105,Centrum-Oost
+BU19300106,Centrum-Zuid
+BU19300201,Schiekamp-Noord
+BU19300202,Schiekamp-Zuid
+BU19300301,Hoogwerf-Noord
+BU19300302,Hoogwerf-Zuid
+BU19300401,Vierambachten
+BU19300501,De Hoek-1
+BU19300502,De Hoek-2
+BU19300503,De Hoek-3
+BU19300504,De Hoek-4
+BU19300601,Gildenwijk-Oost
+BU19300602,Gildenwijk-West
+BU19300603,Ziekenhuis
+BU19300701,Groenewoud-Hoog
+BU19300702,Groenewoud-Huur
+BU19300703,Groenewoud-Koop
+BU19300801,Sterrenkwartier-Hoog
+BU19300802,Sterrenkwartier-Midden
+BU19300803,Sterrenkwartier-Oost
+BU19300804,Sterrenkwartier-Zuid
+BU19300805,Sterrenkwartier-West
+BU19300901,Schenkel-Noordwest
+BU19300902,Schenkel-Industrieterrein
+BU19300903,Schenkel-Zuidwest
+BU19300904,Schenkel-Zuidoost
+BU19300905,Schenkel-Noordoost
+BU19301001,De Dijk
+BU19301002,Bedrijventerrein Haven-Noord
+BU19301003,De Haven
+BU19301004,Het Land
+BU19301101,Vogelenzang-Zuid
+BU19301102,Vogelenzang-Noord
+BU19301201,Gaarden
+BU19301202,Dreven
+BU19301203,Voorden
+BU19301204,Akkers-Centrum
+BU19301205,Donken
+BU19301206,Kreken
+BU19301301,Vriesland
+BU19301401,Ottersveen
+BU19301402,Kikkerveen
+BU19301403,Beverveen
+BU19301404,Egel- en Salamanderveen
+BU19301405,Krekelveen
+BU19301406,Slakkenveen
+BU19301407,Middengebied
+BU19301408,Karperveen
+BU19301409,Snoekenveen
+BU19301410,Baarsveen
+BU19301411,Park Waterland
+BU19301501,Maaswijk-Noordoost
+BU19301502,Maaswijk-Noordwest
+BU19301503,Maaswijk-Zuidwest
+BU19301504,Maaswijk-Zuidoost
+BU19301505,Maaswijktuinen
+BU19301506,Park Welgelegen
+BU19301601,Industrieterrein Halfweg
+BU19301701,Oostbroek
+BU19301702,Landtong
+BU19301703,Hartelpark-Oost
+BU19301704,Hartelpark-West
+BU19301705,Markenburg
+BU19301706,Westrand
+BU19301707,Waterrijk
+BU19301708,Berenplaat
+BU19302501,Kern Heenvliet
+BU19302502,Bloemendaele
+BU19302503,Ravensteijn-West
+BU19302504,Poldergebied Heenvliet
+BU19302701,Kern Geervliet
+BU19302702,Geervliet-Noordoost
+BU19302703,Poldergebied Geervliet
+BU19302901,Kern Abbenbroek
+BU19302902,Poldergebied Abbenbroek
+BU19303101,Kern Zuidland
+BU19303102,Kerckhoek
+BU19303103,Kreken van Nibbeland
+BU19303104,Harregat
+BU19303105,Poldergebied Zuidland
+BU19303301,Kern Simonshaven
+BU19303302,Poldergebied Simonshaven
+BU19303501,Kern Oudenhoorn
+BU19303502,Poldergebied Oudenhoorn
+BU19303503,Poldergebied Nieuwenhoorn
+BU19305001,Hekelingen-Dorp
+BU19305002,Uitslag van Putten-Zuid
+BU19305003,Oud-Schuddebeurs
+BU19310000,Tiendhoek
+BU19310001,Schuwacht
+BU19310002,Opperduit
+BU19310003,Tiendweg-West
+BU19310004,Lekkerkerk-Oost
+BU19310005,Prinsessenbuurt
+BU19310006,Koninginnenbuurt
+BU19310007,Wibautsraat en Lorentzweg
+BU19310008,Molenwerf en omstreken
+BU19310009,Voorstraat en Centrum
+BU19310010,Industrieterrein
+BU19310011,Verspr. huizen Lekkerkerk
+BU19310100,Hoofdstraat
+BU19310101,Binnen Krimpen
+BU19310102,Beroepenbuurt
+BU19310103,Krimpen-Oost
+BU19310104,Zaag
+BU19310105,Tiendweg Noord
+BU19310106,Krimpen Centrum
+BU19310107,Industrieterrein Krimpen
+BU19310108,Lekdijk
+BU19310109,Verspr. huizen Krimpen aan de Lek
+BU19310200,Ouderkerk aan den IJssel
+BU19310208,Verspr. huizen Ouderkerk Noord
+BU19310209,Verspr. huizen Ouderkerk Oost
+BU19310300,Gouderak
+BU19310400,Bergambacht-Dorp
+BU19310401,Kadijk en Kadijkselaan
+BU19310402,Uitbreiding Dorp
+BU19310403,Benedenberg en Zuidbroek
+BU19310404,Tussenlanen
+BU19310409,Bovenberg westelijk van de Fransekade
+BU19310500,Bergstoep
+BU19310501,Lekdijk-West en Provinciale weg (ged.)
+BU19310502,Lekdijk-Oost en Provinciale weg (ged.)
+BU19310503,Bovenstad
+BU19310504,Provinciale weg (ged.) De Hem en Hogedijk (ged.)
+BU19310600,Ammerstol
+BU19310700,Berkenwoude
+BU19310701,Achterbroek
+BU19310800,Haastrecht-Dorpskern
+BU19310801,Boven-Haastrecht
+BU19310802,Beneden-Haastrecht
+BU19310803,Rozendaal
+BU19310804,Stolwijkersluis (ged.)
+BU19310805,Hofkamp
+BU19310806,Agterpoort
+BU19310807,Stein
+BU19310808,Verspr. huizen Haastrecht Noord
+BU19310809,Verspr. huizen Haastrecht Zuid
+BU19310810,Bergvliet
+BU19311000,Stolwijk
+BU19311001,Bovenkerk
+BU19311002,Benedenkerk
+BU19311003,Benedenheul
+BU19311004,Goudseweg
+BU19311005,Het Beijersche
+BU19311006,Koolwijk
+BU19311007,Schoonouwen
+BU19311008,Bilwijk
+BU19311100,Vlist
+BU19311101,Bonrepas
+BU19311200,Schoonhoven-Oude Stad
+BU19311201,Schoonhoven-Noord
+BU19311202,Schoonhoven-West
+BU19311203,Zevender
+BU19311204,Willige-Langerak
+BU19311205,"Vlist, Bovenberg en Lekdijk"

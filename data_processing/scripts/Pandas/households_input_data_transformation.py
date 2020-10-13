@@ -64,7 +64,7 @@ check_number_of_objects(len(df_housing_stock), total_number_of_objects_after_hou
 
 # Load energy label database with 'final' energy labels (EP-online)
 print('Loading energy label database\n')
-ep_online_file = main_path / "BAG" / "general" / "ep_online_v20191003.csv"
+ep_online_file = main_path / "BAG" / "general" / "ep_online_v20190901.csv"
 ep_online = pd.read_csv(ep_online_file, sep=';')
 
 keep = ['Pand_postcode', 'Pand_huisnummer', 'Pand_huisnummer_toev', 'Meting_geldig_tot', 'Pand_energieklasse', 'Pand_energieprestatieindex']
