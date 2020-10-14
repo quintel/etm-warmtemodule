@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pickle
-from scipy.spatial import Delaunay
+#from scipy.spatial import Delaunay
 
 # project modules
 from Bookkeeper import Bookkeeper

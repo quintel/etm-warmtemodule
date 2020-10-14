@@ -548,6 +548,6 @@ def initialise_neighbourhoods_and_heat_sources():
 
 
 if __name__ == "__main__":
-    config.set_current_project('sample')
-    config.current_project.set_current_scenario('scenario_1')
+    config.set_current_project('heemskerk_buurten')
+    config.current_project.set_current_scenario('scenario_3')
     initialise_neighbourhoods_and_heat_sources()
