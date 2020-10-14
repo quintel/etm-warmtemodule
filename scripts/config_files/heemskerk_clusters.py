@@ -98,7 +98,7 @@ KEY_FIGURES = {
 # Different scenarios that are run by the ETM heat module
 SCENARIOS = {
     'scenario_1': { # ruim gas, ruim warmte
-        'renewable_gas_budget': 127.E3,  # in GJ
+        'renewable_gas_budget': 5709.E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
