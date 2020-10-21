@@ -32,7 +32,8 @@ TODO
 
 ### Getting started
 
-Install the `requirements.txt`
+Install the `requirements.txt` by typing the following command in the terminal (for Python3):
+```pip3 install -r requirements.txt```
 
 Furthermore, make sure you have the QGIS application installed on your machine.
 
