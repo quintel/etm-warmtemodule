@@ -11,7 +11,7 @@ main_path = Path(__file__).resolve().parents[3]  # data_processing folder
 #========================== Neighbourhood list ==================================
 
 print('\nLoading complete list of neighbourhoods\n')
-neighbourhood_list_file = main_path / "input_data" / "neighbourhoods_OB2020.csv"
+neighbourhood_list_file = main_path / "input_data" / "buurten_OB2021.csv"
 df_neighbourhood_list = pd.read_csv(Path(neighbourhood_list_file), dtype={"BU_CODE": object})
 
 number_of_objects_total = len(df_neighbourhood_list)
