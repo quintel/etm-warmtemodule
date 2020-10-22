@@ -27,13 +27,64 @@ df_neighbourhood_list.index.names = ['neighbourhood_code']
 #======================== Neighbourhood properties =========================================
 
 print('\nLoading other neighbourhood properties\n')
-neighbourhood_properties_file = main_path / "input_data" / "sample" / "neighbourhood_properties.csv"
+neighbourhood_properties_file = main_path / "input_data" / "Warmtevraag en WEQ data SA.csv"
 df_neighbourhood_properties = pd.read_csv(Path(neighbourhood_properties_file), dtype=object)
+df_neighbourhood_properties.set_index('BU_CODE', inplace=True)
+df_neighbourhood_properties.index.names = ['neighbourhood_code']
+
+print('Removing redundant columns')
+keep = [
+'InStudieGebied?',
+'Vraag_perWEQ_RV [ giga J per WEQ*yr]',
+'Vraag_perWEQ_TW [ giga J per WEQ*yr]',
+'Vraag_perWEQ_K [ giga J per WEQ*yr]',
+'Vraag_perWEQ_App [ giga J per WEQ*yr]'
+]
+
+df_neighbourhood_properties = df_neighbourhood_properties[keep]
+
+# Select only rows for neighbourhoods in our region of interest
+df_neighbourhood_properties = df_neighbourhood_properties[df_neighbourhood_properties['InStudieGebied?'] == "1"]
 
 number_of_properties_objects = len(df_neighbourhood_properties)
 print("Found ", number_of_properties_objects, " neighbourhoods with additional properties")
 
-df_neighbourhood_properties.set_index('neighbourhood_code', inplace=True)
+if number_of_properties_objects != number_of_objects_total:
+	print("WARNING: number of objects with additional properties is not equal to total number of objects!")
+
+## Do stuff with the columns
+
+# space_heating_demand_per_m2_utility = Vraag_perWEQ_RV [ giga J per WEQ*yr] / 130
+df_neighbourhood_properties["space_heating_demand_per_m2_utility"] = df_neighbourhood_properties['Vraag_perWEQ_RV [ giga J per WEQ*yr]'].apply(pd.to_numeric) / 130.0
+
+# space_heating_demand_per_house = Vraag_perWEQ_RV [ giga J per WEQ*yr]
+df_neighbourhood_properties.rename(columns = {'Vraag_perWEQ_RV [ giga J per WEQ*yr]': 'space_heating_demand_per_house'}, inplace = True)
+
+# hot_water_demand_per_m2_utility = Vraag_perWEQ_TW [ giga J per WEQ*yr] / 130
+df_neighbourhood_properties["hot_water_demand_per_m2_utility"] = df_neighbourhood_properties['Vraag_perWEQ_TW [ giga J per WEQ*yr]'].apply(pd.to_numeric) / 130.0
+
+# hot_water_demand_per_house = Vraag_perWEQ_TW [ giga J per WEQ*yr]
+df_neighbourhood_properties.rename(columns = {'Vraag_perWEQ_TW [ giga J per WEQ*yr]': 'hot_water_demand_per_house'}, inplace = True)
+
+# electricity_demand_per_house = Vraag_perWEQ_K [ giga J per WEQ*yr] + Vraag_perWEQ_App [ giga J per WEQ*yr]
+df_neighbourhood_properties["electricity_demand_per_house"] = df_neighbourhood_properties['Vraag_perWEQ_K [ giga J per WEQ*yr]'] + df_neighbourhood_properties['Vraag_perWEQ_App [ giga J per WEQ*yr]']
+
+# electricity_demand_per_m2_utility = (Vraag_perWEQ_K [ giga J per WEQ*yr] + Vraag_perWEQ_App [ giga J per WEQ*yr]) / 130
+df_neighbourhood_properties["electricity_demand_per_m2_utility"] = df_neighbourhood_properties["electricity_demand_per_house"].apply(pd.to_numeric) / 130.0
+
+## Adding additional (empty) columns
+
+df_neighbourhood_properties['share_of_houses_demolished'] = 0
+df_neighbourhood_properties['number_of_new_apartments'] = 0
+df_neighbourhood_properties['number_of_new_terraced_houses'] = 0
+df_neighbourhood_properties['number_of_new_detached_houses'] = 0
+df_neighbourhood_properties['number_of_new_semi_detached_houses'] = 0
+df_neighbourhood_properties['number_of_new_houses_unknown_type'] = 0
+df_neighbourhood_properties['epi_of_new_houses'] = 0
+df_neighbourhood_properties['size_of_new_houses'] = 0
+
+## Drop unused columns
+df_neighbourhood_properties.drop(['Vraag_perWEQ_K [ giga J per WEQ*yr]', 'Vraag_perWEQ_App [ giga J per WEQ*yr]', 'InStudieGebied?'], axis=1, inplace=True)
 
 # Merging the dataframes
 df_neighbourhoods = df_neighbourhood_list.merge(df_neighbourhood_properties, how='left', on='neighbourhood_code')
@@ -62,6 +113,8 @@ df_neighbourhoods = df_neighbourhoods.fillna(0)
 
 # Rename column
 df_neighbourhoods.rename(columns = {'P_STADVERW': 'percentage_of_heat_networks'}, inplace = True)
+
+
 
 # export to CSV
 print('Exporting results to CSV\n')
