@@ -22,7 +22,7 @@ ASSUMPTIONS = {
     # The threshold for the fraction of LT eligible residences (as specified
     # in the LT Matrix) in a neighbourhood: if the threshold is exceeded,
     # the neighbourhood will get a preference checkmark for W_LT
-    'lt_eligibility_threshold': 0.5,
+    'lt_eligibility_threshold': 0.75,
 
     # The offset for the heating option preference vector: based on the linear
     # heat density, the neighbourhood's preference for a heat network may be
@@ -32,11 +32,12 @@ ASSUMPTIONS = {
     # For each heating option, a desired Energy Performance Index (EPI) is
     # assumed: this EPI corresponds to an amount of (relative) heat reduction,
     # specified in the KEY_FIGURES
+    # source: https://keuzehulpduurzaamverwarmen.nl/poster/
     'desired_epi': {
         'W_MTHT': 1.95,  # label D
-        'H': 1.6,   # label C
-        'W_LT': 0.7,
-        'E': 0.7    # label A+
+        'H': 1.95,   # label D
+        'E': 1.2,   # label A/B
+        'W_LT': 1.2 # label A/B
     },
 
     # Neighbourhoods that have existing heat networks are set to have preference
@@ -48,7 +49,7 @@ ASSUMPTIONS = {
     'heat_network_coverage_favour': 0.025,
 
     # Future efficiency of appliances (baseload electricity demand)
-    'efficiency_of_appliances': 0.75, # source: NvdT scenarios
+    'efficiency_of_appliances': 1.0, # assuming no efficiency improvement for OB2021
 }
 
 SPECS = {
@@ -56,16 +57,16 @@ SPECS = {
     # its share in the heat network. The remaining share (peak demand) should
     # be provided by a back-up heater.
     'share_of_HT_heat': 0.8,
-    'share_of_LT_heat_for_W_MTHT': 0.4, ## TODO
-    'share_of_LT_heat_for_W_LT': 0.7,
-    'share_of_geothermal_heat': 0.7,
-    'share_of_TEO_heat': 0.7,
-    'share_of_undefined_heat': 0.7,
+    'share_of_LT_heat_for_W_MTHT': 0.4,
+    'share_of_LT_heat_for_W_LT': 0.7, # source: CE Delft
+    'share_of_geothermal_heat': 0.7, # source: CE Delft
+    'share_of_TEO_heat': 0.7, # source: CE Delft
+    'share_of_undefined_heat': 0.7, # source: CE Delft
 
     # Efficiencies of different heating options (heat network, central combi
     # boiler (ccb), heat pump)
-    'efficiency_of_heat_network': 0.85, # 15% distribution losses
-    'efficiency_of_LT_heat_network': 0.9, # TODO: CHANGE THIS
+    'efficiency_of_heat_network': 0.75, # 25% distribution losses, source: TKI Urban Energy (20-30%)
+    'efficiency_of_LT_heat_network': 0.85, # 15% distribution losses, source: CE Delft
     'efficiency_gas_to_heat_ccb': 1.067,  # source: ETM
     'efficiency_electricity_to_heat': 3.75, # source: CE Delft
 
@@ -107,7 +108,7 @@ KEY_FIGURES = {
 # Different scenarios that are run by the ETM heat module
 SCENARIOS = {
     'scenario_1': { # ruim gas, ruim warmte
-        'renewable_gas_budget':  5709.E6,  # in GJ
+        'renewable_gas_budget':  99999.E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
@@ -115,7 +116,7 @@ SCENARIOS = {
         'teo': 'teo_sources_high_potential.csv'
     },
     'scenario_2': { # beperkt gas, ruim warmte
-        'renewable_gas_budget': 19.E6,  # in GJ
+        'renewable_gas_budget': 6.485E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
@@ -123,12 +124,20 @@ SCENARIOS = {
         'teo': 'teo_sources_high_potential.csv'
     },
     'scenario_3': { # beperkt gas, beperkt warmte
-        'renewable_gas_budget': 19.E6,  # in GJ
+        'renewable_gas_budget': 6.485E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_low_potential.csv',
         'lt_heat': 'lt_sources_low_potential.csv',
         'geothermal': 'geothermal_sources_low_potential.csv',
-        'teo': 'teo_sources_low_potential.csv'
+        'teo': 'teo_sources_no_potential.csv'
+    },
+    'scenario_4': { # beperkt gas, geen geothermie, onbeperkt restwarmte
+        'renewable_gas_budget': 6.485E6,  # in GJ
+        'used_renewable_gas': 0.,
+        'ht_heat': 'ht_sources_unlimited_potential.csv',
+        'lt_heat': 'lt_sources_unlimited_potential.csv',
+        'geothermal': 'geothermal_sources_no_potential.csv',
+        'teo': 'teo_sources_no_potential.csv'
     }
 }
 

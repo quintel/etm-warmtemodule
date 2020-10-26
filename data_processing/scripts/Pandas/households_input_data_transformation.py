@@ -20,7 +20,7 @@ Transforming raw BAG data
 # load raw data
 # When exporting to .py file, remove "" from "__file__"
 main_path = Path(__file__).resolve().parents[2]  # data_processing folder
-housing_stock_file = main_path / "BAG" / "households" / "BAG_housing_stock.csv"
+housing_stock_file = main_path / "BAG" / "households" / "BAG20200101_housing_stock_2019buurtenOBgebied.csv"
 
 print('\nLoading housing stock data\n')
 df_housing_stock = pd.read_csv(Path(housing_stock_file), dtype={"BU_CODE": object, "BU_NAAM": object})
@@ -46,7 +46,7 @@ df_housing_stock['postcode'], df_housing_stock['huisnummer'], df_housing_stock['
 
 # removing redundant columns
 print('Removing redundant columns\n')
-keep = ['IDENTIFICA', 'ENERGIELAB', 'POSTCODE', 'huisnummer', 'toevoeging', 'OPPERVLAKT', 'BOUWJAAR', 'BOUWJAARWO', 'WONINGTYPE', 'BU_CODE', 'BU_NAAM']
+keep = ['IDENTIFICA', 'POSTCODE', 'huisnummer', 'toevoeging', 'OPPERVLAKT', 'BOUWJAAR', 'BOUWJAARWO', 'WONINGTYPE', 'BU_CODE', 'BU_NAAM']
 df_housing_stock = df_housing_stock[keep]
 df_housing_stock.set_index('IDENTIFICA', inplace=True)
 
@@ -64,7 +64,7 @@ check_number_of_objects(len(df_housing_stock), total_number_of_objects_after_hou
 
 # Load energy label database with 'final' energy labels (EP-online)
 print('Loading energy label database\n')
-ep_online_file = main_path / "BAG" / "general" / "ep_online_v20191003.csv"
+ep_online_file = main_path / "BAG" / "general" / "ep_online_v20201001.csv"
 ep_online = pd.read_csv(ep_online_file, sep=';')
 
 keep = ['Pand_postcode', 'Pand_huisnummer', 'Pand_huisnummer_toev', 'Meting_geldig_tot', 'Pand_energieklasse', 'Pand_energieprestatieindex']

@@ -80,8 +80,8 @@ df_neighbourhood_properties['number_of_new_terraced_houses'] = 0
 df_neighbourhood_properties['number_of_new_detached_houses'] = 0
 df_neighbourhood_properties['number_of_new_semi_detached_houses'] = 0
 df_neighbourhood_properties['number_of_new_houses_unknown_type'] = 0
-df_neighbourhood_properties['epi_of_new_houses'] = 0
-df_neighbourhood_properties['size_of_new_houses'] = 0
+df_neighbourhood_properties['epi_of_new_houses'] = 0.9
+df_neighbourhood_properties['size_of_new_houses'] = 100.0
 
 ## Drop unused columns
 df_neighbourhood_properties.drop(['Vraag_perWEQ_K [ giga J per WEQ*yr]', 'Vraag_perWEQ_App [ giga J per WEQ*yr]', 'InStudieGebied?'], axis=1, inplace=True)
@@ -112,7 +112,7 @@ df_neighbourhoods = df_neighbourhoods.merge(df_heat_network_percentage, how='lef
 df_neighbourhoods = df_neighbourhoods.fillna(0)
 
 # Rename column
-df_neighbourhoods.rename(columns = {'P_STADVERW': 'percentage_of_heat_networks'}, inplace = True)
+df_neighbourhoods.rename(columns = {'P_STADVERW': 'existing_heat_network_share'}, inplace = True)
 
 
 

@@ -557,6 +557,6 @@ def initialise_neighbourhoods_and_heat_sources():
 
 
 if __name__ == "__main__":
-    config.set_current_project('sample')
-    config.current_project.set_current_scenario('scenario_1')
+    config.set_current_project('OB2021')
+    config.current_project.set_current_scenario('scenario_4')
     initialise_neighbourhoods_and_heat_sources()

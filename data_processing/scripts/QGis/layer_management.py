@@ -16,7 +16,6 @@ def add_layer_as_reprojected_gpkg(project_folder, geo_layer_folder, source_file,
 
 
 def rename_attributes(layer, rename_dict):
-
     layer.startEditing()
 
     for field in layer.fields():

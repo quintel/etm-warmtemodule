@@ -229,21 +229,21 @@ def export_neighbourhood_results_to_csv(neighbourhoods):
     data directory
     """
     ### DEBT: this is very quickly and uglyly done
-    dict_lt_sources = {}
-    lt_sources_file = (Path(__file__).resolve().parents[1] / "input_data" / f"{config.current_project_name}" / "lt_source_categories.csv")
-    with open(lt_sources_file) as lt:
-        lt_sources = csv.reader(lt)
-        next(lt_sources)
-        for source in lt_sources:
-            dict_lt_sources[int(source[0])] = source[1]
-
-    dict_ht_sources = {}
-    ht_sources_file = (Path(__file__).resolve().parents[1] / "input_data" / f"{config.current_project_name}" / "ht_source_categories.csv")
-    with open(ht_sources_file) as ht:
-        ht_sources = csv.reader(ht)
-        next(ht_sources)
-        for source in ht_sources:
-            dict_ht_sources[int(source[0])] = source[1]
+    # dict_lt_sources = {}
+    # lt_sources_file = (Path(__file__).resolve().parents[1] / "input_data" / f"{config.current_project_name}" / "lt_source_categories.csv")
+    # with open(lt_sources_file) as lt:
+    #     lt_sources = csv.reader(lt)
+    #     next(lt_sources)
+    #     for source in lt_sources:
+    #         dict_lt_sources[int(source[0])] = source[1]
+    #
+    # dict_ht_sources = {}
+    # ht_sources_file = (Path(__file__).resolve().parents[1] / "input_data" / f"{config.current_project_name}" / "ht_source_categories.csv")
+    # with open(ht_sources_file) as ht:
+    #     ht_sources = csv.reader(ht)
+    #     next(ht_sources)
+    #     for source in ht_sources:
+    #         dict_ht_sources[int(source[0])] = source[1]
 
     path = (Path(__file__).resolve().parents[1] / "output_data" /
             f"{config.current_project_name}" /
@@ -262,25 +262,29 @@ def export_neighbourhood_results_to_csv(neighbourhoods):
         writer.writeheader()
         for neighbourhood in neighbourhoods.values():
             attributes = neighbourhood.__dict__
-            attributes['desired_epi'] = (
-                config.current_project.ASSUMPTIONS['desired_epi'][
-                    neighbourhood.assigned_heating_option
-                ]
-            )
-            attributes['category_heat_source'] = None
-            if neighbourhood.assigned_heat_source:
-                if neighbourhood.assigned_heat_source.startswith('LT'):
-                    if dict_lt_sources[int(neighbourhood.assigned_heat_source[4:])] == 'RWZI':
-                        attributes['category_heat_source'] = 'TEA'
-                    else:
-                        attributes['category_heat_source'] = 'LT-restwarmte'
-                elif neighbourhood.assigned_heat_source.startswith('HT'):
-                    if dict_ht_sources[int(neighbourhood.assigned_heat_source[4:])] == 'BMC':
-                        attributes['category_heat_source'] = 'BMC'
-                    else:
-                        attributes['category_heat_source'] = 'HT-restwarmte'
-                else:
-                    attributes['category_heat_source'] = neighbourhood.assigned_heat_source
+
+            if neighbourhood.assigned_heating_option == 'undecided':
+                attributes['desired_epi'] = 'undecided'
+            else:
+                attributes['desired_epi'] = (
+                    config.current_project.ASSUMPTIONS['desired_epi'][
+                        neighbourhood.assigned_heating_option
+                    ]
+                )
+            # attributes['category_heat_source'] = None
+            # if neighbourhood.assigned_heat_source:
+            #     # if neighbourhood.assigned_heat_source.startswith('LT'):
+            #         # if dict_lt_sources[int(neighbourhood.assigned_heat_source[4:])] == 'RWZI':
+            #         #     attributes['category_heat_source'] = 'TEA'
+            #         # else:
+            #         #     attributes['category_heat_source'] = 'LT-restwarmte'
+            #     elif neighbourhood.assigned_heat_source.startswith('HT'):
+            #         if dict_ht_sources[int(neighbourhood.assigned_heat_source[4:])] == 'BMC':
+            #             attributes['category_heat_source'] = 'BMC'
+            #         else:
+            #             attributes['category_heat_source'] = 'HT-restwarmte'
+            #     else:
+            #         attributes['category_heat_source'] = neighbourhood.assigned_heat_source
             writer.writerow(attributes)
 
 
