@@ -520,7 +520,8 @@ def initialise_neighbourhoods_and_heat_sources():
         sum_of_confidences = sum(n for _, n in neighbourhood.heating_option_preference)
         if not math.isclose(sum_of_confidences, 1.):
             if sum_of_confidences != 0.:
-                print('\nWARNING! The confidences of the heating options = {} != 1.'.format(sum_of_confidences))
+                print('\nWARNING! For {}, the confidences of the heating options = {} != 1.'.format(
+                    neighbourhood.code, sum_of_confidences))
 
     # Initialise HT sources and map to neighbourhoods
     ht_sources = initialise_heat_sources(config.current_project.current_scenario['ht_heat'])
