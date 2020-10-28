@@ -22,12 +22,12 @@ ASSUMPTIONS = {
     # The threshold for the fraction of LT eligible residences (as specified
     # in the LT Matrix) in a neighbourhood: if the threshold is exceeded,
     # the neighbourhood will get a preference checkmark for W_LT
-    'lt_eligibility_threshold': 0.75,
+    'lt_eligibility_threshold': 0.5,
 
     # The offset for the heating option preference vector: based on the linear
     # heat density, the neighbourhood's preference for a heat network may be
     # increased with a maximum of the offset
-    'linear_heat_density_max_offset': 0.3,
+    'linear_heat_density_max_offset': 0.05,
 
     # For each heating option, a desired Energy Performance Index (EPI) is
     # assumed: this EPI corresponds to an amount of (relative) heat reduction,
@@ -44,8 +44,8 @@ ASSUMPTIONS = {
     # 100% when the existing heat networks cover more than 'threshold_high' of
     # the neighbourhood. They get an extra 'favour' preference when the coverage
     # is in between 'threshold_high' and 'threshold_low'
-    'heat_network_coverage_threshold_high': 0.7,
-    'heat_network_coverage_threshold_low': 0.3,
+    'heat_network_coverage_threshold_high': 70.0,
+    'heat_network_coverage_threshold_low': 30.0,
     'heat_network_coverage_favour': 0.025,
 
     # Future efficiency of appliances (baseload electricity demand)
@@ -108,7 +108,7 @@ KEY_FIGURES = {
 # Different scenarios that are run by the ETM heat module
 SCENARIOS = {
     'scenario_1': { # ruim gas, ruim warmte
-        'renewable_gas_budget':  99999.E6,  # in GJ
+        'renewable_gas_budget': 99999.E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
