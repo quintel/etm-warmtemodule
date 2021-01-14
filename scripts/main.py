@@ -136,8 +136,8 @@ def apply_decision_trees(sorted_neighbourhoods, heat_sources, bookkeeper):
                 # If the neighbourhood has been assigned a heating option,
                 # count it
                 if not neighbourhood.assigned_heating_option:
-                    print("{} ({}): undecided".format(neighbourhood.name,
-                                                      neighbourhood.code))
+                    # print("{} ({}): undecided".format(neighbourhood.name,
+                    #                                   neighbourhood.code))
                     continue
 
 
@@ -271,6 +271,8 @@ def export_neighbourhood_results_to_csv(neighbourhoods):
                         neighbourhood.assigned_heating_option
                     ]
                 )
+
+            attributes['assigned_heat_source'] = neighbourhood.assigned_heat_source
             # attributes['category_heat_source'] = None
             # if neighbourhood.assigned_heat_source:
             #     # if neighbourhood.assigned_heat_source.startswith('LT'):
