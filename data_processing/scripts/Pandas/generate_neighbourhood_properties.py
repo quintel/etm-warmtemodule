@@ -67,7 +67,7 @@ df_neighbourhood_properties["hot_water_demand_per_m2_utility"] = df_neighbourhoo
 df_neighbourhood_properties.rename(columns = {'Vraag_perWEQ_TW [ giga J per WEQ*yr]': 'hot_water_demand_per_house'}, inplace = True)
 
 # electricity_demand_per_house = Vraag_perWEQ_K [ giga J per WEQ*yr] + Vraag_perWEQ_App [ giga J per WEQ*yr]
-df_neighbourhood_properties["electricity_demand_per_house"] = df_neighbourhood_properties['Vraag_perWEQ_K [ giga J per WEQ*yr]'] + df_neighbourhood_properties['Vraag_perWEQ_App [ giga J per WEQ*yr]']
+df_neighbourhood_properties["electricity_demand_per_house"] = df_neighbourhood_properties['Vraag_perWEQ_K [ giga J per WEQ*yr]'].apply(pd.to_numeric) + df_neighbourhood_properties['Vraag_perWEQ_App [ giga J per WEQ*yr]'].apply(pd.to_numeric) 
 
 # electricity_demand_per_m2_utility = (Vraag_perWEQ_K [ giga J per WEQ*yr] + Vraag_perWEQ_App [ giga J per WEQ*yr]) / 130
 df_neighbourhood_properties["electricity_demand_per_m2_utility"] = df_neighbourhood_properties["electricity_demand_per_house"].apply(pd.to_numeric) / 130.0
