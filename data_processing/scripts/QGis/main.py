@@ -48,7 +48,7 @@ MUNICIPALITIES = {
 
 HEAT_SOURCES = {
     'HT_HIGH_POTENTIAL' : {
-        'path': 'heat_sources/high_potential/MT_SEW_ruim_leveringsgebieden.shp',
+        'path': 'heat_sources/high_potential/MT_SEW_ruim_leveringsgebieden_incl_wsw.shp',
         'rename_attributes': {
                                 'bron_naam': 'source_name',
                                 'MWcapacite': 'available_heat'
@@ -58,7 +58,7 @@ HEAT_SOURCES = {
         'output_file': 'ht_sources_high_potential.csv'
         },
     'HT_LOW_POTENTIAL' : {
-        'path': 'heat_sources/low_potential/MT_SEW_beperkt_leveringsgebieden.shp',
+        'path': 'heat_sources/low_potential/MT_SEW_beperkt_leveringsgebieden_incl_wsw.shp',
         'rename_attributes': {
                                 'bron_naam': 'source_name',
                                 'MWcapacite': 'available_heat'
