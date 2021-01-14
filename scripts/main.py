@@ -6,7 +6,6 @@ import sys
 import csv
 import numpy as np
 import pickle
-import requests
 from pathlib import Path
 
 # project modules
@@ -17,7 +16,6 @@ from classify_neighbourhoods import (apply_electricity_decision_tree,
                                      apply_pre_analysis)
 from load_data import initialise_neighbourhoods_and_heat_sources
 import config
-from post_analysis import flip_LT_eligible_neighbourhoods
 from run_tests import run_all_tests
 
 
@@ -120,11 +118,11 @@ def apply_decision_trees(sorted_neighbourhoods, heat_sources, bookkeeper):
                 # If the neighbourhood's preference is "E",
                 if neighbourhood.heating_option_preference[i][0] == 'E':
                     # Apply electricity decision tree to neighbourhood
-                    apply_electricity_decision_tree(neighbourhood,
-                                                    heat_sources, bookkeeper)
+                    apply_electricity_decision_tree(neighbourhood, heat_sources,
+                                                    i == 1, bookkeeper)
 
                 # Else if the neighbourhood's preference is "W",
-                elif neighbourhood.heating_option_preference[i][0] == 'W':
+                elif neighbourhood.heating_option_preference[i][0] == 'W_MTHT':
                     # Apply electricity decision tree to neighbourhood
                     apply_heat_decision_tree(neighbourhood, heat_sources,
                                              False, i == 1, bookkeeper)
@@ -137,25 +135,32 @@ def apply_decision_trees(sorted_neighbourhoods, heat_sources, bookkeeper):
 
                 # If the neighbourhood has been assigned a heating option,
                 # count it
-                if neighbourhood.assigned_heating_option:
-                    neighbourhood.stage_of_assignment = 'iteration {}'.format(
-                        i + 1)
-                    number_of_assigned_neighbourhoods += 1
-
-                    tuple_position = [i for i, v in enumerate(neighbourhood.heating_option_preference) if v[0] == neighbourhood.assigned_heating_option]
-                    # Determine confidence for assigned heating option
-                    neighbourhood.confidence = neighbourhood.heating_option_preference[tuple_position[0]][1]
-
-                    # print("{} ({}): {}, {} (confidence: {})".format(
-                    #     neighbourhood.name, neighbourhood.code,
-                    #     neighbourhood.assigned_heating_option,
-                    #     neighbourhood.assigned_heat_source,
-                    #     round(neighbourhood.confidence, 2)))
-
-                else:
+                if not neighbourhood.assigned_heating_option:
+                    # print("{} ({}): undecided".format(neighbourhood.name,
+                    #                                   neighbourhood.code))
                     continue
-                    print("{} ({}): undecided".format(neighbourhood.name,
-                                                      neighbourhood.code))
+
+
+                neighbourhood.stage_of_assignment = 'iteration {}'.format(i + 1)
+                number_of_assigned_neighbourhoods += 1
+
+                if neighbourhood.assigned_heating_option == 'W_LT':
+                    confidence_option = 'E'
+                else:
+                    confidence_option =  neighbourhood.assigned_heating_option
+
+                confidence = [
+                    conf for option, conf in neighbourhood.heating_option_preference
+                    if option == confidence_option
+                ][0]
+                neighbourhood.confidence = confidence
+
+                # print("{} ({}): {}, {} (confidence: {})".format(
+                #     neighbourhood.name, neighbourhood.code,
+                #     neighbourhood.assigned_heating_option,
+                #     neighbourhood.assigned_heat_source,
+                #     round(neighbourhood.confidence, 2)))
+
 
         print("\nITERATION {}: [{}/{}] neighbourhoods have been assigned "
               "a heating option".format(i + 1,
@@ -195,25 +200,27 @@ def determine_distance_from_neighbourhood_to_source(neighbourhoods, heat_sources
 
         for code, neighbourhood in neighbourhoods.items():
             # Check if a heat source has been assigned to the neighbourhood
+            if not neighbourhood.assigned_heat_source:
+                continue
+
             assigned_heat_source_code = neighbourhood.assigned_heat_source
 
             # If so, find the corresponding heat source object
-            if assigned_heat_source_code:
-                if assigned_heat_source_code != "geothermal":
-                    heat_type = assigned_heat_source_code[0:2]
-                    assigned_heat_source = heat_sources[heat_type][assigned_heat_source_code]
+            if not assigned_heat_source_code in ["geothermal", 'TEO', "undefined"]:
+                heat_type = assigned_heat_source_code[0:2]
+                assigned_heat_source = heat_sources[heat_type][assigned_heat_source_code]
 
-                    # and determine the distance to the heat source
-                    distance_to_heat_source = np.linalg.norm(
-                        np.array(neighbourhood.geo_coordinate) -
-                        np.array(assigned_heat_source.geo_coordinate))
+                # and determine the distance to the heat source
+                distance_to_heat_source = np.linalg.norm(
+                    np.array(neighbourhood.geo_coordinate) -
+                    np.array(assigned_heat_source.geo_coordinate))
 
-                    writer.writerow({
-                        'neighbourhood_code': code,
-                        'heat_source_code': assigned_heat_source_code,
-                        'heat_source_name': assigned_heat_source.name,
-                        'distance_in_m': distance_to_heat_source
-                    })
+                writer.writerow({
+                    'neighbourhood_code': code,
+                    'heat_source_code': assigned_heat_source_code,
+                    'heat_source_name': assigned_heat_source.name,
+                    'distance_in_m': distance_to_heat_source
+                })
 
 
 def export_neighbourhood_results_to_csv(neighbourhoods):
@@ -221,6 +228,22 @@ def export_neighbourhood_results_to_csv(neighbourhoods):
     Export the neighbourhood attributes and results to a CSV file in the output
     data directory
     """
+    ### DEBT: this is very quickly and uglyly done
+    # dict_lt_sources = {}
+    # lt_sources_file = (Path(__file__).resolve().parents[1] / "input_data" / f"{config.current_project_name}" / "lt_source_categories.csv")
+    # with open(lt_sources_file) as lt:
+    #     lt_sources = csv.reader(lt)
+    #     next(lt_sources)
+    #     for source in lt_sources:
+    #         dict_lt_sources[int(source[0])] = source[1]
+    #
+    # dict_ht_sources = {}
+    # ht_sources_file = (Path(__file__).resolve().parents[1] / "input_data" / f"{config.current_project_name}" / "ht_source_categories.csv")
+    # with open(ht_sources_file) as ht:
+    #     ht_sources = csv.reader(ht)
+    #     next(ht_sources)
+    #     for source in ht_sources:
+    #         dict_ht_sources[int(source[0])] = source[1]
 
     path = (Path(__file__).resolve().parents[1] / "output_data" /
             f"{config.current_project_name}" /
@@ -230,7 +253,7 @@ def export_neighbourhood_results_to_csv(neighbourhoods):
     # Read the Neighbourhood attributes of the first neighbourhood into the
     # csv_columns variable
     for neighbourhood in neighbourhoods.values():
-        csv_columns = list(neighbourhood.__dict__.keys())
+        csv_columns = list(neighbourhood.__dict__.keys()) + ['desired_epi', 'category_heat_source']
         break
 
     # Write the neighbourhood objects to csv file rows
@@ -238,7 +261,33 @@ def export_neighbourhood_results_to_csv(neighbourhoods):
         writer = csv.DictWriter(csv_file, fieldnames=csv_columns)
         writer.writeheader()
         for neighbourhood in neighbourhoods.values():
-            writer.writerow(neighbourhood.__dict__)
+            attributes = neighbourhood.__dict__
+
+            if neighbourhood.assigned_heating_option == 'undecided':
+                attributes['desired_epi'] = 'undecided'
+            else:
+                attributes['desired_epi'] = (
+                    config.current_project.ASSUMPTIONS['desired_epi'][
+                        neighbourhood.assigned_heating_option
+                    ]
+                )
+
+            attributes['assigned_heat_source'] = neighbourhood.assigned_heat_source
+            # attributes['category_heat_source'] = None
+            # if neighbourhood.assigned_heat_source:
+            #     # if neighbourhood.assigned_heat_source.startswith('LT'):
+            #         # if dict_lt_sources[int(neighbourhood.assigned_heat_source[4:])] == 'RWZI':
+            #         #     attributes['category_heat_source'] = 'TEA'
+            #         # else:
+            #         #     attributes['category_heat_source'] = 'LT-restwarmte'
+            #     elif neighbourhood.assigned_heat_source.startswith('HT'):
+            #         if dict_ht_sources[int(neighbourhood.assigned_heat_source[4:])] == 'BMC':
+            #             attributes['category_heat_source'] = 'BMC'
+            #         else:
+            #             attributes['category_heat_source'] = 'HT-restwarmte'
+            #     else:
+            #         attributes['category_heat_source'] = neighbourhood.assigned_heat_source
+            writer.writerow(attributes)
 
 
 def export_heat_source_results_to_csv(heat_sources):
@@ -339,10 +388,6 @@ def main(args):
             key=lambda x: x.fraction_of_lt_eligible_houses(),
             reverse=True):
         sorted_neighbourhoods[neighbourhood.code] = neighbourhood
-
-    # Run post-analysis for all neighbourhoods (and save the refined
-    # neighbourhoods into a new pickle object)
-    flip_LT_eligible_neighbourhoods(bookkeeper, config.current_project.current_scenario_name, sorted_neighbourhoods, heat_sources)
 
     # Get future efficiency of appliances, etc.
     efficiency = config.current_project.ASSUMPTIONS['efficiency_of_appliances']

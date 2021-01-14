@@ -11,15 +11,15 @@ class Matrix:
     Class to describe the heating option preference for each cell of the matrix
     """
 
-    def __init__(self):
+    def __init__(self, number_of_options=3):
         self.residences_matrix = config.current_project.DEFAULT_MATRIX_RESIDENCES
         self.utility_matrix = config.current_project.DEFAULT_MATRIX_UTILITY
 
-        # Vectors represent [E, W, H]
-        self.heat_demand_vector = np.zeros(3)
-        self.heat_demand_vector_residences = np.zeros(3)
-        self.heat_demand_vector_utility = np.zeros(4)
-        self.normalized_vector = np.zeros(3)
+        # Vectors represent [E, W, H] by default
+        self.heat_demand_vector = np.zeros(number_of_options)
+        self.heat_demand_vector_residences = np.zeros(number_of_options)
+        self.heat_demand_vector_utility = np.zeros(number_of_options+1)
+        self.normalized_vector = np.zeros(number_of_options)
 
 
     def determine_heating_option_preference(self, neighbourhood):
@@ -43,24 +43,42 @@ class Matrix:
                                    self.heat_demand_vector_utility)
 
         # Normalize combined heating option vector
-        if np.sum(self.heat_demand_vector) > 0.:
-            self.normalized_vector = self.heat_demand_vector / np.sum(
-                self.heat_demand_vector)
+        self.normalized_vector = Matrix.normalise_vector(self.heat_demand_vector)
+
+        return self.sorted_preference(neighbourhood)
+
+    def sorted_preference(self, neighbourhood):
+        '''
+        Returns the sorted peference for the given neighbourhood by executing
+        step 3 and 4 of determine_heating_option_preference
+        '''
 
         # Take linear heat density offset into account
         offset = self.determine_linear_heat_density_offset(neighbourhood)
+        vector_with_offset = (
+            (self.normalized_vector * (1. - offset)) + np.array([offset, 0, 0])
+        )
 
-        # Cast normalized vector to heating options
+        # Check for existing heat networks
+        ass = config.current_project.ASSUMPTIONS
+        if neighbourhood.existing_heat_network_share > ass['heat_network_coverage_threshold_high']:
+            neighbourhood.force_heat_network = True
+            vector_with_offset = [1., 0., 0.]
+        elif neighbourhood.existing_heat_network_share > ass['heat_network_coverage_threshold_low']:
+            vector_with_offset[0] += ass['heat_network_coverage_favour']
+            vector_with_offset = Matrix.normalise_vector(vector_with_offset)
+
         heating_option_preference = {
-            'W': offset + (1. - offset) * self.normalized_vector[0],
-            'H': (1. - offset) * self.normalized_vector[1],
-            'E': (1. - offset) * self.normalized_vector[2]
+            'W_MTHT': vector_with_offset[0],
+            'H': vector_with_offset[1],
+            'E': vector_with_offset[2]
         }
 
         # Sort by value to determine the neighbourhood's preferences
         return sorted(heating_option_preference.items(),
                       key=lambda x: x[1],
                       reverse=True)
+
 
 
     def apply_matrix_to_housing_stock(self, neighbourhood):
@@ -132,25 +150,25 @@ class Matrix:
                 # and add product to the sum of all vectors
                 self.heat_demand_vector_utility += np.array(self.utility_matrix[building_type][size_class]) * total_heat_demand
 
-        # The fourth entry of the utility vector contains the m2 of utility that
+        # The last entry of the utility vector contains the m2 of utility that
         # 'follows' residences. Here, the residences vector is multiplied by
         # that share of the total heat demand of utilities and added to the
         # utilities vector which is now also a length-3 vector
-        if self.heat_demand_vector_utility[3] > 0.:
+        if self.heat_demand_vector_utility[-1] > 0.:
             if np.sum(self.heat_demand_vector_residences) > 0.:
                 normalized_vector_residences = self.heat_demand_vector_residences / np.sum(self.heat_demand_vector_residences)
-                self.heat_demand_vector_utility = self.heat_demand_vector_utility[:3] + self.heat_demand_vector_utility[3] * normalized_vector_residences
+                self.heat_demand_vector_utility = self.heat_demand_vector_utility[:-1] + self.heat_demand_vector_utility[-1] * normalized_vector_residences
 
-            elif np.sum(self.heat_demand_vector_utility[:3]) > 0.:
-                # If residential vector is empty, add utility vector (first three entries) to itself
-                normalized_vector_utility = self.heat_demand_vector_utility[:3] / np.sum(self.heat_demand_vector_utility[:3])
-                self.heat_demand_vector_utility = self.heat_demand_vector_utility[:3] + self.heat_demand_vector_utility[3] * normalized_vector_utility
+            elif np.sum(self.heat_demand_vector_utility[:-1]) > 0.:
+                # If residential vector is empty, add utility vector (except last entry) to itself
+                normalized_vector_utility = self.heat_demand_vector_utility[:-1] / np.sum(self.heat_demand_vector_utility[:-1])
+                self.heat_demand_vector_utility = self.heat_demand_vector_utility[:-1] + self.heat_demand_vector_utility[-1] * normalized_vector_utility
 
             else:
-                self.heat_demand_vector_utility = np.zeros(3)
+                self.heat_demand_vector_utility = np.zeros(len(self.heat_demand_vector_residences))
 
         else:
-            self.heat_demand_vector_utility = self.heat_demand_vector_utility[:3]
+            self.heat_demand_vector_utility = self.heat_demand_vector_utility[:-1]
 
         # Check if the sum of the vector is equal to the total heat demand of
         # the neighbourhood's utilities. If not, warn the user.
@@ -190,3 +208,13 @@ class Matrix:
             offset = max_offset
 
         return offset
+
+    @staticmethod
+    def normalise_vector(vector):
+        '''
+        Returns normalised vector
+        '''
+        summed = np.sum(vector)
+        if summed > 0.:
+            return vector / summed
+        return vector

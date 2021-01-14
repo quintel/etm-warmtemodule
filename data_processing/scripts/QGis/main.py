@@ -4,7 +4,7 @@ import sys
 from importlib import reload
 
 # folder where project is located
-project_folder = os.path.expanduser('~/') + 'Projects/modeling_experiments/openingsbod/'
+project_folder = os.path.expanduser('~/') + 'Projects/etm-warmtemodule/'
 
 # root folder where scripts are located
 geo_scripts_folder = 'data_processing/scripts/QGis/'
@@ -25,7 +25,7 @@ CRS = 'EPSG:28992'
 
 # specify layers
 NEIGHBOURHOODS = {
-    'path' :'area/groningen_bestand_server_wgs84.geojson',
+    'path' :'area/2019Buurten_in_gebied_StedinEndurisWI.shp',
     'rename_attributes': {
                             'BU_CODE': 'neighbourhood_code',
                             'BU_NAAM': 'neighbourhood_name'
@@ -36,76 +36,83 @@ NEIGHBOURHOODS = {
     }
 
 MUNICIPALITIES = {
-    'path' :'area/2019_gemeentegrenzen_watergrenzen.gpkg',
+    'path' :'area/2019Gemeenten_in_gebied_StedinEndurisWI.shp',
     # attribute containing unique municipality code
-    'id_attribute': 'code',
+    'id_attribute': 'GM_CODE',
     # if municipality code consists of only numbers, we can add a prefix, e.g. 'GM'
     'code_prefix' : 'GM',
     # attribute containing municipality name
-    'name_attribute' : 'gemeentenaam',
+    'name_attribute' : 'GM_NAAM',
     'identifier' : 'MUNIC'
     }
 
 HEAT_SOURCES = {
     'HT_HIGH_POTENTIAL' : {
-        'path': 'heat_sources/high_potential/ht_heat_sources_delivery_areas_groningen_ruim.geojson',
+        'path': 'heat_sources/high_potential/MT_SEW_ruim_leveringsgebieden_incl_wsw.shp',
         'rename_attributes': {
-                                'name': 'source_name',
-                                'capacity': 'available_heat'
+                                'bron_naam': 'source_name',
+                                'MWcapacite': 'available_heat'
                              },
         'attributes_to_keep': ['source_name', 'available_heat'],
         'identifier': 'HTHP',
         'output_file': 'ht_sources_high_potential.csv'
         },
     'HT_LOW_POTENTIAL' : {
-        'path': 'heat_sources/low_potential/ht_heat_sources_delivery_areas_groningen_beperkt.geojson',
+        'path': 'heat_sources/low_potential/MT_SEW_beperkt_leveringsgebieden_incl_wsw.shp',
         'rename_attributes': {
-                                'name': 'source_name',
-                                'capacity': 'available_heat'
+                                'bron_naam': 'source_name',
+                                'MWcapacite': 'available_heat'
                              },
         'attributes_to_keep': ['source_name', 'available_heat'],
         'identifier': 'HTLP',
         'output_file' : 'ht_sources_low_potential.csv'
         },
     'LT_HIGH_POTENTIAL' : {
-        'path': 'heat_sources/high_potential/lt_heat_sources_delivery_areas_groningen_ruim.geojson',
+        'path': 'heat_sources/high_potential/LT_SEW_ruim_leveringsgebieden.shp',
         'rename_attributes': {
-                                'name': 'source_name',
-                                'capacity': 'available_heat'
+                                'bron_naam': 'source_name',
+                                'MWcapacite': 'available_heat'
                              },
         'attributes_to_keep': ['source_name', 'available_heat'],
         'identifier': 'LTHP',
         'output_file' : 'lt_sources_high_potential.csv'
         },
     'LT_LOW_POTENTIAL' : {
-        'path': 'heat_sources/low_potential/lt_heat_sources_delivery_areas_groningen_beperkt.geojson',
+        'path': 'heat_sources/low_potential/LT_SEW_beperkt_leveringsgebieden.shp',
         'rename_attributes': {
-                                'name': 'source_name',
-                                'capacity': 'available_heat'
+                                'bron_naam': 'source_name',
+                                'MWcapacite': 'available_heat'
                              },
         'attributes_to_keep': ['source_name', 'available_heat'],
         'identifier': 'LTLP',
         'output_file' : 'lt_sources_low_potential.csv'
         },
     'GEOTHERMAL_HIGH_POTENTIAL' : {
-        'path': 'heat_sources/high_potential/geothermal_heat_sources_delivery_areas_groningen_ruim.geojson',
+        'path': 'heat_sources/high_potential/GEO_ruim_StedinEndurisWestlandInfra.shp',
         'rename_attributes': {
-                                'name': 'source_name',
-                                'capacity': 'available_heat'
+                                'name': 'source_name'
                              },
-        'attributes_to_keep': ['source_name', 'available_heat'],
+        'attributes_to_keep': ['source_name'],
         'identifier': 'GEOHP',
         'output_file' : 'geothermal_sources_high_potential.csv'
         },
     'GEOTHERMAL_LOW_POTENTIAL' : {
-        'path': 'heat_sources/low_potential/geothermal_heat_sources_delivery_areas_groningen_beperkt.geojson',
+        'path': 'heat_sources/low_potential/GEO_beperkt_StedinEndurisWestlandInfra.shp',
         'rename_attributes': {
-                                'name': 'source_name',
                                 'capacity': 'available_heat'
                              },
-        'attributes_to_keep': ['source_name', 'available_heat'],
+        'attributes_to_keep': ['source_name'],
         'identifier': 'GEOLP',
         'output_file' : 'geothermal_sources_low_potential.csv'
+        },
+    'TEO_HIGH_POTENTIAL' : {
+        'path': 'heat_sources/high_potential/TEO_Potentiekaart_StedinEndurisWestlandInfra_Buffer1km_Contour500m.shp',
+        'rename_attributes': {
+                                'name': 'source_name'
+                             },
+        'attributes_to_keep': ['source_name'],
+        'identifier': 'TEOHP',
+        'output_file' : 'teo_sources_high_potential.csv'
         }
     }
 
@@ -135,6 +142,7 @@ spatial_analysis.add_overlapping_features(neighbourhoods_layer, municipality_lay
 
 # loop over heat source files
 for NAME, SOURCE in HEAT_SOURCES.items():
+    print(NAME)
     # add heat source layers
     heat_layer = layer_management.add_layer_as_reprojected_gpkg(project_folder, geo_layer_folder, SOURCE['path'], CRS, 'reprojected/{}'.format(SOURCE['identifier']))
 

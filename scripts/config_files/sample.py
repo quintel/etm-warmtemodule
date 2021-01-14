@@ -19,14 +19,10 @@ ASSUMPTIONS = {
     # filtered in the pre-analysis
     'pre_analysis_confidence': 0,
 
-    # The threshold for the fraction of LT eligible residences (relatively new
-    # and dense residences; the user may define the types below) in a
-    # neighbourhood: if the threshold is exceeded, the neighbourhood's assigned
-    # heating option may be flipped to an LT heat network if there is an LT
-    # source available
-    'lt_eligibility': 0.5,
-    'lt_eligible_housing_types': ['Apartment', 'Terraced house'],
-    'lt_eligible_construction_years': ['2001-2010', '>2010'],
+    # The threshold for the fraction of LT eligible residences (as specified
+    # in the LT Matrix) in a neighbourhood: if the threshold is exceeded,
+    # the neighbourhood will get a preference checkmark for W_LT
+    'lt_eligibility_threshold': 0.5,
 
     # The offset for the heating option preference vector: based on the linear
     # heat density, the neighbourhood's preference for a heat network may be
@@ -37,10 +33,19 @@ ASSUMPTIONS = {
     # assumed: this EPI corresponds to an amount of (relative) heat reduction,
     # specified in the KEY_FIGURES
     'desired_epi': {
-        'W': 1.95,  # label D
+        'W_MTHT': 1.95,  # label D
         'H': 1.6,   # label C
+        'W_LT': 0.7,
         'E': 0.7    # label A+
     },
+
+    # Neighbourhoods that have existing heat networks are set to have preference
+    # 100% when the existing heat networks cover more than 'threshold_high' of
+    # the neighbourhood. They get an extra 'favour' preference when the coverage
+    # is in between 'threshold_high' and 'threshold_low'
+    'heat_network_coverage_threshold_high': 0.7,
+    'heat_network_coverage_threshold_low': 0.3,
+    'heat_network_coverage_favour': 0.025,
 
     # Future efficiency of appliances (baseload electricity demand)
     'efficiency_of_appliances': 0.75, # source: NvdT scenarios
@@ -51,12 +56,16 @@ SPECS = {
     # its share in the heat network. The remaining share (peak demand) should
     # be provided by a back-up heater.
     'share_of_HT_heat': 0.8,
-    'share_of_LT_heat': 0.4,
+    'share_of_LT_heat_for_W_MTHT': 0.4, ## TODO
+    'share_of_LT_heat_for_W_LT': 0.7,
     'share_of_geothermal_heat': 0.7,
+    'share_of_TEO_heat': 0.7,
+    'share_of_undefined_heat': 0.7,
 
     # Efficiencies of different heating options (heat network, central combi
     # boiler (ccb), heat pump)
     'efficiency_of_heat_network': 0.85, # 15% distribution losses
+    'efficiency_of_LT_heat_network': 0.9, # TODO: CHANGE THIS
     'efficiency_gas_to_heat_ccb': 1.067,  # source: ETM
     'efficiency_electricity_to_heat': 3.75, # source: CE Delft
 
@@ -102,26 +111,29 @@ SCENARIOS = {
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
-        'geothermal': 'geothermal_sources_high_potential.csv'
+        'geothermal': 'geothermal_sources_high_potential.csv',
+        'teo': 'teo_sources_high_potential.csv'
     },
     'scenario_2': { # beperkt gas, ruim warmte
         'renewable_gas_budget': 19.E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_high_potential.csv',
         'lt_heat': 'lt_sources_high_potential.csv',
-        'geothermal': 'geothermal_sources_high_potential.csv'
+        'geothermal': 'geothermal_sources_high_potential.csv',
+        'teo': 'teo_sources_high_potential.csv'
     },
     'scenario_3': { # beperkt gas, beperkt warmte
         'renewable_gas_budget': 19.E6,  # in GJ
         'used_renewable_gas': 0.,
         'ht_heat': 'ht_sources_low_potential.csv',
         'lt_heat': 'lt_sources_low_potential.csv',
-        'geothermal': 'geothermal_sources_low_potential.csv'
+        'geothermal': 'geothermal_sources_low_potential.csv',
+        'teo': 'teo_sources_low_potential.csv'
     }
 }
 
 # Default residences matrix
-# [heat network ('W'), hybrid/renewable gas ('H'), all-electric ('E')]
+# [heat network ('W_MTHT'), hybrid/renewable gas ('H'), all-electric ('E')]
 DEFAULT_MATRIX_RESIDENCES = {
     'Apartment': {
         '<1946': [1.0, 0.0, 0.0],
@@ -158,7 +170,7 @@ DEFAULT_MATRIX_RESIDENCES = {
 }
 
 # Default utility matrix
-# [heat network ('W'), hybrid/renewable gas ('H'), all-electric ('E'),
+# [heat network ('W_MTHT'), hybrid/renewable gas ('H'), all-electric ('E'),
 #  follow housing stock]
 DEFAULT_MATRIX_UTILITY = {
     'Small': {
@@ -177,6 +189,65 @@ DEFAULT_MATRIX_UTILITY = {
         '>2000': [0.0, 0.0, 1.0, 0.0]
     }
 }
+
+# Default lt residences matrix
+# [lt heat network ('W_LT'), nothing]
+LT_MATRIX_RESIDENCES = {
+    'Apartment': {
+        '<1946': [0.0, 1.0],
+        '1946-1974': [0.0, 1.0],
+        '1975-1990': [0.0, 1.0],
+        '1991-2000': [0.33, 0.67],
+        '2001-2010': [0.67, 0.33],
+        '>2010': [1.0, 0.0]
+    },
+    'Terraced house': {
+        '<1946': [0.0, 1.0],
+        '1946-1974': [0.0, 1.0],
+        '1975-1990': [0.0, 1.0],
+        '1991-2000': [0.0, 1.0],
+        '2001-2010': [0.33, 0.67],
+        '>2010': [0.67, 0.33]
+    },
+    'Semi-detached house': {
+        '<1946': [0.0, 1.0],
+        '1946-1974': [0.0, 1.0],
+        '1975-1990': [0.0, 1.0],
+        '1991-2000': [0.0, 1.0],
+        '2001-2010': [0.0, 1.0],
+        '>2010': [0.0, 1.0]
+    },
+    'Detached house': {
+        '<1946': [0.0, 1.0],
+        '1946-1974': [0.0, 1.0],
+        '1975-1990': [0.0, 1.0],
+        '1991-2000': [0.0, 1.0],
+        '2001-2010': [0.0, 1.0],
+        '>2010': [0.0, 1.0]
+    }
+}
+
+# Default utility matrix
+# [heat network ('W_LT'), nothing, follow housing stock]
+LT_MATRIX_UTILITY = {
+    'Small': {
+        '<1991': [0.0,0.0, 1.0],
+        '1991-2000': [0.0, 0.0, 1.0],
+        '>2000': [0.5, 0.5, 0.0]
+    },
+    'Medium': {
+        '<1991': [0.0, 0.0, 1.0],
+        '1991-2000': [0.0, 0.0, 1.0],
+        '>2000': [1.0, 0.0, 0.0]
+    },
+    'Large': {
+        '<1991': [0.0, 1.0, 0.0],
+        '1991-2000': [0.33, 0.67, 0.0],
+        '>2000': [1.0, 0.0, 0.0]
+    }
+}
+
+
 
 # CSV files with neighbourhood data
 NEIGHBOURHOOD_CSVS = {

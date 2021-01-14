@@ -94,7 +94,8 @@ def add_overlapping_features(source_layer, overlapping_layer,
             intersecting_feature = overlapping_layer_dict[id]
 
             if intersecting_feature.geometry().buffer(0, 0).intersects(geom):
-
+                print('id ', id)
+                print('identifying_attribute ', identifying_attribute)
                 overlap.append(prefix + overlapping_layer_dict[id][identifying_attribute])
 
         f[attribute_name] = ','.join(overlap)

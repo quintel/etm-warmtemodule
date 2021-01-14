@@ -283,11 +283,6 @@ def update_neighbourhood_housing_stock(neighbourhoods, csv):
                     'gem_oppervlakte': row['gem_oppervlakte']
                 }
 
-            # Add number of LT eligible houses
-            if row['woningtype'] in config.current_project.ASSUMPTIONS['lt_eligible_housing_types']:
-                if row['QI_bouwjaarklasse'] in config.current_project.ASSUMPTIONS['lt_eligible_construction_years']:
-                    number_of_lt_eligible_houses += row['aantal_woningen']
-
         # Update neighbourhood with housing stock matrix
         neighbourhoods[code].update(
             {'housing_stock_matrix': housing_stock_matrix})
@@ -388,6 +383,9 @@ def map_heat_sources_to_neighbourhoods(neighbourhoods, heat_sources,
         elif source_type == 'geothermal':
             neighbourhood.geothermal_available = bool(neighbourhood_dict[code])
 
+        elif source_type == 'teo':
+            neighbourhood.teo_available = bool(neighbourhood_dict[code])
+
     return neighbourhoods
 
 
@@ -425,9 +423,9 @@ def export_data_to_csv(neighbourhoods):
         'number_of_house_equivalents_utility', 'm2_of_utility',
         'total_heat_demand_of_residences', 'total_heat_demand_of_utility',
         'total_electricity_demand_of_residences',
-        'total_electricity_demand_of_utility', 'geothermal_available',
-        'ht_sources_available', 'lt_sources_available', 'preference_W',
-        'preference_H', 'preference_E'
+        'total_electricity_demand_of_utility', 'geothermal_available', 'teo_available',
+        'ht_sources_available', 'lt_sources_available', 'preference_W_MTHT',
+        'preference_H', 'preference_E', 'elegible_W_LT', 'force_heat_network'
     ]
 
     # Write the neighbourhood objects to csv file rows
@@ -436,8 +434,8 @@ def export_data_to_csv(neighbourhoods):
         writer.writeheader()
         for neighbourhood in neighbourhoods.values():
             for preference in neighbourhood.heating_option_preference:
-                if preference[0] == 'W':
-                    preference_W = preference[1]
+                if preference[0] == 'W_MTHT':
+                    preference_W_MTHT = preference[1]
                 elif preference[0] == 'H':
                     preference_H = preference[1]
                 elif preference[0] == 'E':
@@ -467,16 +465,22 @@ def export_data_to_csv(neighbourhoods):
                 neighbourhood.total_electricity_demand_of_utility(),
                 'geothermal_available':
                 neighbourhood.geothermal_available,
+                'teo_available':
+                neighbourhood.teo_available,
                 'ht_sources_available':
                 neighbourhood.ht_sources_available,
                 'lt_sources_available':
                 neighbourhood.lt_sources_available,
-                'preference_W':
-                preference_W,
+                'preference_W_MTHT':
+                preference_W_MTHT,
                 'preference_H':
                 preference_H,
                 'preference_E':
-                preference_E
+                preference_E,
+                'elegible_W_LT':
+                neighbourhood.lt_elegible,
+                'force_heat_network':
+                neighbourhood.force_heat_network
             }
             writer.writerow(characteristics)
 
@@ -516,7 +520,8 @@ def initialise_neighbourhoods_and_heat_sources():
         sum_of_confidences = sum(n for _, n in neighbourhood.heating_option_preference)
         if not math.isclose(sum_of_confidences, 1.):
             if sum_of_confidences != 0.:
-                print('\nWARNING! The confidences of the heating options = {} != 1.'.format(sum_of_confidences))
+                print('\nWARNING! For {}, the confidences of the heating options = {} != 1.'.format(
+                    neighbourhood.code, sum_of_confidences))
 
     # Initialise HT sources and map to neighbourhoods
     ht_sources = initialise_heat_sources(config.current_project.current_scenario['ht_heat'])
@@ -534,6 +539,11 @@ def initialise_neighbourhoods_and_heat_sources():
     neighbourhoods = map_heat_sources_to_neighbourhoods(
         neighbourhoods, geothermal_sources, 'geothermal')
 
+    # Initialise TEO sources and map to neighbourhoods
+    teo_sources = initialise_heat_sources(config.current_project.current_scenario['teo'])
+    neighbourhoods = map_heat_sources_to_neighbourhoods(
+    neighbourhoods, teo_sources, 'teo')
+
     # Pickle neighbourhoods and heat sources
     # Geothermal is not saved as only availability ('yes'/'no') is relevant
     # (which is saved in the neighbourhood objects)
@@ -548,6 +558,6 @@ def initialise_neighbourhoods_and_heat_sources():
 
 
 if __name__ == "__main__":
-    config.set_current_project('sample')
-    config.current_project.set_current_scenario('scenario_1')
+    config.set_current_project('OB2021')
+    config.current_project.set_current_scenario('scenario_4')
     initialise_neighbourhoods_and_heat_sources()

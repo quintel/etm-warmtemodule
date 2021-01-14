@@ -25,6 +25,22 @@ Note that "E" stands for all-electric, "G" stands for renewable gas, and "W" sta
 
 The user is free to adjust the percentages of the matrices in the config files.
 
+For OB2021 two extra matrices for the LT district heating have been added. When a specific neighbourhood gets a percentage higher than the threshold value, then the 
+neighbourhood is suitable for LT district heating. This threshold can be adjusted in the config-file: "lt_eligibility_threshold".
+
+| Residences | < 1946 | 1946-1974 | 1975-1990 | 1991-2000 | 2001-2010 | > 2010 |
+| ---------- | -------| --------- | --------- | --------- | --------- | ------ |
+| Apartment |  |  |  | W_LT: 33% | W_LT: 67% | W_LT: 100% |
+| Terraced house |  |  |  || W_LT: 33% | W_LT: 67% |
+| Semi-detached house |  |  |  |  |  |  |
+| Detached house |  |  |  |  |  |  |
+
+| Services | <1990 | 1991-2000 | >2000 |
+| -------- | ----- | --------- | ----- |
+| < 200 m<sup>2</sup> | Follow residences | Follow residences | W_LT: 50%|
+| 200 - 2000 m<sup>2</sup> | Follow residences | Follow residences | W_LT: 100%|
+| > 2000 m<sup>2</sup> |  | W_LT: 33% |W_LT: 100% |
+
 ### Decision tree
 
 TODO

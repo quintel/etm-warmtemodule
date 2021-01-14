@@ -21,7 +21,7 @@ Transforming raw BAG data
 # load raw data
 # When exporting to .py file, remove "" from "__file__"
 main_path = Path(__file__).resolve().parents[2] # data_processing folder
-building_stock_file = main_path / "BAG" / "buildings" / "BAG_building_stock.csv"
+building_stock_file = main_path / "BAG" / "buildings" / "BAG20200101_building_stock_2019buurtenOBgebied.csv"
 
 print('\nLoading buildings stock data\n')
 df_building_stock = pd.read_csv(Path(building_stock_file), dtype={"BU_CODE": object, "BU_NAAM": object})
@@ -57,7 +57,7 @@ check_number_of_objects(len(df_building_stock), total_number_of_objects)
 
 # Load energy label database with 'final' energy labels (EP-online)
 print('Loading energy label database\n')
-ep_online_file = main_path / "BAG" / "general" / "ep_online_v20191003.csv"
+ep_online_file = main_path / "BAG" / "general" / "ep_online_v20201001.csv"
 ep_online = pd.read_csv(ep_online_file, sep=';')
 
 keep = ['Pand_postcode', 'Pand_huisnummer', 'Pand_huisnummer_toev', 'Meting_geldig_tot', 'Pand_energieklasse', 'Pand_energieprestatieindex']

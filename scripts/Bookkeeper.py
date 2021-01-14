@@ -29,6 +29,7 @@ class Bookkeeper:
         'HT': final demand heat from HT sources (GJ)
         'MT': final demand heat from MT sources (GJ)
         'LT': final demand heat from LT sources (GJ)
+        'undefined': final demand heat for heat networks with an undefined source
         'backup': final demand backup heat (GJ)
         'undecided': present demand (GJ)
         'useful_heat': useful demand heat for space heating and hot water (GJ)
@@ -40,9 +41,11 @@ class Bookkeeper:
                 'E': 0.,
                 'H': 0.,
                 'geothermal': 0.,
+                'TEO': 0.,
                 'HT': 0.,
                 'MT': 0.,
                 'LT': 0.,
+                'undefined': 0.,
                 'backup': 0.,
                 'undecided': 0.,
                 'useful_heat': 0.,
@@ -52,9 +55,11 @@ class Bookkeeper:
                 'E': 0.,
                 'H': 0.,
                 'geothermal': 0.,
+                'TEO': 0.,
                 'HT': 0.,
                 'MT': 0.,
                 'LT': 0.,
+                'undefined': 0.,
                 'backup': 0.,
                 'undecided': 0.,
                 'useful_heat': 0.,
@@ -135,11 +140,11 @@ class Bookkeeper:
 
         'E': electricity (heating_option 'E')
         'H': renewable gas (heating_option 'H')
-        'geothermal': heat from a geothermal source (heating_option 'W')
-        'HT': heat from an HT source (heating_option 'W')
-        'MT': heat from an MT source (heating_option 'W')
-        'LT': heat from an LT source (heating_option 'W' or 'E')
-        'backup': heat from a backup source (heating_option 'W' or 'H')
+        'geothermal': heat from a geothermal source (heating_option 'W_MTHT')
+        'HT': heat from an HT source (heating_option 'W_MTHT')
+        'MT': heat from an MT source (heating_option 'W_MTHT')
+        'LT': heat from an LT source (heating_option 'W_MTHT' or 'W_LT')
+        'backup': heat from a backup source (heating_option 'W_MTHT' , 'W_LT' or 'H')
         """
 
         # Add final heat demand for all residences in the total region
@@ -225,8 +230,8 @@ class Bookkeeper:
 
         # Define the columns variable
         columns = [
-            'neighbourhood', 'type', 'E', 'H', 'geothermal', 'HT', 'MT', 'LT',
-            'backup', 'undecided', 'useful_heat', 'heat_reduction'
+            'neighbourhood', 'type', 'E', 'H', 'geothermal', 'TEO', 'HT', 'MT', 'LT',
+            'undefined', 'backup', 'undecided', 'useful_heat', 'heat_reduction'
         ]
 
         # Write the neighbourhood objects to csv file rows

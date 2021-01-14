@@ -1,0 +1,2 @@
+fid,source_name,available_heat,source_id,geo_coordinate_x,geo_coordinate_y,neighbourhoods_in_range
+1,"super TEO",999,TEOHP0001,156091.8915,487776.341,"BU001,BU002,BU003,BU004,BU005,BU006,BU007,BU008,BU014"
