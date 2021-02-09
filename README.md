@@ -1,6 +1,10 @@
 ## ETM heat module
 
+### Introduction
+
 The heat module of the Energy Transtion Model (ETM) has been developed as a tool that can support a user in making future scenarios for the heat supply of the built environment. The ETM heat module determines which heating technology is preferred based on the composition of the building stock per neighbourhood. The idea behind this method is that the composition of the building stock is an important factor in determining the heating technology. In addition, the housing stock is relatively stable amid all the uncertainties about the heat supply (such as price developments, efficiencies and the availability of heat sources) towards 2050. In addition to the building stock, the future availability of heat sources is also taken into account.
+
+### Calculation steps
 
 The following technologies are take into account:
 
@@ -25,7 +29,6 @@ In the third part of step 1 (Step 1c), existing MT/HT district heating networks 
 
 In step 2, the preferences of the neighbourhoods are compared to the available heat supply (residual heat, geothermal energy, TEO, renewable gas, hydrogen). The neighbourhoods with the highest preference for a particular technology are allocated the corresponding resource first. The preferred percentage of that technology is then the robustness score. The resources are allocated until one resource is depleted. At that point, the neighbourhoods switch to their second choices. In the case of a second choice, the neighbourhood has a lower robustness score than if a neighbourhood was assigned its first technology choice. The order in which the heat sources are allocated to a neighbourhood are presented in the decision tree images.
 
-
 Calculation example:
 
 - We will take a fictitious neighbourhood that consists only of houses. These consist for 75% of detached houses from before 1946 and for 25% of apartments after 2010.
@@ -37,7 +40,7 @@ Calculation example:
 
 ### Step 1: Preference matrices
 
-#####MATRIX 1 - Renewable gas (G), MT/HT district heating (W_MTHT) and all-electric (E) for residences
+##### MATRIX 1 - Renewable gas (G), MT/HT district heating (W_MTHT) and all-electric (E) for residences
 
 | Residences | < 1946 | 1946-1974 | 1975-1990 | 1991-2000 | 2001-2010 | > 2010 |
 | ---------- | -------| --------- | --------- | --------- | --------- | ------ |
@@ -46,7 +49,7 @@ Calculation example:
 | Semi-detached house | G: 100% | G: 100% | G: 100% | G: 33%, E: 67% | G: 33%, E: 67% | E: 100% |
 | Detached house | G: 100% | G: 100% | G: 100% | G: 67%, E: 33% | G: 33%, E: 67% | E: 100% |
 
-#####MATRIX 2 - Renewable gas (G), MT/HT district heating (W_MTHT) and all-electric (E) for services
+#### MATRIX 2 - Renewable gas (G), MT/HT district heating (W_MTHT) and all-electric (E) for services
 
 | Services | <1990 | 1991-2000 | >2000 |
 | -------- | ----- | --------- | ----- |
@@ -54,7 +57,7 @@ Calculation example:
 | 200 - 2000 m<sup>2</sup> | Follow residences | Follow residences | E: 100% |
 | > 2000 m<sup>2</sup> | W_MTHT: 100% | W_MTHT: 67%, E: 33% | E: 100% |
 
-#####MATRIX 3 - LT district heating (W_LT) for residences
+##### MATRIX 3 - LT district heating (W_LT) for residences
 
 | Residences | < 1946 | 1946-1974 | 1975-1990 | 1991-2000 | 2001-2010 | > 2010 |
 | ---------- | -------| --------- | --------- | --------- | --------- | ------ |
@@ -63,7 +66,7 @@ Calculation example:
 | Semi-detached house |  |  |  |  |  |  |
 | Detached house |  |  |  |  |  |  |
 
-#####MATRIX 4 - LT district heating (W_LT) for services
+##### MATRIX 4 - LT district heating (W_LT) for services
 
 | Services | <1990 | 1991-2000 | >2000 |
 | -------- | ----- | --------- | ----- |
