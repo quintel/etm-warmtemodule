@@ -14,11 +14,11 @@ The following technologies are take into account:
 
 - Medium and high temperature heating technologies (MT / HT):
 	- Renewable gas (green gas / hydrogen): HR boiler or hybrid heat pump (in combination with electricity)
-	- MT / HT district heating: fed by geothermal / residual heat sources from 50 degrees output temperature or thermal energy from surface water (Dutch acronym: TEO) / thermal energy from waste water (Dutch acronym: TEA) from 30 degrees output temperature in combination with co-firing 
+	- MT / HT district heating: fed by geothermal / residual heat sources from 50 degrees output temperature or thermal energy from surface water (Dutch acronym: TEO) / thermal energy from waste water (Dutch acronym: TEA) from 30 degrees output temperature in combination with co-firing
 
 The ETM heat module determines the preferred technology per neighbourhood according to three main steps:
 
-1. The ETM heat module determines which heating technology is preferred based on the composition of the building stock per neighbourhood. This results in a robustness score per heating technology for each neighbourhood. 
+1. The ETM heat module determines which heating technology is preferred based on the composition of the building stock per neighbourhood. This results in a robustness score per heating technology for each neighbourhood.
 2. Scarce resources are allocated to the neighbourhoods according to this robustness score. Neighbourhoods with the highest robustness score for a scarce resource are assigned this first.
 
 In the first part of step 1 (Step 1a), the existing building stock in the area is examined. Based on the year of construction and type of housing / utility type of the building stock, it is determined which heating technologies are suitable for this neighbourhood (see [Matrix 1](#matrix-1---renewable-gas-g-mtht-district-heating-w_mtht-and-all-electric-e-for-residences) and [Matrix 2](#matrix-2---renewable-gas-g-mtht-district-heating-w_mtht-and-all-electric-e-for-services) below). Every combination of house type / utility type and year of construction class has a preference for a specific heating technology. A total robustness score of 100% is thus divided over the three possible technologies. The result of this step is a list of heating technologies and for each technology a percentage that indicates how high this preference is.
@@ -77,9 +77,9 @@ The user is free to adjust the percentages of the matrices in the config files.
 
 ### Step 2: Decision trees
 
-![Decision tree first choice](Beslisboom 1e keus openingsbod 2021 v0.3 EN.png)
+![Decision tree first choice](img/Beslisboom%201e%20keus%20openingsbod%202021%20v0.3%20EN.png)
 
-![Decision tree second choice](Beslisboom 2e keus openingsbod 2021 v0.3 EN.png)
+![Decision tree second choice](img/Beslisboom%202e%20keus%20openingsbod%202021%20v0.3%20EN.png)
 
 ### Getting started
 
@@ -101,7 +101,7 @@ For each script, a short description is provided.
 
 #### main.py
 
-The `main.py` script should be imported into QGIS and run from there. The exact steps for this can be read `data_processing` ▸ `⁨scripts` ▸ `QGis` ▸ `README.md`.  Before running the script, make sure the  `data_processing`⁩ ▸ ⁨`geo_layers⁩` ▸ `⁨reprojected` directory exists. In the `data_processing`⁩ ▸ ⁨`projects` directory the raw data for the different projects is stored. Before running the script, make sure the correct `BAG` and `geo_layers` directories are copied into the `data_processing` root directory. 
+The `main.py` script should be imported into QGIS and run from there. The exact steps for this can be read `data_processing` ▸ `⁨scripts` ▸ `QGis` ▸ `README.md`.  Before running the script, make sure the  `data_processing`⁩ ▸ ⁨`geo_layers⁩` ▸ `⁨reprojected` directory exists. In the `data_processing`⁩ ▸ ⁨`projects` directory the raw data for the different projects is stored. Before running the script, make sure the correct `BAG` and `geo_layers` directories are copied into the `data_processing` root directory.
 
 Below, you can find an overview of the required input data:
 
