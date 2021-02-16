@@ -168,7 +168,7 @@ Below, you can find an overview of the required input data:
 | \<EP online download with all offical labels>| data_processing ▸ ⁨BAG ▸ general | This file can be downloaded [here](https://www.ep-online.nl/ep-online/PublicData)|
 | building\_types.csv | data_processing ▸ ⁨BAG ▸ buildings | Based on types used in energy model [VESTA](https://github.com/RuudvandenWijngaart/VestaDV/tree/Vesta40/data)|
 | vesta\_generic\_labels\_buildings.csv | data_processing ▸ ⁨BAG ▸ buildings | Based on labels used in energy model [VESTA](https://github.com/RuudvandenWijngaart/VestaDV/tree/Vesta40/data) |
-| \<BAG file with all utility objects>| data_processing ▸ ⁨BAG ▸ households | CSV-file with all utility objects including BAG specifications and neighbourhood|
+| \<BAG file with all utility objects>| data_processing ▸ ⁨BAG ▸ buildings | CSV-file with all utility objects including BAG specifications and neighbourhood|
 
 The output of this script is as follows:
 
