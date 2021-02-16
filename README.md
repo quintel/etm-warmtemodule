@@ -178,10 +178,24 @@ The output of this script is as follows:
 
 Make sure you move these output files to the correct project directory: `input_data` ▸ `< project_name >`.
 
-### Running the heat module script
+### Running the main heat module
 
-Script
+The main module is run by executing `main.py` in the `scripts` folder (`python3 scripts/main.py`). Make sure
+the preprocessing is done before you start: the files described in the previous step should be
+present in the `input_data` folder, and they should be loaded by running `python3 scripts/load_data.py`.
 
-Input
+#### Input and configuration
 
-Output
+Moreover the folowing input files are necessary:
+
+| Input file  | Comment |
+| ----------- | ---- |
+| neighbourhoods_list.csv | The neighbourhoods you like to run the module for (code and name) |
+| neighbouhoods_properties.csv | The properties of the neighbourhoods you listed in `neighbourhood_list`, see [the sample file](input_data/sample/neighbourhood_properties.csv) for all necessary properties. |
+
+You can also adjust any thresholds, matrices or other configurables in
+[a config file for your project](scripts/config_files/sample.py).
+
+#### Output
+
+The module will generate a file called `neighbourhoods_output.csv` in your project folder in `output_data` . This csv contains one column *assigned_heating_option* specifiying the heat option recommended by the heat module. Other columns show the information this decision was made on, or show more detail on the assigned option.
