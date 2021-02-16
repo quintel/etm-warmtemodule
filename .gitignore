@@ -2,4 +2,4 @@
 *.xlsx
 venv
 __pycache__
-*.pkl
+**/*.pkl
