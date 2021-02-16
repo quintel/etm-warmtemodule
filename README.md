@@ -178,6 +178,18 @@ The output of this script is as follows:
 
 Make sure you move these output files to the correct project directory: `input_data` ▸ `< project_name >`.
 
+#### generate\_neighbourhood\_properties.py
+
+This script generates the neighbourhood properties file for your project. You simply run `python3 data_processing/scripts/Pandas/generate_heighbourhood_properties.py <PROJECT>`, where `<PROJECT>` is the name of your project (e.g. sample). Make sure you have the following files in your `input_data/<project_name>` folder:
+
+| Input file | Path | Comment |
+| ---------- | ---- | ------- |
+| neighbourhood_list.csv | `input_data` ▸ `<project_name>` | Neighbourhoods for which the heat module and preprocessing should be run. |
+| neighbourhood_heat_demand.csv |  `input_data` ▸ `<project_name>` | Contains info on demand (Giga J / house-equivalent) for different heating technologies |
+| existing_heat_network_share.csv | `input_data` ▸ `<project_name>` | Specifies the percentage of objects already attached to a heat network per neighbourhood |
+
+You may also skip this step and create the neighbourhood properties file yourself. Please look at [the sample file](input_data/sample/neighbourhood_properties.csv) for the required fields.
+
 ### Running the main heat module
 
 The main module is run by executing `main.py` in the `scripts` folder. Make sure
@@ -191,15 +203,10 @@ python3 scripts/main.py <PROJECT> <SCENARIO>
 ```
 #### Input and configuration
 
-Moreover the folowing input files are necessary:
-
-| Input file  | Comment |
-| ----------- | ---- |
-| neighbourhoods_list.csv | The neighbourhoods you like to run the module for (code and name) |
-| neighbouhoods_properties.csv | The properties of the neighbourhoods you listed in `neighbourhood_list`, see [the sample file](input_data/sample/neighbourhood_properties.csv) for all necessary properties. |
-
-You can also adjust any thresholds, matrices and other configurables in
+You can adjust any thresholds, matrices and other configurables in
 [a config file for your project](scripts/config_files/sample.py). This is also the place where you can specify your scenarios (starting on line 108).
+
+All input files can be generated from the preprocessing steps described above.
 
 #### Output
 
