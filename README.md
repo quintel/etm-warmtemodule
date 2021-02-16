@@ -180,10 +180,15 @@ Make sure you move these output files to the correct project directory: `input_d
 
 ### Running the main heat module
 
-The main module is run by executing `main.py` in the `scripts` folder (`python3 scripts/main.py`). Make sure
+The main module is run by executing `main.py` in the `scripts` folder. Make sure
 the preprocessing is done before you start: the files described in the previous step should be
-present in the `input_data` folder, and they should be loaded by running `python3 scripts/load_data.py`.
+present in the `input_data` folder, and they should be loaded by running `load_data.py`.
 
+The module should be run for a specific project (e.g. sample), and scenario (e.g. scenario_1):
+```
+python3 scripts/load_data.py <PROJECT> <SCENARIO>
+python3 scripts/main.py <PROJECT> <SCENARIO>
+```
 #### Input and configuration
 
 Moreover the folowing input files are necessary:
@@ -193,8 +198,8 @@ Moreover the folowing input files are necessary:
 | neighbourhoods_list.csv | The neighbourhoods you like to run the module for (code and name) |
 | neighbouhoods_properties.csv | The properties of the neighbourhoods you listed in `neighbourhood_list`, see [the sample file](input_data/sample/neighbourhood_properties.csv) for all necessary properties. |
 
-You can also adjust any thresholds, matrices or other configurables in
-[a config file for your project](scripts/config_files/sample.py).
+You can also adjust any thresholds, matrices and other configurables in
+[a config file for your project](scripts/config_files/sample.py). This is also the place where you can specify your scenarios (starting on line 108).
 
 #### Output
 

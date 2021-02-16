@@ -558,6 +558,9 @@ def initialise_neighbourhoods_and_heat_sources():
 
 
 if __name__ == "__main__":
-    config.set_current_project('OB2021')
-    config.current_project.set_current_scenario('scenario_4')
-    initialise_neighbourhoods_and_heat_sources()
+    if len(sys.argv) != 3:
+        print('The following arguments were expected: load_data.py <PROJECT> <SCENARIO>')
+    else:
+        config.set_current_project(sys.argv[1])
+        config.current_project.set_current_scenario(sys.argv[2])
+        initialise_neighbourhoods_and_heat_sources()

@@ -1,5 +1,5 @@
 code,name,geo_coordinate,available_heat,neighbourhoods_in_range,used_heat
-LTHP0001,"Bardeen Datahotel, Groningen","[235082.0087, 580965.9738]",176601.6,"BU012,BU013",50527.720882646456
+LTHP0001,"Bardeen Datahotel, Groningen","[235082.0087, 580965.9738]",176601.6,"BU012,BU013",0
 LTHP0002,"KPN GN2, Groningen","[231560.3621, 580589.3105]",176601.6,"BU011,BU012,BU013",0
 LTHP0003,"KPN HD, Groningen","[233354.5101, 579429.7496]",176601.6,"BU010,BU011,BU012",0
 LTHP0004,"Rekenhal - Zernikeborg, Groningen","[231687.6912, 584103.2279]",176601.6,"BU009,BU010,BU011",0
