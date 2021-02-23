@@ -1,7 +1,8 @@
 class HeatSource:
     """
     Class to describe a residual (HT or LT) heat source, including its
-    properties (available heat, etc.)
+    properties (available heat, etc.). If no available heat is given, we assume
+    an endless supply (e.g. for geothermal sources)
     """
 
     def __init__(self, initial_values):
@@ -12,11 +13,14 @@ class HeatSource:
             initial_values['geo_coordinate_x'],
             initial_values['geo_coordinate_y']
         ]
-        self.available_heat = initial_values['available_heat']
-        self.neighbourhoods_in_range = initial_values[
-            'neighbourhoods_in_range']
+        self.neighbourhoods_in_range = initial_values['neighbourhoods_in_range']
 
         self.used_heat = 0
+
+        if 'available_heat' in initial_values:
+            self.available_heat = initial_values['available_heat']
+        else:
+            self.available_heat = 9999999.0
 
 
     def __str__(self):
