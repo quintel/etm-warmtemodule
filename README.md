@@ -104,8 +104,6 @@ For each script, a short description is provided.
 
 The `main.py` script should be imported into QGIS and run from there. The exact steps for this can be read `data_processing` ▸ `⁨scripts` ▸ `QGis` ▸ `README.md`.  Before running the script, make sure the  `data_processing`⁩ ▸ ⁨`geo_layers⁩` ▸ `⁨reprojected` directory exists. In the `data_processing`⁩ ▸ ⁨`projects` directory the raw data for the different projects is stored. Before running the script, make sure the correct `BAG` and `geo_layers` directories are copied into the `data_processing` root directory.
 
-Note: the shapefiles with the heat_sources should contain a column named `available_heat` with the available heat in Giga Joule. For OB2021 we have calculated the available heat based on the installed capacity and 8760 full load hours.
-
 Below, you can find an overview of the required input data:
 
 | Input file | Path | Comment |
@@ -139,6 +137,8 @@ The output of this script is as follows:
 | neighbourhoods_geo.csv | input_data |
 
 Make sure you move these output files to the correct project directory: `input_data` ▸ `< project_name >`.
+
+Note: the outputfiles with the heat sources should contain a column named `available_heat` with the available heat in Giga Joule to be able to run the main heat module. For OB2021 we have calculated the available heat based on the installed capacity and 8760 full load hours and added this to the shapefiles of the heat sources. When no `available_heat`column is given in the output files, then the main heat module will automatically add a heat demand of 9999999.0 GJ (see [this commit](https://github.com/quintel/etm-warmtemodule/commit/daf28c8a0e3a5f007ee6b486054779a1d99e4c16))
 
 #### households\_input\_data\_transformation.py
 
@@ -188,7 +188,7 @@ This script generates the neighbourhood properties file for your project. You si
 | Input file | Path | Comment |
 | ---------- | ---- | ------- |
 | neighbourhood_list.csv | `input_data` ▸ `<project_name>` | Neighbourhoods for which the heat module and preprocessing should be run. |
-| neighbourhood_heat_demand.csv |  `input_data` ▸ `<project_name>` | Contains info on demand (Giga Joule / house-equivalent) for different heating technologies |
+| neighbourhood_heat_demand.csv |  `input_data` ▸ `<project_name>` | Contains info on demand (Giga Joule / house-equivalent) for different heating technologies. For OB2021 we have used VESTA neighbourhood demands |
 | existing_heat_network_share.csv | `input_data` ▸ `<project_name>` | Specifies the percentage of objects already attached to a heat network per neighbourhood |
 
 You may also skip this step and create the neighbourhood properties file yourself. Please look at [the sample file](input_data/sample/neighbourhood_properties.csv) for the required fields.
