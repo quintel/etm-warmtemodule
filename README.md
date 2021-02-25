@@ -96,12 +96,15 @@ Before we can run the heat module, the raw data has to be processed in order to 
 * `data_processing` ▸ `⁨scripts` ▸ `QGis` ▸ `main.py`
 * `data_processing` ▸ `⁨scripts` ▸ `Pandas` ▸ `households_input_data_transformation.py`
 * `data_processing` ▸ `⁨scripts` ▸ `Pandas` ▸ `buildings_input_data_transformation.py`
+* `data_processing` ▸ `⁨scripts` ▸ `Pandas` ▸ `generate_neighbourhood_properties.py`
 
 For each script, a short description is provided.
 
 #### main.py
 
 The `main.py` script should be imported into QGIS and run from there. The exact steps for this can be read `data_processing` ▸ `⁨scripts` ▸ `QGis` ▸ `README.md`.  Before running the script, make sure the  `data_processing`⁩ ▸ ⁨`geo_layers⁩` ▸ `⁨reprojected` directory exists. In the `data_processing`⁩ ▸ ⁨`projects` directory the raw data for the different projects is stored. Before running the script, make sure the correct `BAG` and `geo_layers` directories are copied into the `data_processing` root directory.
+
+Note: the shapefiles with the heat_sources should contain a column named `available_heat` with the available heat in Giga Joule. For OB2021 we have calculated the available heat based on the installed capacity and 8760 full load hours.
 
 Below, you can find an overview of the required input data:
 
@@ -185,7 +188,7 @@ This script generates the neighbourhood properties file for your project. You si
 | Input file | Path | Comment |
 | ---------- | ---- | ------- |
 | neighbourhood_list.csv | `input_data` ▸ `<project_name>` | Neighbourhoods for which the heat module and preprocessing should be run. |
-| neighbourhood_heat_demand.csv |  `input_data` ▸ `<project_name>` | Contains info on demand (Giga J / house-equivalent) for different heating technologies |
+| neighbourhood_heat_demand.csv |  `input_data` ▸ `<project_name>` | Contains info on demand (Giga Joule / house-equivalent) for different heating technologies |
 | existing_heat_network_share.csv | `input_data` ▸ `<project_name>` | Specifies the percentage of objects already attached to a heat network per neighbourhood |
 
 You may also skip this step and create the neighbourhood properties file yourself. Please look at [the sample file](input_data/sample/neighbourhood_properties.csv) for the required fields.
@@ -210,4 +213,5 @@ All input files can be generated from the preprocessing steps described above.
 
 #### Output
 
-The module will generate a file called `neighbourhoods_output.csv` in your project folder in `output_data` . This csv contains one column *assigned_heating_option* specifiying the heat option recommended by the heat module. Other columns show the information this decision was made on, or show more detail on the assigned option.
+The module will generate a file called `neighbourhoods_output.csv` in your project folder in `output_data` . This csv contains one column *assigned_heating_option* specifiying the heat option recommended by the heat module. Other columns show the information this decision was made on, or show more detail on the assigned option. 
+Note: the energy demands in the output files have the same unit as the energy values used as input, in our case Giga Joule. 
